@@ -10,8 +10,8 @@
 	import richardShinners from '$lib/assets/people/Richard_Shinners.jpg';
 	import migdyMoya from '$lib/assets/people/Migdy_Moya.jpeg';
 	import { onMount } from 'svelte';
-	import { fly } from 'svelte/transition';
-	import { sineInOut } from 'svelte/easing';
+	import { fade } from 'svelte/transition';
+	import { sineIn } from 'svelte/easing';
 
 	let mounted = false;
 	onMount(() => {
@@ -36,7 +36,7 @@
 				<div class="flex flex-col">
 					<div
 						class="card p-6 variant-glass-surface max-w-xl h-fit"
-						in:fly={{ x: -1000, duration: 800, easing: sineInOut }}
+						in:fade={{ duration: 800, easing: sineIn }}
 					>
 						<h2 class="h2 font-semibold text-center">What We Do</h2>
 						<img src="$lib/assets/rope.png" alt="" class="px-10 my-2" />
@@ -55,7 +55,7 @@
 					<div class="flex flex-row my-6 gap-y-4 justify-between max-w-[100rem] mx-auto">
 						<div
 							class="card p-6 variant-glass-surface max-w-xl"
-							in:fly={{ x: -1000, duration: 800, easing: sineInOut }}
+							in:fade={{ duration: 800, easing: sineIn }}
 						>
 							<h2 class="h2 font-semibold text-center">Contact Information</h2>
 							<img src="$lib/assets/rope.png" alt="" class="px-10 my-2" />
@@ -76,7 +76,7 @@
 				</div>
 				<div
 					class="card p-6 variant-glass-surface max-w-3xl"
-					in:fly={{ x: 1000, duration: 800, easing: sineInOut }}
+					in:fade={{ duration: 800, easing: sineIn }}
 				>
 					<h2 class="h2 font-semibold text-center">Our Board</h2>
 					<img src="$lib/assets/rope.png" alt="" class="px-10 my-2" />
@@ -119,6 +119,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
+		z-index: -10;
 		background-image: url($lib/assets/hammer_point_entrance.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;

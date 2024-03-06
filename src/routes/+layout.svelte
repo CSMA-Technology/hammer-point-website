@@ -32,7 +32,7 @@
 		<!-- App Bar -->
 		<AppBar
 			border="rounded-full mx-1 mb-[-100%]"
-			background="variant-glass-tertiary"
+			background="variant-glass-tertiary shadow-sm"
 			padding="mx-auto mt-2 w-fit px-2 py-2"
 			gap="md:gap-8"
 		>

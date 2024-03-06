@@ -20,7 +20,7 @@
 		}
 		lastIndexChanged = randomIndex;
 	};
-	setInterval(replaceRandomTestimonial, 5000);
+	setInterval(replaceRandomTestimonial, 7000);
 </script>
 
 <div class="grid grid-cols-3 mt-6 gap-4">
