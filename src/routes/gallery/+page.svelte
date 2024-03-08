@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { getModalStore } from '@skeletonlabs/skeleton';
+	import { getModalStore, type ModalComponent } from '@skeletonlabs/skeleton';
+	import ImageModal from './ImageModal.svelte';
+
+	const modalComponent: ModalComponent = { ref: ImageModal };
 
 	const modalStore = getModalStore();
 
@@ -26,9 +29,9 @@
 					<button
 						on:click={() => {
 							modalStore.trigger({
-								type: 'alert',
-								image: src,
-								buttonTextCancel: 'Close'
+								type: 'component',
+								component: modalComponent,
+								image: src
 							});
 						}}
 						><img

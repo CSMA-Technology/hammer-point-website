@@ -4,7 +4,7 @@
 	export let photo: string = '';
 </script>
 
-<div class="bg-surface-300 opacity-95 ring-1 ring-tertiary-400 rounded-lg p-4 shadow-lg w-full">
+<div class="bg-surface-300 opacity-95 ring-1 ring-tertiary-400 rounded-lg p-4 shadow-lg w-80">
 	<div class="flex flex-row items-center">
 		{#if photo}
 			<img src={photo} alt="" class="w-28 h-28 rounded-full mb-4 object-cover" />

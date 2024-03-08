@@ -12,35 +12,45 @@
 			mounted = true;
 		}, 100);
 	});
-	//bg-[url($lib/assets/sunset.jpeg)]
 </script>
 
-<!-- <enhanced:img
-	src="$lib/assets/sunset.jpeg"
-	alt=""
-	class="absolute inset-0 w-full h-full object-cover -z-10"
-/> -->
 <div id="content" class="flex flex-col h-full justify-between">
 	<div class="min-h-[720px] bg-cover bg-center h-full flex flex-col justify-between">
 		{#if mounted}
 			<div
-				class="flex flex-row flex-wrap gap-y-4 justify-between px-10 py-32 max-w-[90rem] mx-auto w-full my-auto"
+				class="flex flex-row flex-wrap gap-y-4 justify-between px-10 py-32 max-w-7xl mx-auto w-full my-auto"
 			>
-				<div
-					in:fade={{ duration: 800, easing: sineIn }}
-					class="card variant-glass-secondary p-4 max-w-xl h-fit"
-				>
-					<p class="h2 font-semibold text-center">Welcome to Hammer Point</p>
-					<img src="$lib/assets/rope.png" alt="" class="px-10 my-1" />
-					<p class="mt-3 font-semibold text-lg text-pretty text-center">
-						The Hammer Point Owners Accociation proudly maintains and improves this beautiful
-						community. We are a volunteer HOA that works to keep our neighborhood safe, clean, and
-						beautiful.
-					</p>
-					<div class="flex flex-row w-full justify-around mt-4 opacity-70">
-						<a href="/about" class="btn variant-filled-secondary">Learn More</a>
-						<a href="/resources" class="btn variant-filled-primary">Community Resources</a>
-						<a href="/pay-dues" class="btn variant-filled-tertiary">Contribute</a>
+				<div class="flex flex-col gap-4">
+					<div
+						in:fade={{ duration: 800, easing: sineIn }}
+						class="card variant-glass-secondary p-4 max-w-xl h-fit"
+					>
+						<p class="h2 font-semibold text-center">Welcome to Hammer Point</p>
+						<img src="$lib/assets/rope.png" alt="" class="px-10 my-1" />
+						<p class="mt-3 font-semibold text-lg text-pretty text-center">
+							The Hammer Point Owners Accociation proudly maintains and improves this beautiful
+							community. We are a volunteer HOA that works to keep our neighborhood safe, clean, and
+							beautiful.
+						</p>
+						<div class="flex flex-row w-full justify-center gap-16 mt-4 opacity-70">
+							<a href="/about" class="btn font-bold variant-filled-primary">Learn More</a>
+							<a href="/pay-dues" class="btn font-bold variant-filled-tertiary">Contribute</a>
+						</div>
+					</div>
+					<div
+						in:fade={{ duration: 800, easing: sineIn }}
+						class="card variant-glass-secondary p-4 max-w-xl h-fit"
+					>
+						<p class="h2 font-semibold text-center">Community Resources</p>
+						<img src="$lib/assets/rope.png" alt="" class="px-10 my-1" />
+						<p class="mt-3 font-semibold text-lg text-pretty text-center">
+							We maintain an up-to-date list of useful tools, contacts, and local information for
+							Hammer Point residents. To learn more, check out the <a
+								class="anchor"
+								href="/resources">resources</a
+							>
+							page.
+						</p>
 					</div>
 				</div>
 				<div
@@ -67,7 +77,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="p-10 max-w-[90rem] mx-auto">
+			<div class="p-10 max-w-7xl mx-auto">
 				<div
 					in:fade={{ duration: 800, easing: sineIn }}
 					class="!border-none grow p-8 mx-auto card variant-glass-secondary"
@@ -82,8 +92,7 @@
 								author: 'Jane Doe'
 							},
 							{
-								quote:
-									"The HOA does a great job of keeping the neighborhood clean and safe. I'm proud to be a part of it.",
+								quote: 'The HOA does a great job of keeping the neighborhood clean and safe.',
 								author: 'Joe Shmoe'
 							},
 							{
