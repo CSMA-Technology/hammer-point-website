@@ -4,8 +4,17 @@
 	export let photo: string = '';
 </script>
 
-<div class="bg-white bg-opacity-20 rounded-lg p-4 shadow-lg h-52 flex flex-col justify-between">
-	<div class="text-2xl font-bold mb-4 italic text-pretty">{quote}</div>
+<div
+	class="bg-white bg-opacity-20 rounded-lg p-4 shadow-lg min-h-32 flex flex-col justify-between
+lg:h-52"
+>
+	<div
+		class="text-lg font-bold mb-4 italic text-pretty
+		md:text-xl
+		lg:text-2xl"
+	>
+		{quote}
+	</div>
 	{#if photo}
 		<img src={photo} alt="The testimonial author" class="w-16 h-16 rounded-full mb-4" />
 	{/if}

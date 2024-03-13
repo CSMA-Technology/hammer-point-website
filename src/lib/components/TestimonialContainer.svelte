@@ -23,7 +23,19 @@
 	setInterval(replaceRandomTestimonial, 7000);
 </script>
 
-<div class="grid grid-cols-3 mt-6 gap-4">
+<!-- Mobile -->
+<div class="lg:hidden grid grid-cols-1 mt-6 gap-4">
+	{#each currentTestimonials as testimonial, idx}
+		{#key testimonial.quote}
+			<div class="w-lg" style={`grid-area:${idx + 1}/1`} transition:fade>
+				<Testimonial quote={testimonial.quote} author={testimonial.author} />
+			</div>
+		{/key}
+	{/each}
+</div>
+
+<!-- Desktop -->
+<div class="hidden lg:grid grid-cols-3 mt-6 gap-4">
 	{#each currentTestimonials as testimonial, idx}
 		{#key testimonial.quote}
 			<div class="w-lg" style={`grid-area:1/${idx + 1}`} transition:fade>

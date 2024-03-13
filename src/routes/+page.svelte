@@ -18,12 +18,17 @@
 	<div class="min-h-[720px] bg-cover bg-center h-full flex flex-col justify-between">
 		{#if mounted}
 			<div
-				class="flex flex-row flex-wrap gap-y-4 justify-between px-10 py-32 max-w-7xl mx-auto w-full my-auto"
+				class="flex flex-row flex-wrap gap-y-4 justify-between px-6 pt-24 mb-4 mx-auto w-full my-auto
+				lg:px-10 lg:py-32 lg:max-w-7xl"
 			>
-				<div class="flex flex-col gap-4">
+				<div
+					class="flex flex-col gap-4 mx-auto
+				lg:mx-0"
+				>
 					<div
 						in:fade={{ duration: 800, easing: sineIn }}
-						class="card variant-glass-secondary p-4 max-w-xl h-fit"
+						class="card variant-glass-secondary p-4 h-fit max-w-2xl
+						lg:max-w-xl"
 					>
 						<p class="h2 font-semibold text-center">Welcome to Hammer Point</p>
 						<img src="$lib/assets/rope.png" alt="" class="px-10 my-1" />
@@ -32,14 +37,17 @@
 							community. We are a volunteer HOA that works to keep our neighborhood safe, clean, and
 							beautiful.
 						</p>
-						<div class="flex flex-row w-full justify-center gap-16 mt-4 opacity-70">
+						<div
+							class="flex flex-row w-full justify-center max-md:justify-around md:gap-16 mt-4 opacity-70"
+						>
 							<a href="/about" class="btn font-bold variant-filled-primary">Learn More</a>
 							<a href="/pay-dues" class="btn font-bold variant-filled-tertiary">Contribute</a>
 						</div>
 					</div>
 					<div
 						in:fade={{ duration: 800, easing: sineIn }}
-						class="card variant-glass-secondary p-4 max-w-xl h-fit"
+						class="card variant-glass-secondary p-4 h-fit max-w-2xl
+						lg:max-w-xl"
 					>
 						<p class="h2 font-semibold text-center">Community Resources</p>
 						<img src="$lib/assets/rope.png" alt="" class="px-10 my-1" />
@@ -55,7 +63,8 @@
 				</div>
 				<div
 					in:fade={{ duration: 800, easing: sineIn }}
-					class="card variant-glass-secondary p-4 max-w-sm h-fit"
+					class="card variant-glass-secondary p-4 h-fit mx-auto max-w-2xl
+					lg:max-w-sm lg:mx-0"
 				>
 					<h2 class="h2 font-semibold text-center">News and Notes</h2>
 					<img src="$lib/assets/rope.png" alt="" class="px-10 my-1" />
@@ -77,10 +86,14 @@
 					</ul>
 				</div>
 			</div>
-			<div class="p-10 max-w-7xl mx-auto">
+			<div
+				class="px-6 lg:p-10 mb-4 mx-auto
+			"
+			>
 				<div
 					in:fade={{ duration: 800, easing: sineIn }}
-					class="!border-none grow p-8 mx-auto card variant-glass-secondary"
+					class="!border-none grow p-8 mx-auto card variant-glass-secondary w-full max-w-2xl
+					lg:max-w-7xl"
 				>
 					<h2 class="h2 font-semibold text-center">What Your Neighbors Are Saying</h2>
 					<TestimonialContainer
