@@ -25,13 +25,16 @@
 <div
 	id="content"
 	class="h-full w-full
-  max-sm:bg-[-8rem_0rem] bg-center
-  "
+  max-sm:bg-[-8rem_0rem] bg-center"
 >
 	{#if mounted}
-		<div class="w-full pt-28">
+		<div
+			class="w-full pt-24
+		xl:pt-28 xl:my-6"
+		>
 			<div
-				class="flex flex-row flex-wrap w-full my-6 gap-y-4 justify-around px-10 max-w-[100rem] mx-auto align-middle"
+				class="flex flex-row flex-wrap w-full gap-y-4 justify-around px-6 max-w-[100rem] mx-auto align-middle
+				lg:px-10"
 			>
 				<div class="flex flex-col">
 					<div
@@ -46,13 +49,13 @@
 							and improve the Hammer Point community. We are dedicated to keeping our neighborhood
 							safe, clean, and beautiful.
 						</p>
-						<h3 class="h3 font-semibold">Our Vision</h3>
+						<h3 class="h3 font-semibold mt-3">Our Vision</h3>
 						<p class="text-lg font-semibold text-pretty">
 							We strive to create a community that is welcoming, inclusive, and vibrant. We believe
 							that Hammer Point is a special place and we work to keep it that way.
 						</p>
 					</div>
-					<div class="flex flex-row my-6 gap-y-4 justify-between max-w-[100rem] mx-auto">
+					<div class="flex flex-row mt-6 gap-y-4 justify-between max-w-[100rem] mx-auto">
 						<div
 							class="card p-6 variant-glass-surface max-w-xl"
 							in:fade={{ duration: 800, easing: sineIn }}
@@ -75,7 +78,8 @@
 					</div>
 				</div>
 				<div
-					class="card p-6 variant-glass-surface max-w-3xl"
+					class="card p-6 variant-glass-surface max-w-xl mb-4
+					md:max-w-3xl"
 					in:fade={{ duration: 800, easing: sineIn }}
 				>
 					<h2 class="h2 font-semibold text-center">Our Board</h2>
@@ -88,7 +92,10 @@
 							<PersonCard name="Burke Cannon" title="Vice President" photo={burkeCannon} />
 						</div>
 					</div>
-					<div class="grid grid-cols-2 mx-auto w-fit gap-4">
+					<div
+						class="grid grid-cols-1 mx-auto w-fit gap-4
+					md:grid-cols-2"
+					>
 						<PersonCard name="Migdy Moya" title="Treasurer" photo={migdyMoya} />
 						<PersonCard name="Mary Barron-Lopez" title="Member at Large" photo={maryBarron} />
 						<PersonCard name="Rick Hamilton" title="Member at Large" photo={rickHamilton} />

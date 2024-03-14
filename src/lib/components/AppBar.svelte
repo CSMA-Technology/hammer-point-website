@@ -2,6 +2,7 @@
 	import { AppBar } from '@skeletonlabs/skeleton';
 	import { fade } from 'svelte/transition';
 	import closeIcon from '$lib/assets/close-icon.svg';
+	import { browser } from '$app/environment';
 
 	const links = [
 		{ href: '/about', text: 'About' },
@@ -15,6 +16,14 @@
 
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
+	}
+
+	if (browser) {
+		window.onclick = () => {
+			if (isMenuOpen) {
+				isMenuOpen = false;
+			}
+		};
 	}
 </script>
 
@@ -55,7 +64,7 @@
 					<button
 						role="menu"
 						class="flex flex-col justify-between w-5 h-5 bg-transparent border-none cursor-pointer"
-						on:click={toggleMenu}
+						on:click|stopPropagation={toggleMenu}
 					>
 						{#if !isMenuOpen}
 							<span class="w-full h-0.5 bg-tertiary-500"></span>

@@ -14,7 +14,10 @@
 </script>
 
 <div class="flex flex-col h-full">
-	<div class="mt-28 mx-auto p-8 card variant-glass-surface w-[90vw]">
+	<div
+		class=" mx-auto card variant-glass-surface w-full pt-28 px-4
+		md:w-[90vw] md:mt-28 md:p-8"
+	>
 		<h1 class="h1 text-center font-semibold">Gallery</h1>
 		<div class="text-center mt-4">
 			<p>The photos below were taken by your neighbors and highlight the beuaty of Hammer Point.</p>
