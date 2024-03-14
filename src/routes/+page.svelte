@@ -68,7 +68,10 @@
 				>
 					<h2 class="h2 font-semibold text-center">News and Notes</h2>
 					<img src="$lib/assets/rope.png" alt="" class="px-10 my-1" />
-					<ul class="list-['📰'] list-inside m-4 text-lg font-semibold space-y-3">
+					<ul
+						class="list-inside m-4 text-lg font-semibold space-y-3"
+						style="list-style-type: '📰';"
+					>
 						<li>
 							Someone saw a manatee! Check out the picture in the <a class="anchor" href="gallery"
 								>gallery</a
