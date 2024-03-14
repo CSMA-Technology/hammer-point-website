@@ -5,7 +5,7 @@ export const sunset: CustomThemeConfig = {
 	properties: {
 		// =~= Theme Properties =~=
 		'--theme-font-family-base': `Tenor Sans`,
-		'--theme-font-family-heading': `Tenor Sans`,
+		'--theme-font-family-heading': `Gilda Display`,
 		'--theme-font-color-base': '0 0 0',
 		'--theme-font-color-dark': '255 255 255',
 		'--theme-rounded-base': '9999px',

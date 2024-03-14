@@ -35,15 +35,25 @@
 		gap="md:gap-8"
 	>
 		<svelte:fragment slot="lead">
-			<a href="/">
+			<a href="/" class="flex flex-row items-center">
 				<!-- <strong class="text-xl uppercase">Hammer Point Owners Association</strong> -->
-				<enhanced:img
-					class="min-h-[65px] min-w-[200px]"
-					width="200"
+				<img
+					class="min-w-[65px] min-h-[65px]"
+					width="65"
 					height="65"
-					src="$lib/assets/hammer-point-logo-horizontal.svg"
+					src="$lib/assets/hammer-point-logo-condensed.png"
 					alt="Hammer Point Owners Association"
 				/>
+				<div class="ml-1">
+					<div class="font-heading-token leading-tight mb-0 text-lg font-semibold">
+						HAMMER POINT
+					</div>
+					<div
+						class="font-heading-token leading-tight mt-0 text-xs font-semibold text-center tracking-wide"
+					>
+						OWNERS ASSOCIATION
+					</div>
+				</div>
 			</a>
 		</svelte:fragment>
 		<svelte:fragment slot="trail">
