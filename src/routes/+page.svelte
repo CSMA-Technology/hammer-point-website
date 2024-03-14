@@ -30,10 +30,10 @@
 						class="card variant-glass-secondary p-4 h-fit max-w-2xl
 						lg:max-w-xl"
 					>
-						<p class="h2 font-semibold text-center">Welcome to Hammer Point</p>
+						<p class="h2 antialiased font-semibold text-center">Welcome to Hammer Point</p>
 						<img src="$lib/assets/rope.png" alt="" class="px-10 my-1" />
-						<p class="mt-3 font-semibold text-lg text-pretty text-center">
-							The Hammer Point Owners Accociation proudly maintains and improves this beautiful
+						<p class="mt-3 antialiased font-semibold text-lg text-pretty text-center">
+							The Hammer Point Owners Association proudly maintains and improves this beautiful
 							community. We are a volunteer HOA that works to keep our neighborhood safe, clean, and
 							beautiful.
 						</p>
