@@ -27,12 +27,11 @@
 				>
 					<div
 						in:fade={{ duration: 800, easing: sineIn }}
-						class="card variant-glass-secondary p-4 h-fit max-w-2xl
-						lg:max-w-xl"
+						class="card variant-glass-secondary p-4 h-fit max-w-2xl"
 					>
-						<p class="h2 antialiased font-semibold text-center">Welcome to Hammer Point</p>
+						<p class="h1 text-center">Welcome to Hammer Point</p>
 						<img src="$lib/assets/rope.png" alt="" class="px-10 my-1" />
-						<p class="mt-3 antialiased font-semibold text-lg text-pretty text-center">
+						<p class="mt-3 text-pretty text-xl text-center">
 							The Hammer Point Owners Association proudly maintains and improves this beautiful
 							community. We are a volunteer HOA that works to keep our neighborhood safe, clean, and
 							beautiful.
@@ -46,12 +45,11 @@
 					</div>
 					<div
 						in:fade={{ duration: 800, easing: sineIn }}
-						class="card variant-glass-secondary p-4 h-fit max-w-2xl
-						lg:max-w-xl"
+						class="card variant-glass-secondary p-4 h-fit max-w-2xl"
 					>
-						<p class="h2 font-semibold text-center">Community Resources</p>
+						<p class="h1 text-center">Community Resources</p>
 						<img src="$lib/assets/rope.png" alt="" class="px-10 my-1" />
-						<p class="mt-3 font-semibold text-lg text-pretty text-center">
+						<p class="mt-3 text-xl text-pretty text-center">
 							We maintain an up-to-date list of useful tools, contacts, and local information for
 							Hammer Point residents. To learn more, check out the <a
 								class="anchor"
@@ -66,12 +64,9 @@
 					class="card variant-glass-secondary p-4 h-fit mx-auto max-w-2xl
 					lg:max-w-sm lg:mx-0"
 				>
-					<h2 class="h2 font-semibold text-center">News and Notes</h2>
-					<img src="$lib/assets/rope.png" alt="" class="px-10 my-1" />
-					<ul
-						class="list-inside m-4 text-lg font-semibold space-y-3"
-						style="list-style-type: '📰';"
-					>
+					<h2 class="h1 text-center">News and Notes</h2>
+					<img src="$lib/assets/rope.png" alt="" class="px-1 my-1" />
+					<ul class="list-inside m-4 text-xl space-y-3" style="list-style-type: '📰 ';">
 						<li>
 							Someone saw a manatee! Check out the picture in the <a class="anchor" href="gallery"
 								>gallery</a
@@ -98,7 +93,8 @@
 					class="!border-none grow p-8 mx-auto card variant-glass-secondary w-full max-w-2xl
 					lg:max-w-7xl"
 				>
-					<h2 class="h2 font-semibold text-center">What Your Neighbors Are Saying</h2>
+					<h2 class="h1 text-center">What Your Neighbors Are Saying</h2>
+					<img src="$lib/assets/rope.png" alt="" class="px-10 my-1 max-w-3xl mx-auto" />
 					<TestimonialContainer
 						count={3}
 						testimonials={[

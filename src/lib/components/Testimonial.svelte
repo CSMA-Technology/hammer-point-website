@@ -9,7 +9,7 @@
 lg:h-52"
 >
 	<div
-		class="text-lg font-bold mb-4 italic text-pretty
+		class="text-lg mb-4 italic text-pretty
 		md:text-xl
 		lg:text-2xl"
 	>

@@ -45,12 +45,8 @@
 					alt="Hammer Point Owners Association"
 				/>
 				<div class="ml-1">
-					<div class="font-heading-token leading-tight mb-0 text-lg font-semibold">
-						HAMMER POINT
-					</div>
-					<div
-						class="font-heading-token leading-tight mt-0 text-xs font-semibold text-center tracking-wide"
-					>
+					<div class="font-heading-token leading-none mb-0 h3">HAMMER POINT</div>
+					<div class="leading-none mt-0 text-sm lg:text-base text-center tracking-tighter">
 						OWNERS ASSOCIATION
 					</div>
 				</div>
