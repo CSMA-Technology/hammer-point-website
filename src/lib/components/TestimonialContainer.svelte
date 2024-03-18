@@ -27,7 +27,7 @@
 <div class="lg:hidden grid grid-cols-1 mt-6 gap-4">
 	{#each currentTestimonials as testimonial, idx}
 		{#key testimonial.quote}
-			<div class="w-lg" style={`grid-area:${idx + 1}/1`} transition:fade>
+			<div class="max-w-lg" style={`grid-area:${idx + 1}/1`} transition:fade>
 				<Testimonial quote={testimonial.quote} author={testimonial.author} />
 			</div>
 		{/key}
@@ -38,7 +38,7 @@
 <div class="hidden lg:grid grid-cols-3 mt-6 gap-4">
 	{#each currentTestimonials as testimonial, idx}
 		{#key testimonial.quote}
-			<div class="w-lg" style={`grid-area:1/${idx + 1}`} transition:fade>
+			<div class="max-w-lg" style={`grid-area:1/${idx + 1}`} transition:fade>
 				<Testimonial quote={testimonial.quote} author={testimonial.author} />
 			</div>
 		{/key}

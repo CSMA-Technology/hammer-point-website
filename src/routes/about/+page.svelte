@@ -41,18 +41,26 @@
 						class="card p-6 variant-glass-surface max-w-xl h-fit"
 						in:fade={{ duration: 800, easing: sineIn }}
 					>
-						<h2 class="h2 font-semibold text-center">What We Do</h2>
+						<h2 class="h1 text-center">What We Do</h2>
 						<img src="$lib/assets/rope.png" alt="" class="px-10 my-2" />
-						<h3 class="h3 font-semibold">Our Mission</h3>
-						<p class="text-lg font-semibold text-pretty">
+						<h3 class="h2">Our Mission</h3>
+						<p class="text-lg text-pretty">
 							The Hammer Point Owners Association is a volunteer organization that works to maintain
 							and improve the Hammer Point community. We are dedicated to keeping our neighborhood
 							safe, clean, and beautiful.
 						</p>
-						<h3 class="h3 font-semibold mt-3">Our Vision</h3>
-						<p class="text-lg font-semibold text-pretty">
+						<h3 class="h2 mt-3">Our Vision</h3>
+						<p class="text-lg text-pretty">
 							We strive to create a community that is welcoming, inclusive, and vibrant. We believe
 							that Hammer Point is a special place and we work to keep it that way.
+						</p>
+						<h3 class="h2 mt-3">Bylaws</h3>
+						<p>
+							To view and download the association bylaws, <a
+								class="anchor"
+								target="_blank"
+								href="/2023_HammerPoint_Bylaws.pdf">click here</a
+							>
 						</p>
 					</div>
 					<div class="flex flex-row mt-6 gap-y-4 justify-between max-w-[100rem] mx-auto">
@@ -60,15 +68,15 @@
 							class="card p-6 variant-glass-surface max-w-xl"
 							in:fade={{ duration: 800, easing: sineIn }}
 						>
-							<h2 class="h2 font-semibold text-center">Contact Information</h2>
+							<h2 class="h1 text-center">Contact Information</h2>
 							<img src="$lib/assets/rope.png" alt="" class="px-10 my-2" />
-							<p class="text-lg font-semibold text-pretty">
+							<p class="text-lg text-pretty">
 								<strong>Address:</strong> 1234 Hammer Point Blvd, Key Largo, FL 33037
 							</p>
-							<p class="text-lg font-semibold text-pretty">
+							<p class="text-lg text-pretty">
 								<strong>Phone:</strong> (305) 555-5555
 							</p>
-							<p class="text-lg font-semibold text-pretty">
+							<p class="text-lg text-pretty">
 								<strong>Email:</strong>
 								<a href="mailto:support@hammerpointhoa.org" class="anchor"
 									>support@hammerpointhoa.org</a
@@ -82,7 +90,7 @@
 					md:max-w-3xl"
 					in:fade={{ duration: 800, easing: sineIn }}
 				>
-					<h2 class="h2 font-semibold text-center">Our Board</h2>
+					<h2 class="h1 text-center">Our Board</h2>
 					<img src="$lib/assets/rope.png" alt="" class="px-10 my-2" />
 					<div class="w-full my-4">
 						<div class="mx-auto w-fit">
