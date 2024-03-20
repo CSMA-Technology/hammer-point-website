@@ -57,7 +57,7 @@
 				<nav class="list-nav flex gap-0 max-md:hidden">
 					{#each links as link}
 						<a
-							class="anchor no-underline text-tertiary-500 font-semibold !px-2"
+							class="anchor no-underline !text-inherit font-semibold !px-2"
 							href={link.href}
 							rel="noreferrer"
 						>
@@ -103,8 +103,6 @@
 <style>
 	.mobile-menu-link {
 		margin-bottom: 8px;
-		color: #000;
 		text-decoration: none;
-		font-weight: bold;
 	}
 </style>

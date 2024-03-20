@@ -5,7 +5,7 @@ import { skeleton } from '@skeletonlabs/tw-plugin';
 import { sunset } from './src/sunset';
 
 export default {
-	darkMode: 'selector',
+	darkMode: 'class',
 	content: [
 		'./src/**/*.{html,js,svelte,ts}',
 		join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')

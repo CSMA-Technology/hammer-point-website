@@ -30,7 +30,7 @@
 	{#if mounted}
 		<div
 			class="w-full pt-24
-		xl:pt-28 xl:my-6"
+			xl:pt-28 xl:my-6"
 		>
 			<div
 				class="flex flex-row flex-wrap w-full gap-y-4 justify-around px-6 max-w-[100rem] mx-auto align-middle
