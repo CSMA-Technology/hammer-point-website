@@ -144,7 +144,7 @@
 		width: 100%;
 		height: 100%;
 		z-index: -10;
-		background-image: url($lib/assets/sunset.jpeg);
+		background-image: url(/sunset.jpeg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		transform: scale(1.005);

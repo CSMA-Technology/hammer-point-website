@@ -139,7 +139,7 @@
 		width: 100%;
 		height: 100%;
 		z-index: -10;
-		background-image: url($lib/assets/hammer_point_entrance.jpg);
+		background-image: url(/hammer-point-entrance.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		transform: scale(1.005);

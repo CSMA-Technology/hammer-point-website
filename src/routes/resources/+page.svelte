@@ -245,7 +245,7 @@
 		width: 100%;
 		height: 100%;
 		z-index: -10;
-		background-image: url($lib/assets/hammer-point-satellite-view.png);
+		background-image: url(/hammer-point-satellite-view.png);
 		background-repeat: no-repeat;
 		background-size: cover;
 		transform: scale(1.005);
