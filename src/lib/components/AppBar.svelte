@@ -3,12 +3,13 @@
 	import { fade } from 'svelte/transition';
 	import closeIcon from '$lib/assets/close-icon.svg';
 	import { browser } from '$app/environment';
+	import { page } from '$app/stores';
 
 	const links = [
 		{ href: '/about', text: 'About' },
 		{ href: '/resources', text: 'Resources' },
 		{ href: '/gallery', text: 'Gallery' },
-		{ href: '/newsletter', text: 'Newsletter' },
+		{ href: '/updates', text: 'Updates' },
 		{ href: '/pay-dues', text: 'Pay Dues' }
 	];
 
@@ -36,7 +37,6 @@
 	>
 		<svelte:fragment slot="lead">
 			<a href="/" class="flex flex-row items-center">
-				<!-- <strong class="text-xl uppercase">Hammer Point Owners Association</strong> -->
 				<img
 					class="min-w-[65px] min-h-[65px]"
 					width="65"
@@ -57,7 +57,7 @@
 				<nav class="list-nav flex gap-0 max-md:hidden">
 					{#each links as link}
 						<a
-							class="anchor no-underline !text-inherit font-semibold !px-2"
+							class={`anchor no-underline !text-inherit font-semibold !px-3 mx-1 ${link.href === $page.url.pathname ? '!bg-surface-500/30' : ''}`}
 							href={link.href}
 							rel="noreferrer"
 						>

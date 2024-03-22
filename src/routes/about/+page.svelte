@@ -22,6 +22,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Hammer Point HOA - About</title>
+</svelte:head>
+
 <div
 	id="content"
 	class="h-full w-full

@@ -14,12 +14,16 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Hammer Point HOA</title>
+</svelte:head>
+
 <div id="content" class="flex flex-col h-full justify-between">
 	<div class="min-h-[720px] bg-cover bg-center h-full flex flex-col justify-between">
 		{#if mounted}
 			<div
 				class="flex flex-row flex-wrap gap-y-4 justify-between px-6 pt-24 mb-4 mx-auto w-full my-auto
-				lg:px-10 lg:py-32 lg:max-w-7xl"
+				lg:px-0 lg:py-32 lg:max-w-7xl"
 			>
 				<div
 					class="flex flex-col gap-4 mx-auto

@@ -18,6 +18,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Hammer Point HOA - Resources</title>
+</svelte:head>
+
 <div id="content" class="h-full w-full bg-center pt-28">
 	{#if mounted}
 		<div
