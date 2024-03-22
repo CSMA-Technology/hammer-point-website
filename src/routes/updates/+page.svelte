@@ -74,7 +74,7 @@ lg:mt-0"
 			<!-- Pinned Posts -->
 			<div class="flex flex-col gap-4 rounded-md variant-ringed-surface p-3">
 				<h2
-					class="h3 -translate-y-9 -translate-x-1 fixed z-10 bg-primary-300 rounded-lg p-1 w-fit variant-ringed-surface"
+					class="h3 -translate-y-9 -translate-x-1 absolute z-10 bg-primary-300 rounded-lg p-1 w-fit variant-ringed-surface"
 				>
 					Pinned Items
 				</h2>
@@ -96,7 +96,7 @@ lg:mt-0"
 			<!-- Recent Posts -->
 			<div class="flex flex-col gap-4 rounded-md variant-ringed-surface p-3 mt-10">
 				<h2
-					class="h3 -translate-y-9 -translate-x-1 fixed z-10 bg-primary-300 rounded-lg p-1 w-fit variant-ringed-surface"
+					class="h3 -translate-y-9 -translate-x-1 absolute z-10 bg-primary-300 rounded-lg p-1 w-fit variant-ringed-surface"
 				>
 					Recent Updates
 				</h2>

@@ -27,7 +27,7 @@
 	<title>Hammer Point HOA - Gallery</title>
 </svelte:head>
 
-<div class="flex flex-col h-full">
+<div class="flex flex-col h-full mb-4">
 	{#if mounted}
 		<div
 			class=" mx-auto card variant-glass-surface w-full pt-28 px-4
