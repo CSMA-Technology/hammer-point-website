@@ -46,8 +46,8 @@
 
 {#if mounted}
 	<div
-		class="flex flex-col-reverse gap-4 justify-center mt-28 mx-2 mb-4
-  lg:flex-row lg:mx-0"
+		class="flex flex-col-reverse gap-4 justify-center mt-24 mx-2 mb-4
+  lg:flex-row lg:mx-0 lg:mt-28"
 		in:fade={{ duration: 800, easing: sineIn }}
 	>
 		<div
@@ -117,7 +117,7 @@ lg:mt-0"
 			</div>
 		</div>
 		<div
-			class="flex flex-col gap-4 mx-2
+			class="flex flex-col gap-4
 lg:max-w-lg lg:w-[20vw] lg:mx-0"
 		>
 			<div class="card ring-1 variant-glass-secondary mx-auto p-6 shadow-md">

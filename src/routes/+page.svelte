@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { sineIn } from 'svelte/easing';
+	import Rope from '$lib/components/Rope.svelte';
 
 	let mounted = false;
 	onMount(() => {
@@ -34,7 +35,7 @@
 						class="card variant-glass-secondary p-4 h-fit max-w-2xl"
 					>
 						<p class="h1 text-center">Welcome to Hammer Point</p>
-						<img src="$lib/assets/rope.png" alt="" class="sm:px-10 my-1" />
+						<Rope />
 						<p class="mt-3 text-pretty text-xl text-center">
 							The Hammer Point Owners Association proudly maintains and improves this beautiful
 							community. We are a volunteer HOA that works to keep our neighborhood safe, clean, and
@@ -64,7 +65,7 @@
 					lg:max-w-sm lg:mx-0"
 				>
 					<h2 class="h1 text-center">News and Notes</h2>
-					<img src="$lib/assets/rope.png" alt="" class="sm:px-10 lg:px-1 my-1" />
+					<Rope />
 					<ul class="list-inside m-4 text-xl space-y-3" style="list-style-type: '📰 ';">
 						<li>
 							Someone saw a manatee! Check out the picture in the <a class="anchor" href="gallery"
@@ -90,19 +91,14 @@
 					lg:max-w-7xl"
 				>
 					<h2 class="h1 text-center">What Your Neighbors Are Saying</h2>
-					<img
-						src="$lib/assets/rope.png"
-						alt=""
-						class="my-1 mx-auto
-						lg:max-w-3xl sm:px-10"
-					/>
+					<Rope />
 					<TestimonialContainer
 						count={3}
 						testimonials={[
 							{
 								quote:
-									'I love living in Hammer Point. The community is so friendly and the neighborhood is beautiful.',
-								author: 'Jane Doe'
+									'Hammer Point has very active sea life canals and central access to land and sea. Many amenities and great sunsets!',
+								author: 'Debbie P.'
 							},
 							{
 								quote: 'The HOA does a great job of keeping the neighborhood clean and safe.',

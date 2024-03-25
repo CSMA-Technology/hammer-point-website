@@ -22,7 +22,7 @@
 	<title>Hammer Point HOA - Resources</title>
 </svelte:head>
 
-<div id="content" class="h-full w-full bg-center pt-28">
+<div id="content" class="h-full w-full bg-center pt-24">
 	{#if mounted}
 		<div
 			class="card variant-glass-secondary p-6 w-fit md:mx-auto max-w-3xl mx-4"
@@ -41,6 +41,12 @@
 			in:fade={{ duration: 800, easing: sineIn }}
 		>
 			<div class="flex flex-col gap-4">
+				<ResourceCard>
+					<svelte:fragment slot="heading">Monroe County Resource Guide</svelte:fragment>
+					<p class="text-center pt-2">
+						<a class="anchor" href="/monroe-guide-2024.pdf" target="_blank">Click here</a> to download
+					</p>
+				</ResourceCard>
 				<ResourceCard>
 					<svelte:fragment slot="heading">Law Enforcement</svelte:fragment>
 					<svelte:fragment slot="subtitle">Sheriff's Office</svelte:fragment>

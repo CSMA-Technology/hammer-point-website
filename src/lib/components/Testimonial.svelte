@@ -9,7 +9,7 @@
 lg:h-52"
 >
 	<div
-		class="text-lg mb-4 italic text-pretty
+		class="text-lg mb-4 text-pretty
 		md:text-xl
 		lg:text-2xl"
 	>
@@ -18,7 +18,7 @@ lg:h-52"
 	{#if photo}
 		<img src={photo} alt="The testimonial author" class="w-16 h-16 rounded-full mb-4" />
 	{/if}
-	<div class="text-lg text-right mr-10 text-gray-500">—{author}</div>
+	<div class="text-lg text-right lg:mr-10 text-gray-500">—{author}</div>
 </div>
 
 <style>
