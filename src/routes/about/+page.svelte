@@ -86,6 +86,23 @@
 									>support@hammerpointhoa.org</a
 								>
 							</p>
+							<hr class="my-2 !border-tertiary-500/30" />
+							<h3 class="h3 my-2 text-center">Send Us a Message</h3>
+							<form>
+								We'd love to hear from you! Leave us your email and message below and someone from
+								the board will respond to you promptly.
+								<div class="flex flex-col gap-2 mt-4">
+									<input
+										aria-label="Email Address"
+										type="email"
+										class="input"
+										placeholder="Email Address"
+									/>
+									<textarea aria-label="Message" class="textarea" placeholder="Message" rows="4"
+									></textarea>
+									<button class="btn variant-filled-primary">Send</button>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
