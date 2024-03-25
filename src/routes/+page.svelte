@@ -68,18 +68,20 @@
 					<Rope />
 					<ul class="list-inside m-4 text-xl space-y-3" style="list-style-type: '📰 ';">
 						<li>
-							Someone saw a manatee! Check out the picture in the <a class="anchor" href="gallery"
-								>gallery</a
-							>!
+							Your neighbors have been taking wonderful photos of the community. Check them out in
+							our <a class="anchor" href="gallery">gallery</a>!
 						</li>
 						<li>
-							We're looking for volunteers to help with the <a class="anchor" href="newsletter"
-								>newsletter</a
-							>!
+							To stay up to date with community news and events, head over to the <a
+								class="anchor"
+								href="newsletter">updates</a
+							> page.
 						</li>
 						<li>
-							There are reports of someone not picking up after their dog. A friendly reminder that
-							the penalty for this offense is death.
+							Learn more about the Hammer Point HOA and your board members on the <a
+								class="anchor"
+								href="about">about</a
+							> page.
 						</li>
 					</ul>
 				</div>
