@@ -7,4 +7,7 @@
 		<input type="email" name="email" />
 		<textarea name="message"></textarea>
 	</form>
+	<form name="newsletter-subscribe" method="POST" data-netlify="true">
+		<input type="email" name="email" />
+	</form>
 </div>

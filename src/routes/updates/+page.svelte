@@ -5,6 +5,7 @@
 	import { fade } from 'svelte/transition';
 	import { sineIn } from 'svelte/easing';
 	import { onMount } from 'svelte';
+	import { submitFormToNetlify } from '$lib/utils';
 
 	type Post = {
 		title: string;
@@ -38,6 +39,21 @@
 			mounted = true;
 		}, 100);
 	});
+
+	let isSubscribeFormSubmitting = false;
+	let didSubmitSubscribeForm = false;
+	let subscribeFormError = '';
+	const handleSubscribeFormSubmit = async (event: Event) => {
+		isSubscribeFormSubmitting = true;
+		const form = event.target as HTMLFormElement;
+		const error = await submitFormToNetlify(form);
+		if (error) {
+			subscribeFormError = error;
+		} else {
+			didSubmitSubscribeForm = true;
+		}
+		isSubscribeFormSubmitting = false;
+	};
 </script>
 
 <svelte:head>
@@ -126,17 +142,31 @@ lg:max-w-lg lg:w-[20vw] lg:mx-0"
 					Subscribe to the Pelican Press and get the latest edition straight to your inbox right
 					when it is published.
 				</p>
-				<form>
-					<div class="flex flex-row gap-1 mt-3">
-						<input
-							aria-label="Email Address"
-							type="email"
-							class="input"
-							placeholder="Email Address"
-						/>
-						<button class="btn variant-filled-primary">Subscribe</button>
-					</div>
-				</form>
+				{#if !subscribeFormError}
+					{#if !didSubmitSubscribeForm}
+						<form on:submit|preventDefault={handleSubscribeFormSubmit}>
+							<input type="hidden" name="form-name" value="newsletter-subscribe" />
+							<div class="flex flex-row gap-1 mt-3">
+								<input
+									name="email"
+									aria-label="Email Address"
+									type="email"
+									class="input"
+									placeholder="Email Address"
+								/>
+								<button disabled={isSubscribeFormSubmitting} class="btn variant-filled-primary"
+									>Subscribe</button
+								>
+							</div>
+						</form>
+					{:else}
+						<p class="text-success-500 text-lg card p-4">Thank you for subscribing!</p>
+					{/if}
+				{:else}
+					<p class="text-error-500 text-lg card p-4">
+						There was an error subscribing you to the newsletter. Please try again later.
+					</p>
+				{/if}
 			</div>
 		</div>
 	</div>

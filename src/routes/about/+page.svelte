@@ -106,12 +106,7 @@
 							<h3 class="h3 my-2 text-center">Send Us a Message</h3>
 							{#if !contactFormError}
 								{#if !didSubmitContactForm}
-									<form
-										name="contact-form"
-										data-netlify="true"
-										method="POST"
-										on:submit|preventDefault={handleContactFormSubmit}
-									>
+									<form on:submit|preventDefault={handleContactFormSubmit}>
 										<input type="hidden" name="form-name" value="contact-form" />
 										We'd love to hear from you! Leave us your email and message below and someone from
 										the board will respond to you promptly.
