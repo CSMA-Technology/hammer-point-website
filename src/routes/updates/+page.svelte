@@ -160,10 +160,10 @@ lg:max-w-lg lg:w-[20vw] lg:mx-0"
 							</div>
 						</form>
 					{:else}
-						<p class="text-success-500 text-lg card p-4">Thank you for subscribing!</p>
+						<p class="text-success-500 text-center text-lg card p-4">Thank you for subscribing!</p>
 					{/if}
 				{:else}
-					<p class="text-error-500 text-lg card p-4">
+					<p class="text-error-500 text-center text-lg card p-4">
 						There was an error subscribing you to the newsletter. Please try again later.
 					</p>
 				{/if}
