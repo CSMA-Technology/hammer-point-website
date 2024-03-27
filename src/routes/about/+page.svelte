@@ -12,6 +12,7 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { sineIn } from 'svelte/easing';
+	import { submitFormToNetlify } from '$lib/utils';
 
 	let mounted = false;
 	onMount(() => {
@@ -20,6 +21,21 @@
 			mounted = true;
 		}, 100);
 	});
+
+	let isContactFormSubmitting = false;
+	let didSubmitContactForm = false;
+	let contactFormError = '';
+	const handleContactFormSubmit = async (event: Event) => {
+		isContactFormSubmitting = true;
+		const form = event.target as HTMLFormElement;
+		const error = await submitFormToNetlify(form);
+		if (error) {
+			contactFormError = error;
+		} else {
+			didSubmitContactForm = true;
+		}
+		isContactFormSubmitting = false;
+	};
 </script>
 
 <svelte:head>
@@ -88,21 +104,50 @@
 							</p>
 							<hr class="my-2 !border-tertiary-500/30" />
 							<h3 class="h3 my-2 text-center">Send Us a Message</h3>
-							<form>
-								We'd love to hear from you! Leave us your email and message below and someone from
-								the board will respond to you promptly.
-								<div class="flex flex-col gap-2 mt-4">
-									<input
-										aria-label="Email Address"
-										type="email"
-										class="input"
-										placeholder="Email Address"
-									/>
-									<textarea aria-label="Message" class="textarea" placeholder="Message" rows="4"
-									></textarea>
-									<button class="btn variant-filled-primary">Send</button>
-								</div>
-							</form>
+							{#if !contactFormError}
+								{#if !didSubmitContactForm}
+									<form
+										name="contact-form"
+										data-netlify="true"
+										method="POST"
+										on:submit|preventDefault={handleContactFormSubmit}
+									>
+										<input type="hidden" name="form-name" value="contact-form" />
+										We'd love to hear from you! Leave us your email and message below and someone from
+										the board will respond to you promptly.
+										<div class="flex flex-col gap-2 mt-4">
+											<input
+												name="email"
+												aria-label="Email Address"
+												type="email"
+												class="input"
+												placeholder="Email Address"
+												required
+											/>
+											<textarea
+												name="message"
+												required
+												aria-label="Message"
+												class="textarea"
+												placeholder="Message"
+												rows="4"
+											></textarea>
+											<button disabled={isContactFormSubmitting} class="btn variant-filled-primary"
+												>Send</button
+											>
+										</div>
+									</form>
+								{:else}
+									<p class="text-success-500 text-lg card p-4">
+										Your message has been submitted successfully. We will get back to you as soon as
+										possible.
+									</p>
+								{/if}
+							{:else}
+								<p class="text-success-500 text-lg card p-4">
+									There was an error submitting your message. Please try again later.
+								</p>
+							{/if}
 						</div>
 					</div>
 				</div>
