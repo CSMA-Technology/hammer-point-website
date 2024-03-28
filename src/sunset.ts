@@ -86,16 +86,16 @@ export const sunset: CustomThemeConfig = {
 		'--color-error-700': '164 42 31', // #a42a1f
 		'--color-error-800': '131 34 25', // #832219
 		'--color-error-900': '107 27 20', // #6b1b14
-		// surface | #f5a675
-		'--color-surface-50': '254 242 234', // #fef2ea
-		'--color-surface-100': '253 237 227', // #fdede3
-		'--color-surface-200': '253 233 221', // #fde9dd
-		'--color-surface-300': '251 219 200', // #fbdbc8
-		'--color-surface-400': '248 193 158', // #f8c19e
-		'--color-surface-500': '245 166 117', // #f5a675
-		'--color-surface-600': '221 149 105', // #dd9569
-		'--color-surface-700': '184 125 88', // #b87d58
-		'--color-surface-800': '147 100 70', // #936446
-		'--color-surface-900': '120 81 57' // #785139
+		// surface | #68aca0
+		'--color-surface-50': '232 243 241', // #e8f3f1
+		'--color-surface-100': '225 238 236', // #e1eeec
+		'--color-surface-200': '217 234 231', // #d9eae7
+		'--color-surface-300': '195 222 217', // #c3ded9
+		'--color-surface-400': '149 197 189', // #95c5bd
+		'--color-surface-500': '104 172 160', // #68aca0
+		'--color-surface-600': '94 155 144', // #5e9b90
+		'--color-surface-700': '78 129 120', // #4e8178
+		'--color-surface-800': '62 103 96', // #3e6760
+		'--color-surface-900': '51 84 78' // #33544e
 	}
 };

@@ -13,7 +13,10 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				paper: '#fbdbc8'
+				'paper-light': '#fde9dd', // Formerly surface-200
+				paper: '#fbdbc8', // Formerly surface-300
+				'paper-dark': '#f8c19e', // Formerly surface-400
+				'paper-darker': '#f5a675' // Formerly surface-500
 			}
 		}
 	},

@@ -20,7 +20,7 @@
 
 <ul class="mt-2 flex flex-row flex-wrap gap-2">
 	{#each issues as issue}
-		<li class="bg-surface-300 shadow-md w-48 p-4 !rounded-md mx-auto">
+		<li class="bg-paper shadow-md w-48 p-4 !rounded-md mx-auto">
 			<a href={issue.url}> 🗞️ {issue.title} </a>
 		</li>
 	{/each}

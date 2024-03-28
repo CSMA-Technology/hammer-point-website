@@ -30,7 +30,7 @@
 <div class="flex flex-col h-full mb-4">
 	{#if mounted}
 		<div
-			class=" mx-auto card variant-glass-surface w-full pt-24 px-4
+			class=" mx-auto card variant-glass-surface bg-paper-darker bg-opacity-20 w-full pt-24 px-4
 	md:w-[90vw] md:mt-28 md:p-8"
 			in:fade={{ duration: 800, easing: sineIn }}
 		>

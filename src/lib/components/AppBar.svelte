@@ -42,19 +42,20 @@
 					width="65"
 					height="65"
 					src="$lib/assets/hammer-point-logo-condensed.png"
-					alt="Hammer Point Owners Association"
+					alt=""
 				/>
 				<div class="ml-1">
-					<div class="font-heading-token leading-none mb-0 text-xl">HAMMER POINT</div>
-					<div class="leading-none mt-0 text-sm text-center tracking-tighter">
-						OWNERS ASSOCIATION
-					</div>
+					<img
+						src="$lib/assets/hammer-point-logo-text.png"
+						alt="Hammer Point Owner's Association"
+						width="165"
+					/>
 				</div>
 			</a>
 		</svelte:fragment>
 		<svelte:fragment slot="trail">
 			<div>
-				<nav class="list-nav flex gap-0 max-md:hidden">
+				<nav class="list-nav flex gap-0 max-md:hidden lg:min-w-[472px]">
 					{#each links as link}
 						<a
 							class={`anchor no-underline !text-inherit font-semibold !px-3 mx-1 ${link.href === $page.url.pathname ? '!bg-surface-500/30' : ''}`}

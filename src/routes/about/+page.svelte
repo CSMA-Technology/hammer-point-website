@@ -91,25 +91,24 @@
 							<h2 class="h1 text-center">Contact Information</h2>
 							<img src="$lib/assets/rope.png" alt="" class="px-10 my-2" />
 							<p class="text-lg text-pretty">
-								<strong>Address:</strong> 1234 Hammer Point Blvd, Key Largo, FL 33037
-							</p>
-							<p class="text-lg text-pretty">
-								<strong>Phone:</strong> (305) 555-5555
+								<strong>Mailing Address:</strong> P.O. 90, Tavernier, FL 33070
 							</p>
 							<p class="text-lg text-pretty">
 								<strong>Email:</strong>
 								<a href="mailto:support@hammerpointhoa.org" class="anchor"
-									>support@hammerpointhoa.org</a
+									>hammerpointhoa@gmail.com</a
 								>
 							</p>
 							<hr class="my-2 !border-tertiary-500/30" />
-							<h3 class="h3 my-2 text-center">Send Us a Message</h3>
+							<h3 class="h2 my-2 text-center">Send Us a Message</h3>
 							{#if !contactFormError}
 								{#if !didSubmitContactForm}
 									<form on:submit|preventDefault={handleContactFormSubmit}>
 										<input type="hidden" name="form-name" value="contact-form" />
-										We'd love to hear from you! Leave us your email and message below and someone from
-										the board will respond to you promptly.
+										<p class="text-lg">
+											We'd love to hear from you! Leave us your email and message below and someone
+											from the board will respond to you promptly.
+										</p>
 										<div class="flex flex-col gap-2 mt-4">
 											<input
 												name="email"
@@ -175,7 +174,11 @@
 						/>
 						<PersonCard name="Ernie Portuondo" title="Member at Large" photo={erniePortuondo} />
 						<PersonCard name="Lidia Yoham" title="Member at Large" photo={lidiaYoham} />
-						<PersonCard name="Richard Shinners" title="Past President" photo={richardShinners} />
+						<PersonCard
+							name="Richard Shinners"
+							title="Past President Ex Officio"
+							photo={richardShinners}
+						/>
 					</div>
 				</div>
 			</div>
