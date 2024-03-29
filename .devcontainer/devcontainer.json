@@ -15,29 +15,29 @@
 	// "postCreateCommand": "yarn install",
 
 	// Configure tool-specific properties.
-		// Configure tool-specific properties.
-		"customizations": {
-			// Configure properties specific to VS Code.
-			"vscode": {
-				"extensions": [
-					"dbaeumer.vscode-eslint",
-					"svelte.svelte-vscode",
-					"bradlc.vscode-tailwindcss",
-					"eamodio.gitlens",
-					"esbenp.prettier-vscode"
-				],
-				"settings": {
-					"eslint.validate": ["javascript", "javascriptreact", "svelte"],
-					"editor.insertSpaces": true,
-					"editor.tabSize": 2,
-					"editor.formatOnSave": true,
-					"editor.defaultFormatter": "esbenp.prettier-vscode",
-					"[svelte]": {
-						"editor.defaultFormatter": "svelte.svelte-vscode"
-					}
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"svelte.svelte-vscode",
+				"bradlc.vscode-tailwindcss",
+				"eamodio.gitlens",
+				"esbenp.prettier-vscode"
+			],
+			"settings": {
+				"eslint.validate": ["javascript", "javascriptreact", "svelte"],
+				"editor.insertSpaces": true,
+				"editor.tabSize": 2,
+				"editor.formatOnSave": true,
+				"editor.defaultFormatter": "esbenp.prettier-vscode",
+				"[svelte]": {
+					"editor.defaultFormatter": "svelte.svelte-vscode"
 				}
 			}
 		}
+	}
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"

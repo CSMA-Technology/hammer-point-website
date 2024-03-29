@@ -5,20 +5,20 @@
 </script>
 
 <div
-	class="bg-white bg-opacity-20 rounded-lg p-4 shadow-lg min-h-32 flex flex-col justify-between
+	class="flex min-h-32 flex-col justify-between rounded-lg bg-white bg-opacity-20 p-4 shadow-lg
 lg:h-52"
 >
 	<div
-		class="text-lg mb-4 text-pretty
+		class="mb-4 text-pretty text-lg
 		md:text-xl
 		lg:text-2xl"
 	>
 		{quote}
 	</div>
 	{#if photo}
-		<img src={photo} alt="The testimonial author" class="w-16 h-16 rounded-full mb-4" />
+		<img src={photo} alt="The testimonial author" class="mb-4 h-16 w-16 rounded-full" />
 	{/if}
-	<div class="text-lg text-right lg:mr-10 text-gray-500">—{author}</div>
+	<div class="text-right text-lg text-gray-500 lg:mr-10">—{author}</div>
 </div>
 
 <style>

@@ -24,7 +24,7 @@
 </script>
 
 <!-- Mobile -->
-<div class="lg:hidden grid grid-cols-1 mt-6 gap-4">
+<div class="mt-6 grid grid-cols-1 gap-4 lg:hidden">
 	{#each currentTestimonials as testimonial, idx}
 		{#key testimonial.quote}
 			<div class="max-w-lg" style={`grid-area:${idx + 1}/1`} transition:fade>
@@ -35,7 +35,7 @@
 </div>
 
 <!-- Desktop -->
-<div class="hidden lg:grid grid-cols-3 mt-6 gap-4">
+<div class="mt-6 hidden grid-cols-3 gap-4 lg:grid">
 	{#each currentTestimonials as testimonial, idx}
 		{#key testimonial.quote}
 			<div class="max-w-lg" style={`grid-area:1/${idx + 1}`} transition:fade>

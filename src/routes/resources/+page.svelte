@@ -4,6 +4,7 @@
 	import { fade } from 'svelte/transition';
 	import ResourceCard from './ResourceCard.svelte';
 	import ResourceProperty from './ResourceProperty.svelte';
+	import Rope from '$lib/components/Rope.svelte';
 
 	let mounted = false;
 	onMount(() => {
@@ -25,25 +26,32 @@
 <div id="content" class="h-full w-full bg-center pt-24">
 	{#if mounted}
 		<div
-			class="card variant-glass-secondary p-6 w-fit md:mx-auto max-w-3xl mx-4"
+			class="card variant-glass-secondary mx-1 w-fit max-w-3xl px-2 py-6
+			sm:mx-4 sm:px-6 md:mx-auto"
 			in:fade={{ duration: 800, easing: sineIn }}
 		>
 			<h1 class="h1 text-center">Community Resources</h1>
-			<img src="$lib/assets/rope.png" alt="" class=" px-10 my-2" />
-			<p class="text-center text-xl mt-4">
+			<div class="mx-auto my-2 max-w-2xl">
+				<Rope />
+			</div>
+			<p class="mt-4 text-center text-xl">
 				The association maintains a directory of useful contacts and information for our residents.
 				If you think something is missing from this page, please feel free to reach out!
 			</p>
 		</div>
 		<div
-			class="flex flex-row flex-wrap w-fit max-w-5xl mx-4 my-6 gap-4 card variant-glass-secondary p-4 justify-around
-			lg:max-w-6xl md:mx-auto"
+			class="card variant-glass-secondary mx-1 my-6 flex w-fit max-w-5xl flex-row flex-wrap justify-around gap-4 px-2 py-4
+			sm:mx-4
+			sm:px-4
+			md:mx-auto lg:max-w-6xl"
 			in:fade={{ duration: 800, easing: sineIn }}
 		>
 			<div class="flex flex-col gap-4">
 				<ResourceCard>
-					<svelte:fragment slot="heading">Monroe County Resource Guide</svelte:fragment>
-					<p class="text-center pt-2">
+					<svelte:fragment slot="heading"
+						>2024 State of the County and Information Guide</svelte:fragment
+					>
+					<p class="pt-2 text-center">
 						<a class="anchor" href="/monroe-guide-2024.pdf" target="_blank">Click here</a> to download
 					</p>
 				</ResourceCard>
@@ -92,7 +100,7 @@
 							<svelte:fragment slot="value">Thursdays</svelte:fragment>
 						</ResourceProperty>
 						<hr class="my-2 !border-tertiary-500/30" />
-						<p class="text-sm text-justify hyphens-auto">
+						<p class="hyphens-auto text-justify text-sm">
 							NO Yard Waste may be placed in plastic bags. Limbs/fronds must be cut to 4 feet or
 							less and either placed in a garbage can or tied/bundled. Oversized items and “Bulk
 							Waste” will be collected on an individual basis at no additional charge for
@@ -156,7 +164,7 @@
 						</ResourceProperty>
 					</dl>
 					<hr class="my-2 !border-tertiary-500/30" />
-					<p class="text-sm text-justify hyphens-auto">
+					<p class="hyphens-auto text-justify text-sm">
 						To report an outage call (305) 852-2431 or (800) 858-8845 and follow the automated
 						instructions. For the fastest possible response, FKEC uses an Outage Mapping System
 						which allows FKEC to rapidly pinpoint trouble areas and dispatch personnel and equipment

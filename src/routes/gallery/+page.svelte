@@ -27,15 +27,15 @@
 	<title>Hammer Point HOA - Gallery</title>
 </svelte:head>
 
-<div class="flex flex-col h-full mb-4">
+<div class="mb-4 flex h-full flex-col">
 	{#if mounted}
 		<div
-			class=" mx-auto card variant-glass-surface bg-paper-darker bg-opacity-20 w-full pt-24 px-4
-	md:w-[90vw] md:mt-28 md:p-8"
+			class=" card variant-glass-surface mx-auto w-full bg-paper-darker bg-opacity-20 px-4 pt-24
+	md:mt-28 md:w-[90vw] md:p-8"
 			in:fade={{ duration: 800, easing: sineIn }}
 		>
 			<h1 class="h1 text-center font-semibold">Gallery</h1>
-			<div class="text-center mt-4">
+			<div class="mt-4 text-center">
 				<p>
 					The photos below were taken by your neighbors and highlight the beuaty of Hammer Point.
 				</p>
@@ -45,7 +45,7 @@
 						href="mailto:contact@hammerpointhoa.org">contact@hammerpointhoa.org</a
 					>
 				</p>
-				<div class="flex flex-row flex-wrap gap-8 w-full justify-center mt-8">
+				<div class="mt-8 flex w-full flex-row flex-wrap justify-center gap-8">
 					{#each imageUrls as src}
 						<button
 							on:click={() => {
@@ -56,7 +56,7 @@
 								});
 							}}
 							><img
-								class="w-96 h-96 object-cover border-primary-700 border-2 rounded-xl"
+								class="h-96 w-96 rounded-xl border-2 border-primary-700 object-cover"
 								{src}
 								alt=""
 							/></button

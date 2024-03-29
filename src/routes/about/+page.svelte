@@ -13,6 +13,7 @@
 	import { fade } from 'svelte/transition';
 	import { sineIn } from 'svelte/easing';
 	import { submitFormToNetlify } from '$lib/utils';
+	import Rope from '$lib/components/Rope.svelte';
 
 	let mounted = false;
 	onMount(() => {
@@ -45,32 +46,35 @@
 <div
 	id="content"
 	class="h-full w-full
-  max-sm:bg-[-8rem_0rem] bg-center"
+  bg-center max-sm:bg-[-8rem_0rem]"
 >
 	{#if mounted}
 		<div
 			class="w-full pt-24
-			xl:pt-28 xl:my-6"
+			xl:my-6 xl:pt-28"
 		>
 			<div
-				class="flex flex-row flex-wrap w-full gap-y-4 justify-around px-6 max-w-[100rem] mx-auto align-middle
+				class="mx-auto flex w-full max-w-[100rem] flex-row flex-wrap justify-around gap-y-4 px-1 align-middle
+				sm:px-6
 				lg:px-10"
 			>
 				<div class="flex flex-col">
 					<div
-						class="card p-6 variant-glass-surface max-w-xl h-fit"
+						class="card variant-glass-surface h-fit max-w-xl px-2 py-6 sm:px-6"
 						in:fade={{ duration: 800, easing: sineIn }}
 					>
 						<h2 class="h1 text-center">What We Do</h2>
-						<img src="$lib/assets/rope.png" alt="" class="px-10 my-2" />
+						<div class="mx-auto my-2 max-w-xl">
+							<Rope />
+						</div>
 						<h3 class="h2">Our Mission</h3>
-						<p class="text-lg text-pretty">
+						<p class="text-pretty text-lg">
 							The Hammer Point Owners Association is a volunteer organization that works to maintain
 							and improve the Hammer Point community. We are dedicated to keeping our neighborhood
 							safe, clean, and beautiful.
 						</p>
 						<h3 class="h2 mt-3">Our Vision</h3>
-						<p class="text-lg text-pretty">
+						<p class="text-pretty text-lg">
 							We strive to create a community that is welcoming, inclusive, and vibrant. We believe
 							that Hammer Point is a special place and we work to keep it that way.
 						</p>
@@ -83,19 +87,21 @@
 							>
 						</p>
 					</div>
-					<div class="flex flex-row mt-6 gap-y-4 justify-between max-w-[100rem] mx-auto">
+					<div class="mx-auto mt-6 flex max-w-[100rem] flex-row justify-between gap-y-4">
 						<div
-							class="card p-6 variant-glass-surface max-w-xl"
+							class="card variant-glass-surface max-w-xl px-2 py-6 sm:px-6"
 							in:fade={{ duration: 800, easing: sineIn }}
 						>
 							<h2 class="h1 text-center">Contact Information</h2>
-							<img src="$lib/assets/rope.png" alt="" class="px-10 my-2" />
-							<p class="text-lg text-pretty">
+							<div class="mx-auto my-2 max-w-xl">
+								<Rope />
+							</div>
+							<p class="text-pretty text-lg">
 								<strong>Mailing Address:</strong> P.O. 90, Tavernier, FL 33070
 							</p>
-							<p class="text-lg text-pretty">
+							<p class="text-pretty text-lg">
 								<strong>Email:</strong>
-								<a href="mailto:support@hammerpointhoa.org" class="anchor"
+								<a href="mailto:support@hammerpointhoa.org" class="anchor break-all"
 									>hammerpointhoa@gmail.com</a
 								>
 							</p>
@@ -109,7 +115,7 @@
 											We'd love to hear from you! Leave us your email and message below and someone
 											from the board will respond to you promptly.
 										</p>
-										<div class="flex flex-col gap-2 mt-4">
+										<div class="mt-4 flex flex-col gap-2">
 											<input
 												name="email"
 												aria-label="Email Address"
@@ -126,19 +132,19 @@
 												placeholder="Message"
 												rows="4"
 											></textarea>
-											<button disabled={isContactFormSubmitting} class="btn variant-filled-primary"
+											<button disabled={isContactFormSubmitting} class="variant-filled-primary btn"
 												>Send</button
 											>
 										</div>
 									</form>
 								{:else}
-									<p class="text-success-500 text-lg card p-4">
+									<p class="card p-4 text-lg text-success-500">
 										Your message has been submitted successfully. We will get back to you as soon as
 										possible.
 									</p>
 								{/if}
 							{:else}
-								<p class="text-success-500 text-lg card p-4">
+								<p class="card p-4 text-lg text-success-500">
 									There was an error submitting your message. Please try again later.
 								</p>
 							{/if}
@@ -146,22 +152,25 @@
 					</div>
 				</div>
 				<div
-					class="card p-6 variant-glass-surface max-w-xl mb-4
+					class="card variant-glass-surface mb-4 w-full max-w-xl px-2 py-6 sm:px-6
+					md:w-fit
 					md:max-w-3xl"
 					in:fade={{ duration: 800, easing: sineIn }}
 				>
 					<h2 class="h1 text-center">Our Board</h2>
-					<img src="$lib/assets/rope.png" alt="" class="px-10 my-2" />
-					<div class="w-full my-4">
+					<div class="mx-auto my-2 max-w-xl">
+						<Rope />
+					</div>
+					<div class="my-4 w-full">
 						<div class="mx-auto w-fit">
 							<PersonCard name="Helen Shinners" title="President" photo={helenShinners} />
 						</div>
-						<div class="mx-auto w-fit mt-2">
+						<div class="mx-auto mt-2 w-fit">
 							<PersonCard name="Burke Cannon" title="Vice President" photo={burkeCannon} />
 						</div>
 					</div>
 					<div
-						class="grid grid-cols-1 mx-auto w-fit gap-4
+						class="mx-auto grid w-fit grid-cols-1 gap-4
 					md:grid-cols-2"
 					>
 						<PersonCard name="Migdy Moya" title="Treasurer" photo={migdyMoya} />

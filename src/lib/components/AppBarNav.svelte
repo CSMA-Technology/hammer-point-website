@@ -17,7 +17,7 @@
 <nav class="list-nav flex gap-0 max-md:hidden">
 	{#each links as link}
 		<a
-			class="anchor no-underline text-tertiary-500 font-semibold !px-2"
+			class="anchor !px-2 font-semibold text-tertiary-500 no-underline"
 			href={link.href}
 			rel="noreferrer"
 		>
@@ -26,7 +26,7 @@
 	{/each}
 </nav>
 
-<div class="md:hidden pl-6 pr-4">
+<div class="pl-6 pr-4 md:hidden">
 	<button class="hamburger-menu" on:click={toggleMenu}>
 		<span class="hamburger-line"></span>
 		<span class="hamburger-line"></span>
@@ -35,8 +35,8 @@
 
 	{#if isMenuOpen}
 		<nav
-			class="absolute top-1/4 left-0 w-full -z-30
-	flex flex-col items-center rounded-b-xl p-4"
+			class="absolute left-0 top-1/4 -z-30 flex
+	w-full flex-col items-center rounded-b-xl p-4"
 		>
 			{#each links as link}
 				<a class="mobile-menu-link" href={link.href} rel="noreferrer">

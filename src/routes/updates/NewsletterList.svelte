@@ -20,11 +20,11 @@
 
 <ul class="mt-2 flex flex-row flex-wrap gap-2">
 	{#each issues as issue}
-		<li class="bg-paper shadow-md w-48 p-4 !rounded-md mx-auto">
+		<li class="mx-auto w-48 !rounded-md bg-paper p-4 shadow-md">
 			<a href={issue.url}> 🗞️ {issue.title} </a>
 		</li>
 	{/each}
-	<li class="bg-primary-300 shadow-md w-48 p-4 !rounded-md mx-auto">
+	<li class="mx-auto w-48 !rounded-md bg-primary-300 p-4 shadow-md">
 		<a href="/newsletter/archive"> 🧾 Full Archive </a>
 	</li>
 </ul>

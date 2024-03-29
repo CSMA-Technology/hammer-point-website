@@ -4,14 +4,31 @@
 	export let photo: string = '';
 </script>
 
-<div class="bg-paper opacity-95 ring-1 ring-tertiary-400 rounded-lg p-4 shadow-lg w-80">
-	<div class="flex flex-row items-center">
+<div
+	class="rounded-lg bg-paper p-4 opacity-95 shadow-lg ring-1 ring-tertiary-400
+	xs:w-80"
+>
+	<div
+		class="flex flex-row flex-wrap items-center justify-center
+		xs:flex-nowrap
+		xs:justify-start"
+	>
 		{#if photo}
-			<img src={photo} alt="" class="w-28 h-28 rounded-full mb-4 object-cover" />
+			<img src={photo} alt="" class="mx-auto mb-4 h-28 w-28 rounded-full object-cover" />
 		{/if}
 		<div class="ml-2">
-			<div class="text-2xl font-bold mb-1 text-pretty">{name}</div>
-			<div class="text-xl text-left text-tertiary-500 italic font-semibold text-pretty">
+			<div
+				class="mb-1 text-pretty text-center font-bold
+				xs:text-left
+				xs:text-2xl"
+			>
+				{name}
+			</div>
+			<div
+				class="text-pretty text-center font-semibold italic text-tertiary-500
+				xs:text-left
+				xs:text-xl"
+			>
 				{title}
 			</div>
 		</div>

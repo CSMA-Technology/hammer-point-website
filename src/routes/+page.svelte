@@ -19,37 +19,40 @@
 	<title>Hammer Point HOA</title>
 </svelte:head>
 
-<div id="content" class="flex flex-col h-full justify-between">
-	<div class="min-h-[720px] bg-cover bg-center h-full flex flex-col justify-between">
+<div id="content" class="flex h-full flex-col justify-between">
+	<div class="flex h-full min-h-[720px] flex-col justify-between bg-cover bg-center">
 		{#if mounted}
 			<div
-				class="flex flex-row flex-wrap gap-y-4 justify-between px-6 pt-24 mb-4 mx-auto w-full my-auto
-				lg:px-0 lg:py-32 lg:max-w-7xl"
+				class="mx-auto my-auto mb-4 flex w-full flex-row flex-wrap justify-between gap-y-4 px-1 pt-24
+				xs:px-6
+				lg:max-w-7xl lg:px-0 lg:py-32"
 			>
 				<div
-					class="flex flex-col gap-4 mx-auto
+					class="mx-auto flex flex-col gap-4
 				lg:mx-0"
 				>
 					<div
 						in:fade={{ duration: 800, easing: sineIn }}
-						class="card variant-glass-secondary p-4 h-fit max-w-2xl"
+						class="card variant-glass-secondary h-fit max-w-2xl p-4"
 					>
-						<p class="h1 text-center">Welcome to Hammer Point</p>
-						<Rope />
-						<p class="mt-3 text-pretty text-xl text-center">
+						<p class="h1 mx-auto w-fit text-center">Welcome to Hammer Point</p>
+						<div class="mx-auto max-w-xl">
+							<Rope />
+						</div>
+						<p class="mt-3 text-pretty text-center text-xl">
 							The Hammer Point Owners Association proudly maintains and improves this beautiful
 							community. We are a volunteer HOA that works to keep our neighborhood safe, clean, and
 							beautiful.
 						</p>
 						<div
-							class="flex flex-row w-full justify-center max-md:justify-around md:gap-16 mt-4 opacity-70"
+							class="mt-4 flex w-full flex-row flex-wrap justify-center gap-y-2 opacity-70 max-md:justify-around md:gap-16"
 						>
-							<a href="/about" class="btn font-bold variant-filled-primary">Learn More</a>
-							<a href="/pay-dues" class="btn font-bold variant-filled-tertiary">Contribute</a>
+							<a href="/about" class="variant-filled-primary btn font-bold">Learn More</a>
+							<a href="/pay-dues" class="variant-filled-tertiary btn font-bold">Contribute</a>
 						</div>
-						<h2 class="h2 text-center mt-6">Community Resources</h2>
+						<h2 class="h2 mt-6 text-center">Community Resources</h2>
 						<!-- <img src="$lib/assets/rope.png" alt="" class="px-10 my-1" /> -->
-						<p class="mt-3 text-xl text-pretty text-center">
+						<p class="mt-3 text-pretty text-center text-xl">
 							We maintain an up-to-date list of useful tools, contacts, and local information for
 							Hammer Point residents. To learn more, check out the <a
 								class="anchor"
@@ -61,12 +64,12 @@
 				</div>
 				<div
 					in:fade={{ duration: 800, easing: sineIn }}
-					class="card variant-glass-secondary p-4 h-fit mx-auto max-w-2xl
-					lg:max-w-sm lg:mx-0"
+					class="card variant-glass-secondary mx-auto h-fit max-w-2xl p-4
+					lg:mx-0 lg:max-w-sm"
 				>
 					<h2 class="h1 text-center">News and Notes</h2>
 					<Rope />
-					<ul class="list-inside m-4 text-xl space-y-3" style="list-style-type: '📰 ';">
+					<ul class="my-4 list-inside space-y-3 text-xl" style="list-style-type: '📰 ';">
 						<li>
 							Your neighbors have been taking wonderful photos of the community. Check them out in
 							our <a class="anchor" href="gallery">gallery</a>!
@@ -86,14 +89,16 @@
 					</ul>
 				</div>
 			</div>
-			<div class="px-6 lg:p-10 mb-4 mx-auto">
+			<div class="mx-auto mb-4 px-1 xs:px-6 lg:p-10">
 				<div
 					in:fade={{ duration: 800, easing: sineIn }}
-					class="!border-none grow p-8 mx-auto card variant-glass-secondary w-full max-w-2xl
+					class="card variant-glass-secondary mx-auto w-full max-w-2xl grow !border-none p-4 xs:p-8
 					lg:max-w-7xl"
 				>
 					<h2 class="h1 text-center">What Your Neighbors Are Saying</h2>
-					<Rope />
+					<div class="mx-auto mt-2 max-w-3xl">
+						<Rope />
+					</div>
 					<TestimonialContainer
 						count={3}
 						testimonials={[

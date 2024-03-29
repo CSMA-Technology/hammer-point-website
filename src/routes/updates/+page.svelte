@@ -62,13 +62,13 @@
 
 {#if mounted}
 	<div
-		class="flex flex-col-reverse gap-4 justify-center mt-24 mx-2 mb-4
-  lg:flex-row lg:mx-0 lg:mt-28"
+		class="mx-2 mb-4 mt-24 flex flex-col-reverse justify-center gap-4
+  lg:mx-0 lg:mt-28 lg:flex-row"
 		in:fade={{ duration: 800, easing: sineIn }}
 	>
 		<div
-			class="card variant-glass-secondary p-6 shadow-md
-lg:w-[20vw] h-fit"
+			class="card variant-glass-secondary h-fit p-6
+shadow-md lg:w-[20vw]"
 		>
 			<h2 class="h2 text-center">Pelican Press</h2>
 			<p>
@@ -78,21 +78,21 @@ lg:w-[20vw] h-fit"
 			<NewsletterList />
 		</div>
 		<div
-			class="card max-w-5xl variant-glass-secondary p-1 shadow-md
-lg:p-6 lg:w-[40vw]"
+			class="card variant-glass-secondary max-w-5xl p-1 shadow-md
+lg:w-[40vw] lg:p-6"
 		>
 			<h1
-				class="h1 text-center mb-6 mt-2
+				class="h1 mb-6 mt-2 text-center
 lg:mt-0"
 			>
 				Community Updates
 			</h1>
 			<!-- Pinned Posts -->
 			<div
-				class="relative flex flex-col gap-4 rounded-md variant-ringed-surface ring-paper-darker p-3"
+				class="variant-ringed-surface relative flex flex-col gap-4 rounded-md p-3 ring-paper-darker"
 			>
 				<h2
-					class="h3 -translate-y-9 -translate-x-1 absolute z-10 bg-primary-300 rounded-lg p-1 w-fit variant-ringed-surface ring-paper-darker"
+					class="variant-ringed-surface h3 absolute z-10 w-fit -translate-x-1 -translate-y-9 rounded-lg bg-primary-300 p-1 ring-paper-darker"
 				>
 					Pinned Items
 				</h2>
@@ -113,10 +113,10 @@ lg:mt-0"
 			</div>
 			<!-- Recent Posts -->
 			<div
-				class="relative flex flex-col gap-4 rounded-md variant-ringed-surface ring-paper-darker p-3 mt-10"
+				class="variant-ringed-surface relative mt-10 flex flex-col gap-4 rounded-md p-3 ring-paper-darker"
 			>
 				<h2
-					class="h3 -translate-y-9 -translate-x-1 absolute z-10 bg-primary-300 rounded-lg p-1 w-fit variant-ringed-surface ring-paper-darker"
+					class="variant-ringed-surface h3 absolute z-10 w-fit -translate-x-1 -translate-y-9 rounded-lg bg-primary-300 p-1 ring-paper-darker"
 				>
 					Recent Updates
 				</h2>
@@ -138,9 +138,9 @@ lg:mt-0"
 		</div>
 		<div
 			class="flex flex-col gap-4
-lg:max-w-lg lg:w-[20vw] lg:mx-0"
+lg:mx-0 lg:w-[20vw] lg:max-w-lg"
 		>
-			<div class="card ring-1 variant-glass-secondary mx-auto p-6 shadow-md">
+			<div class="card variant-glass-secondary mx-auto p-6 shadow-md ring-1">
 				<h2 class="h2 text-center">Stay Informed!</h2>
 				<p>
 					Subscribe to the Pelican Press and get the latest edition straight to your inbox right
@@ -150,24 +150,24 @@ lg:max-w-lg lg:w-[20vw] lg:mx-0"
 					{#if !didSubmitSubscribeForm}
 						<form on:submit|preventDefault={handleSubscribeFormSubmit}>
 							<input type="hidden" name="form-name" value="newsletter-subscribe" />
-							<div class="flex flex-row gap-1 mt-3">
+							<div class="mt-3 flex flex-row flex-wrap justify-center gap-1 2xl:flex-nowrap">
 								<input
 									name="email"
 									aria-label="Email Address"
 									type="email"
-									class="input bg-paper-light border-paper-dark"
+									class="input border-paper-dark bg-paper-light"
 									placeholder="Email Address"
 								/>
-								<button disabled={isSubscribeFormSubmitting} class="btn variant-filled-primary"
+								<button disabled={isSubscribeFormSubmitting} class="variant-filled-primary btn"
 									>Subscribe</button
 								>
 							</div>
 						</form>
 					{:else}
-						<p class="text-success-500 text-center text-lg card p-4">Thank you for subscribing!</p>
+						<p class="card p-4 text-center text-lg text-success-500">Thank you for subscribing!</p>
 					{/if}
 				{:else}
-					<p class="text-error-500 text-center text-lg card p-4">
+					<p class="card p-4 text-center text-lg text-error-500">
 						There was an error subscribing you to the newsletter. Please try again later.
 					</p>
 				{/if}

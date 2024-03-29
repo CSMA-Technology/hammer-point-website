@@ -35,7 +35,7 @@
 	<!-- Page Route Content -->
 	<slot />
 	<svelte:fragment slot="pageFooter">
-		<div class="bg-tertiary-500 text-white text-center p-4">
+		<div class="bg-tertiary-500 p-4 text-center text-white">
 			<p class="text-sm">&copy; 2024 Hammer Point Owners Association</p>
 		</div>
 	</svelte:fragment>

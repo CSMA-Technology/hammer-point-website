@@ -17,6 +17,10 @@ export default {
 				paper: '#fbdbc8', // Formerly surface-300
 				'paper-dark': '#f8c19e', // Formerly surface-400
 				'paper-darker': '#f5a675' // Formerly surface-500
+			},
+			screens: {
+				xs: '375px',
+				xxs: '320px'
 			}
 		}
 	},

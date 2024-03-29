@@ -1,7 +1,7 @@
-<div class="card bg-paper-light shadow-md p-6">
-	<div class="flex flex-row xl:flex-nowrap flex-wrap gap-4">
-		<div class="w-52 h-52 shrink-0 mx-auto">
-			<div class="h-full flex flex-col justify-center">
+<div class="card bg-paper-light p-6 shadow-md">
+	<div class="flex flex-row flex-wrap gap-4 xl:flex-nowrap">
+		<div class="mx-auto xs:h-52 xs:w-52 xs:shrink-0">
+			<div class="flex h-full flex-col justify-center">
 				<slot name="image" />
 			</div>
 		</div>
