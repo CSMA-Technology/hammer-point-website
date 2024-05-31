@@ -24,10 +24,10 @@
 </script>
 
 <!-- Mobile -->
-<div class="mt-6 grid grid-cols-1 gap-4 lg:hidden">
+<div class="mt-6 grid grid-cols-1 gap-4 xl:hidden">
 	{#each currentTestimonials as testimonial, idx}
 		{#key testimonial.quote}
-			<div class="max-w-lg" style={`grid-area:${idx + 1}/1`} transition:fade>
+			<div class="mx-auto max-w-xl" style={`grid-area:${idx + 1}/1`} transition:fade>
 				<Testimonial quote={testimonial.quote} author={testimonial.author} />
 			</div>
 		{/key}
@@ -35,7 +35,7 @@
 </div>
 
 <!-- Desktop -->
-<div class="mt-6 hidden grid-cols-3 gap-4 lg:grid">
+<div class="mt-6 hidden grid-cols-3 gap-4 xl:grid">
 	{#each currentTestimonials as testimonial, idx}
 		{#key testimonial.quote}
 			<div class="max-w-lg" style={`grid-area:1/${idx + 1}`} transition:fade>

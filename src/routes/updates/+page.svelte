@@ -1,43 +1,15 @@
 <script lang="ts">
 	import NewsletterList from './NewsletterList.svelte';
 	import UpdatePost from './UpdatePost.svelte';
-	import westminster from '$lib/assets/westminster.png';
 	import { fade } from 'svelte/transition';
 	import { sineIn } from 'svelte/easing';
 	import { onMount } from 'svelte';
 	import { submitFormToNetlify } from '$lib/utils';
+	import { updatePosts, pinnedPosts } from '$lib/data/updates';
 
-	type Post = {
-		title: string;
-		description: string;
-		image?: string;
-	};
-	const pinnedPosts: Post[] = [
-		{
-			title: 'Community Calendar - March 2024',
-			description:
-				'Our community calendar includes pickup schedules, upcoming local events, and the HOA meeting schedule. To view and download the calendar, <a class="anchor" href="/calendar">click here</a>.'
-		}
-	];
-	const updatePosts: Post[] = [
-		{
-			title: 'Next HOA meeting will be 4/1',
-			description:
-				'We will be meeting on 4/1 to discuss the upcoming community yard sale and the various construction projects around the neighborhood. We will also be holding elections for the new Party Planning Committee.'
-		},
-		{
-			title: 'Road Work Starting 3/25',
-			image: westminster,
-			description:
-				'Please be aware that Westminster Ave. will be closed on 3/25 for road work. The city will be filling two pot holes and repainting the crosswalks.'
-		}
-	];
 	let mounted = false;
 	onMount(() => {
-		setTimeout(() => {
-			document.getElementById('content')?.classList.add('customBlur');
-			mounted = true;
-		}, 100);
+		mounted = true;
 	});
 
 	let isSubscribeFormSubmitting = false;
@@ -63,12 +35,12 @@
 {#if mounted}
 	<div
 		class="mx-2 mb-4 mt-24 flex flex-col-reverse justify-center gap-4
-  lg:mx-0 lg:mt-28 lg:flex-row"
-		in:fade={{ duration: 800, easing: sineIn }}
+  				lg:mx-0 lg:mt-28 lg:flex-row"
+		in:fade={{ duration: 800, easing: sineIn, delay: 100 }}
 	>
 		<div
 			class="card variant-glass-secondary h-fit p-6
-shadow-md lg:w-[20vw]"
+						shadow-md lg:w-[20vw]"
 		>
 			<h2 class="h2 text-center">Pelican Press</h2>
 			<p>
@@ -79,38 +51,40 @@ shadow-md lg:w-[20vw]"
 		</div>
 		<div
 			class="card variant-glass-secondary max-w-5xl p-1 shadow-md
-lg:w-[40vw] lg:p-6"
+						lg:w-[40vw] lg:p-6"
 		>
 			<h1
 				class="h1 mb-6 mt-2 text-center
-lg:mt-0"
+							lg:mt-0"
 			>
 				Community Updates
 			</h1>
 			<!-- Pinned Posts -->
-			<div
-				class="variant-ringed-surface relative flex flex-col gap-4 rounded-md p-3 ring-paper-darker"
-			>
-				<h2
-					class="variant-ringed-surface h3 absolute z-10 w-fit -translate-x-1 -translate-y-9 rounded-lg bg-primary-300 p-1 ring-paper-darker"
+			{#if pinnedPosts.length}
+				<div
+					class="variant-ringed-surface relative flex flex-col gap-4 rounded-md p-3 ring-paper-darker"
 				>
-					Pinned Items
-				</h2>
-				{#each pinnedPosts as post}
-					<UpdatePost>
-						<svelte:fragment slot="title">{post.title}</svelte:fragment>
-						<svelte:fragment slot="image">
-							{#if post.image}
-								<img src={post.image} alt="" class="rounded-2xl" />
-							{:else}
-								<img src="$lib/assets/hammer-point-logo.svg" alt="" />
-							{/if}
-						</svelte:fragment>
-						<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-						<svelte:fragment slot="description">{@html post.description}</svelte:fragment>
-					</UpdatePost>
-				{/each}
-			</div>
+					<h2
+						class="variant-ringed-surface h3 absolute z-10 w-fit -translate-x-1 -translate-y-9 rounded-lg bg-primary-300 p-1 ring-paper-darker"
+					>
+						Pinned Items
+					</h2>
+					{#each pinnedPosts as post}
+						<UpdatePost>
+							<svelte:fragment slot="title">{post.title}</svelte:fragment>
+							<svelte:fragment slot="image">
+								{#if post.image}
+									<img src={post.image} alt="" class="rounded-2xl" />
+								{:else}
+									<img src="$lib/assets/hammer-point-logo.svg" alt="" />
+								{/if}
+							</svelte:fragment>
+							<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+							<svelte:fragment slot="description">{@html post.description}</svelte:fragment>
+						</UpdatePost>
+					{/each}
+				</div>
+			{/if}
 			<!-- Recent Posts -->
 			<div
 				class="variant-ringed-surface relative mt-10 flex flex-col gap-4 rounded-md p-3 ring-paper-darker"
@@ -138,7 +112,7 @@ lg:mt-0"
 		</div>
 		<div
 			class="flex flex-col gap-4
-lg:mx-0 lg:w-[20vw] lg:max-w-lg"
+						lg:mx-0 lg:w-[20vw] lg:max-w-lg"
 		>
 			<div class="card variant-glass-secondary mx-auto p-6 shadow-md ring-1">
 				<h2 class="h2 text-center">Stay Informed!</h2>

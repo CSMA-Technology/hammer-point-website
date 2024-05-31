@@ -1,6 +1,6 @@
 <div class="card bg-paper-light p-6 shadow-md">
 	<div class="flex flex-row flex-wrap gap-4 xl:flex-nowrap">
-		<div class="mx-auto xs:h-52 xs:w-52 xs:shrink-0">
+		<div class="mx-auto xs:h-64 xs:w-64 xs:shrink-0">
 			<div class="flex h-full flex-col justify-center">
 				<slot name="image" />
 			</div>
@@ -9,7 +9,7 @@
 			<h3 class="h3 mb-2">
 				<slot name="title" />
 			</h3>
-			<p class="lg:text-lg">
+			<p class="lg:text-base">
 				<slot name="description" />
 			</p>
 		</div>

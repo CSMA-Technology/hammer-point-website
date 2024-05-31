@@ -9,10 +9,8 @@
 	let mounted = false;
 	onMount(() => {
 		document.documentElement.classList.replace('light', 'dark');
-		setTimeout(() => {
-			document.getElementById('content')?.classList.add('customBlur');
-			mounted = true;
-		}, 100);
+		document.getElementById('content')?.classList.add('customBlur');
+		mounted = true;
 		return () => {
 			document.documentElement.classList.replace('dark', 'light');
 		};
@@ -28,7 +26,7 @@
 		<div
 			class="card variant-glass-secondary mx-1 w-fit max-w-3xl px-2 py-6
 			sm:mx-4 sm:px-6 md:mx-auto"
-			in:fade={{ duration: 800, easing: sineIn }}
+			in:fade={{ duration: 800, easing: sineIn, delay: 100 }}
 		>
 			<h1 class="h1 text-center">Community Resources</h1>
 			<div class="mx-auto my-2 max-w-2xl">
@@ -44,7 +42,7 @@
 			sm:mx-4
 			sm:px-4
 			md:mx-auto lg:max-w-6xl"
-			in:fade={{ duration: 800, easing: sineIn }}
+			in:fade={{ duration: 800, easing: sineIn, delay: 100 }}
 		>
 			<div class="flex flex-col gap-4">
 				<ResourceCard>
@@ -157,6 +155,12 @@
 							</svelte:fragment>
 						</ResourceProperty>
 						<ResourceProperty>
+							<svelte:fragment slot="label">Address</svelte:fragment>
+							<svelte:fragment slot="value">
+								91630 Overseas Hwy<br /> Tavernier FL 33070
+							</svelte:fragment>
+						</ResourceProperty>
+						<ResourceProperty>
 							<svelte:fragment slot="label">Mailing Address</svelte:fragment>
 							<svelte:fragment slot="value">
 								P.O. Box 377<br />Tavernier, FL 33070
@@ -179,7 +183,7 @@
 						<ResourceProperty>
 							<svelte:fragment slot="label">Website</svelte:fragment>
 							<svelte:fragment slot="value">
-								<a href="https://www.fkaa.com" target="_blank">www.faa.com</a>
+								<a href="https://www.fkaa.com" target="_blank">www.fkaa.com</a>
 							</svelte:fragment>
 						</ResourceProperty>
 						<ResourceProperty>
