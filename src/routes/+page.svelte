@@ -18,8 +18,8 @@
 	<title>Hammer Point HOA</title>
 </svelte:head>
 
-<div id="content" class="flex h-full flex-col justify-between px-10">
-	<div class="flex h-full min-h-[720px] flex-col justify-between bg-cover bg-center">
+<div id="content" class="mx-2 flex h-full flex-col justify-between lg:px-10">
+	<div class="flex h-full min-h-[720px] flex-col justify-between">
 		{#if mounted}
 			<div
 				class="mx-auto my-auto mb-4 flex w-full flex-row flex-wrap justify-between gap-y-4 pt-24
@@ -82,10 +82,11 @@
 					</ul>
 				</div>
 			</div>
-			<div class="mx-auto mb-4">
+			<div class="mb-4 w-full">
 				<div
 					in:fade={{ duration: 800, easing: sineIn, delay: 100 }}
-					class="card variant-glass-secondary mx-auto w-full max-w-2xl grow !border-none p-4 xs:p-8
+					class="card variant-glass-secondary mx-auto w-full max-w-2xl grow !border-none p-4
+					xs:p-8
 					xl:max-w-7xl"
 				>
 					<h2 class="h1 text-center">What Your Neighbors Are Saying</h2>
