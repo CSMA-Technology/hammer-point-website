@@ -22,12 +22,12 @@
 <div class="mb-4 flex h-full flex-col">
 	{#if mounted}
 		<div
-			class=" card variant-glass-surface mx-auto w-full bg-paper-darker bg-opacity-20 px-4 pt-24
-	md:mt-28 md:w-[90vw] md:p-8"
+			class="card variant-glass-surface mx-auto w-full bg-paper-darker bg-opacity-20 px-4 pt-28
+						md:mt-28 md:w-[90vw] md:p-8"
 			in:fade={{ duration: 800, easing: sineIn, delay: 100 }}
 		>
 			<h1 class="h1 text-center font-semibold">Gallery</h1>
-			<div class="mt-4 text-center">
+			<div class="mt-2 text-center">
 				<p>
 					The photos below were taken by your neighbors and highlight the beuaty of Hammer Point.
 				</p>
