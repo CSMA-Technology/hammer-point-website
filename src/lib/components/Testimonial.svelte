@@ -22,7 +22,7 @@
 	{/if}
 	<div
 		class="absolute bottom-2 right-3 text-right text-sm text-gray-500
-		xs:text-lg
+		sm:text-lg
 		"
 	>
 		—{author}
