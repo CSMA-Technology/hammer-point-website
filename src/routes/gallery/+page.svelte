@@ -34,7 +34,7 @@
 				<p>
 					If you'd like to submit photos, please email them to <a
 						class="anchor"
-						href="mailto:contact@hammerpointhoa.org">contact@hammerpointhoa.org</a
+						href="mailto:hammerpointhoa@gmail.com">hammerpointhoa@gmail.com</a
 					>
 				</p>
 				<div class="relative mt-8 flex w-full flex-row flex-wrap justify-center gap-8">
@@ -42,18 +42,27 @@
 						<div class="relative">
 							<button
 								on:click={() => {
+									console.log(image.src);
 									modalStore.trigger({
 										type: 'component',
 										component: modalComponent,
 										image: image.src
 									});
 								}}
-								><img
-									class="h-96 w-96 rounded-xl border-2 border-primary-700 object-cover"
-									src={image.src}
-									alt=""
-								/></button
 							>
+								{#if image.enhancedImage}
+									<enhanced:img
+										class="h-96 w-96 rounded-xl border-2 border-primary-700 object-cover"
+										src={image.enhancedImage}
+									/>
+								{:else}
+									<img
+										class="h-96 w-96 rounded-xl border-2 border-primary-700 object-cover"
+										src={image.src}
+										alt=""
+									/>
+								{/if}
+							</button>
 							{#if image.photographer}
 								<div
 									class="absolute -bottom-3 right-1 -z-10 rounded-b-md bg-paper-light px-0.5 text-sm"
