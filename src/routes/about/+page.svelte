@@ -95,11 +95,11 @@
 								<Rope />
 							</div>
 							<p class="text-pretty text-lg">
-								<strong>Mailing Address:</strong> P.O. 90, Tavernier, FL 33070
+								<strong>Mailing Address:</strong><br /> P.O. Box 90<br /> Tavernier, FL 33070
 							</p>
-							<p class="text-pretty text-lg">
+							<p class="mt-1 text-pretty text-lg">
 								<strong>Email:</strong>
-								<a href="mailto:support@hammerpointhoa.org" class="anchor break-all"
+								<a href="mailto:hammerpointhoa@gmail.com" class="anchor break-all"
 									>hammerpointhoa@gmail.com</a
 								>
 							</p>

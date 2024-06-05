@@ -119,6 +119,18 @@
 								<a href="https://myfwc.com" target="_blank">myfwc.com</a>
 							</svelte:fragment>
 						</ResourceProperty>
+						<hr class="my-2 !border-tertiary-500/30" />
+						<p class="hyphens-auto text-balance break-all text-justify text-sm">
+							To report wildlife in distress, or a fishing, boating, or wildlife violation call the
+							<strong>Wildlife Alert Hotline</strong>: (888) 404-3922.
+							<br />
+							To report nuisance alligators/crocodiles call (866) 392-4286.
+							<br />
+							For more information on these topics go to
+							<a target="_blank" href="https://myfwc.com/contact/incident-reporting/"
+								>myfw.com/contact/incident-reporting</a
+							>
+						</p>
 					</dl>
 				</ResourceCard>
 				<ResourceCard>
