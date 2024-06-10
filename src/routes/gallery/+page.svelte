@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getModalStore, type ModalComponent } from '@skeletonlabs/skeleton';
-	import ImageModal from './ImageModal.svelte';
+	import ImageModal from '../../lib/components/ImageModal.svelte';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { sineIn } from 'svelte/easing';
@@ -42,7 +42,6 @@
 						<div class="relative">
 							<button
 								on:click={() => {
-									console.log(image.src);
 									modalStore.trigger({
 										type: 'component',
 										component: modalComponent,

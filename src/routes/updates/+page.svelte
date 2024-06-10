@@ -1,11 +1,17 @@
 <script lang="ts">
 	import NewsletterList from './NewsletterList.svelte';
+	import VideoModal from '$lib/components/VideoModal.svelte';
 	import UpdatePost from './UpdatePost.svelte';
 	import { fade } from 'svelte/transition';
 	import { sineIn } from 'svelte/easing';
 	import { onMount } from 'svelte';
 	import { submitFormToNetlify } from '$lib/utils';
 	import { updatePosts, pinnedPosts } from '$lib/data/updates';
+	import { getModalStore, type ModalComponent } from '@skeletonlabs/skeleton';
+
+	const modalComponent: ModalComponent = { ref: VideoModal };
+
+	const modalStore = getModalStore();
 
 	let mounted = false;
 	onMount(() => {
@@ -81,6 +87,21 @@
 							</svelte:fragment>
 							<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 							<svelte:fragment slot="description">{@html post.description}</svelte:fragment>
+							<svelte:fragment slot="video">
+								{#if post.video}
+									{@const videoSrc = post.video.src}
+									<button
+										class="anchor mt-1"
+										on:click={() => {
+											modalStore.trigger({
+												type: 'component',
+												component: modalComponent,
+												image: videoSrc
+											});
+										}}>{post.video.linkText}</button
+									>
+								{/if}
+							</svelte:fragment>
 						</UpdatePost>
 					{/each}
 				</div>
@@ -106,6 +127,21 @@
 						</svelte:fragment>
 						<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 						<svelte:fragment slot="description">{@html post.description}</svelte:fragment>
+						<svelte:fragment slot="video">
+							{#if post.video}
+								{@const videoSrc = post.video.src}
+								<button
+									class="anchor mt-1"
+									on:click={() => {
+										modalStore.trigger({
+											type: 'component',
+											component: modalComponent,
+											image: videoSrc
+										});
+									}}>{post.video.linkText}</button
+								>
+							{/if}
+						</svelte:fragment>
 					</UpdatePost>
 				{/each}
 			</div>
