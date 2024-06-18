@@ -6,6 +6,7 @@
 	import { page } from '$app/stores';
 
 	const links = [
+		{ href: '/', text: 'Home' },
 		{ href: '/about', text: 'About' },
 		{ href: '/resources', text: 'Resources' },
 		{ href: '/gallery', text: 'Gallery' },
@@ -30,10 +31,10 @@
 
 <div class="w-full sm:px-6">
 	<AppBar
-		border={`rounded-[2.5rem] mx-1 mb-[-100%] ${isMenuOpen ? 'h-64' : 'h-20'} transition-[height]`}
+		border={`rounded-[2.5rem] mx-1 mb-[-100%] ${isMenuOpen ? 'h-72' : 'h-20'} transition-[height]`}
 		background="variant-glass-tertiary shadow-sm relative z-50"
-		padding="mx-auto mt-2 w-fit max-md:w-full px-2 py-2"
-		gap="md:gap-8"
+		padding="mx-auto mt-2 w-fit max-lg:w-full px-2 py-2"
+		gap="lg:gap-8"
 	>
 		<svelte:fragment slot="lead">
 			<a href="/" class="flex flex-row items-center">
@@ -64,7 +65,7 @@
 		</svelte:fragment>
 		<svelte:fragment slot="trail">
 			<div>
-				<nav class="list-nav flex gap-0 max-md:hidden lg:min-w-[472px]">
+				<nav class="list-nav flex gap-0 max-lg:hidden lg:min-w-[472px]">
 					{#each links as link}
 						<a
 							class={`anchor mx-1 !px-3 font-semibold !text-inherit no-underline ${link.href === $page.url.pathname ? '!bg-surface-500/30' : ''}`}
@@ -76,7 +77,7 @@
 					{/each}
 				</nav>
 
-				<div class="pl-6 pr-4 md:hidden">
+				<div class="pl-6 pr-4 lg:hidden">
 					<button
 						role="menu"
 						class="flex h-5 w-5 cursor-pointer flex-col justify-between border-none bg-transparent"

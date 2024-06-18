@@ -27,7 +27,7 @@
 			>
 				<div
 					in:fade={{ duration: 800, easing: sineIn, delay: 100 }}
-					class="card variant-glass-secondary mx-auto h-fit max-w-2xl p-4
+					class="card variant-glass-secondary mx-auto h-fit max-w-2xl p-4 shadow
 					xl:mx-0"
 				>
 					<p class="h1 mx-auto w-fit text-center">Welcome to Hammer Point</p>
@@ -57,7 +57,7 @@
 				</div>
 				<div
 					in:fade={{ duration: 800, easing: sineIn, delay: 100 }}
-					class="card variant-glass-secondary mx-auto h-fit max-w-2xl p-4
+					class="card variant-glass-secondary mx-auto h-fit max-w-2xl p-4 shadow
 					xl:mx-0 xl:max-w-sm"
 				>
 					<h2 class="h1 text-center">News and Notes</h2>
@@ -85,7 +85,7 @@
 			<div class="mb-4 w-full">
 				<div
 					in:fade={{ duration: 800, easing: sineIn, delay: 100 }}
-					class="card variant-glass-secondary mx-auto w-full max-w-2xl grow !border-none p-4
+					class="card variant-glass-secondary mx-auto w-full max-w-2xl grow !border-none p-4 shadow
 					xs:p-8
 					xl:max-w-7xl"
 				>
@@ -127,6 +127,7 @@
 		animation-delay: 1s;
 		animation-duration: 60s;
 		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
 	}
 
 	@media (prefers-reduced-motion: reduce) {

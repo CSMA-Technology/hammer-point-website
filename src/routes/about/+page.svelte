@@ -58,7 +58,7 @@
 			>
 				<div class="flex flex-col">
 					<div
-						class="card variant-glass-surface h-fit max-w-xl px-2 py-6 sm:px-6"
+						class="card variant-glass-surface h-fit max-w-xl px-2 py-6 shadow sm:px-6"
 						in:fade={{ duration: 800, easing: sineIn, delay: 100 }}
 					>
 						<h2 class="h1 text-center">What We Do</h2>
@@ -87,7 +87,7 @@
 					</div>
 					<div class="mx-auto mt-6 flex max-w-[100rem] flex-row justify-between gap-y-4">
 						<div
-							class="card variant-glass-surface max-w-xl px-2 py-6 sm:px-6"
+							class="card variant-glass-surface max-w-xl px-2 py-6 shadow sm:px-6"
 							in:fade={{ duration: 800, easing: sineIn, delay: 100 }}
 						>
 							<h2 class="h1 text-center">Contact Information</h2>
@@ -150,7 +150,7 @@
 					</div>
 				</div>
 				<div
-					class="card variant-glass-surface mb-4 w-full max-w-xl px-2 py-6 sm:px-6
+					class="card variant-glass-surface mb-4 w-full max-w-xl px-2 py-6 shadow sm:px-6
 					md:w-fit
 					md:max-w-3xl"
 					in:fade={{ duration: 800, easing: sineIn, delay: 100 }}
