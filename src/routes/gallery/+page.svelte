@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getModalStore, type ModalComponent } from '@skeletonlabs/skeleton';
-	import ImageModal from '../../lib/components/ImageModal.svelte';
+	import ImageModal from '$lib/components/ImageModal.svelte';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { sineIn } from 'svelte/easing';

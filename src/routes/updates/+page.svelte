@@ -102,6 +102,11 @@
 									>
 								{/if}
 							</svelte:fragment>
+							<svelte:fragment slot="details">
+								{#if post.details}
+									<a href={post.details.src} class="anchor">{post.details.linkText}</a>
+								{/if}
+							</svelte:fragment>
 						</UpdatePost>
 					{/each}
 				</div>
@@ -131,7 +136,7 @@
 							{#if post.video}
 								{@const videoSrc = post.video.src}
 								<button
-									class="anchor mt-1"
+									class="anchor mt-1 text-left"
 									on:click={() => {
 										modalStore.trigger({
 											type: 'component',
@@ -140,6 +145,11 @@
 										});
 									}}>{post.video.linkText}</button
 								>
+							{/if}
+						</svelte:fragment>
+						<svelte:fragment slot="details">
+							{#if post.details}
+								<a href={post.details.src} class="anchor">{post.details.linkText}</a>
 							{/if}
 						</svelte:fragment>
 					</UpdatePost>
