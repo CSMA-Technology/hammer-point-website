@@ -70,7 +70,7 @@
 						<li>
 							To stay up to date with community news and events, head over to the <a
 								class="anchor"
-								href="newsletter">updates</a
+								href="updates">updates</a
 							> page.
 						</li>
 						<li>

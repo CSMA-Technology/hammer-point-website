@@ -77,7 +77,7 @@
 							that Hammer Point is a special place and we work to keep it that way.
 						</p>
 						<h3 class="h2 mt-3">Bylaws</h3>
-						<p>
+						<p class="text-pretty text-lg">
 							To view and download the association bylaws, <a
 								class="anchor"
 								target="_blank"

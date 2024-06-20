@@ -29,7 +29,7 @@
 			<h1 class="h1 text-center font-semibold">Gallery</h1>
 			<div class="mt-2 text-center">
 				<p>
-					The photos below were taken by your neighbors and highlight the beuaty of Hammer Point.
+					The photos below were taken by your neighbors and highlight the beauty of Hammer Point.
 				</p>
 				<p>
 					If you'd like to submit photos, please email them to <a
