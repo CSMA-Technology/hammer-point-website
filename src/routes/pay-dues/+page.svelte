@@ -35,16 +35,17 @@
 					rely on your contributions to keep our community clean, safe, and informed.
 				</p>
 				<p class="mt-2">
-					<strong>Annual dues are $100.00 per year, per property</strong>. Please make personal or
-					electronic checks payable to
+					<strong>Annual dues are $100.00 per year, per property</strong>. Dues cover the calendar
+					year (January-December) in which they are paid. Please make personal or electronic checks
+					payable to
 					<strong>Hammer Point Owners Association</strong> and mail to:
 				</p>
 				<p class="mx-auto my-2 w-fit">PO Box 90<br /> Tavernier Fl 33070</p>
 				<p>
-					Please include your <strong>name, address, and email</strong> with your payment. Your information
-					is not shared with any third parties. This allows us to contact you in the event of an emergency
-					that may affect your property. It also helps keep you informed of community events and items
-					of interest through our Hammer Point Newsletter.
+					Please fill out <a class="anchor" href="/HP_Dues_Form.pdf" target="_blank">this form</a> and
+					include it with your payment. Your information is not shared with any third parties. This allows
+					us to contact you in the event of an emergency that may affect your property. It also helps
+					keep you informed of community events and items of interest through our Hammer Point Newsletter.
 				</p>
 			</div>
 		</div>
