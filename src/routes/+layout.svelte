@@ -6,13 +6,16 @@
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup, initializeStores } from '@skeletonlabs/skeleton';
-	import { onNavigate } from '$app/navigation';
+	import { beforeNavigate, onNavigate } from '$app/navigation';
 	import { browser } from '$app/environment';
 
 	initializeStores();
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 
 	if (browser) {
+		beforeNavigate(() => {
+			document.getElementById('page')?.scrollTo(0, 0);
+		});
 		onNavigate((navigation) => {
 			if (!document.startViewTransition) return;
 

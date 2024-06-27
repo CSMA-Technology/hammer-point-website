@@ -12,7 +12,9 @@
 			<p class="lg:text-base">
 				<slot name="description" />
 			</p>
-			<slot name="details" />
+			<p>
+				<slot name="details" />
+			</p>
 			<slot name="video" />
 		</div>
 	</div>

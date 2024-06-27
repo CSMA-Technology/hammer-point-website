@@ -1,9 +1,6 @@
 <script lang="ts">
-	import { getModalStore, type ModalComponent } from '@skeletonlabs/skeleton';
-	import ImageModal from '$lib/components/ImageModal.svelte';
-	const modalComponent: ModalComponent = { ref: ImageModal };
-
-	const modalStore = getModalStore();
+	import UpdateDetailPost from '$lib/components/UpdateDetailPost.svelte';
+	import PhotoRow, { applyAltText } from '$lib/components/PhotoRow.svelte';
 
 	import canal1 from '$lib/assets/updates/canal/canal-restoration-1.jpg';
 	import canal2 from '$lib/assets/updates/canal/canal-restoration-2.jpg';
@@ -11,31 +8,12 @@
 	import canal4 from '$lib/assets/updates/canal/canal-restoration-4.jpg';
 </script>
 
-<h1 class="h2 text-center max-md:top-1">Canal 90 Restoration Project</h1>
-<div class="card variant-glass-secondary bg-paper-light p-4 sm:p-6">
-	<div
-		class="flex flex-col gap-2 hyphens-auto text-justify
-  max-sm:text-sm"
-	>
-		<div class="flex flex-row flex-wrap justify-around gap-2 max-sm:justify-center">
-			{#each [canal1, canal2, canal3, canal4] as img}
-				<button
-					on:click={() => {
-						modalStore.trigger({
-							type: 'component',
-							component: modalComponent,
-							image: img
-						});
-					}}
-				>
-					<img
-						src={img}
-						alt="Canal 90 Restoration Project"
-						class="h-44 w-44 rounded-md max-sm:h-32 max-sm:w-32"
-					/>
-				</button>
-			{/each}
-		</div>
+<UpdateDetailPost>
+	<svelte:fragment slot="title">Canal 90 Restoration Project</svelte:fragment>
+	<svelte:fragment>
+		<PhotoRow
+			photos={applyAltText([canal1, canal2, canal3, canal4], 'Canal 90 Restoration Project')}
+		/>
 		<p>
 			Restoration work began March 1, 2024, on Canal 90 (between Hilson Ct and Ivanhoe Ct.). The
 			work is funded by a Florida Department of Environmental Protection Keys Stewardship grant to
@@ -88,5 +66,5 @@
 			<br />
 			President, HPHOA
 		</p>
-	</div>
-</div>
+	</svelte:fragment>
+</UpdateDetailPost>
