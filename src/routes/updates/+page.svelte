@@ -104,7 +104,12 @@
 							</svelte:fragment>
 							<svelte:fragment slot="details">
 								{#if post.details}
-									<a href={post.details.src} class="anchor">{post.details.linkText}</a>
+									<a
+										href={post.details.src}
+										class="anchor"
+										target={post.details.linkOpenInNewTab ? '_blank' : ''}
+										>{post.details.linkText}</a
+									>
 								{/if}
 							</svelte:fragment>
 						</UpdatePost>
@@ -149,7 +154,11 @@
 						</svelte:fragment>
 						<svelte:fragment slot="details">
 							{#if post.details}
-								<a href={post.details.src} class="anchor">{post.details.linkText}</a>
+								<a
+									href={post.details.src}
+									class="anchor"
+									target={post.details.linkOpenInNewTab ? '_blank' : ''}>{post.details.linkText}</a
+								>
 							{/if}
 						</svelte:fragment>
 					</UpdatePost>

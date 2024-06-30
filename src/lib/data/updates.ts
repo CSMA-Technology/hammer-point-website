@@ -12,9 +12,22 @@ type Post = {
 	details?: {
 		src: string;
 		linkText: string;
+		linkOpenInNewTab?: boolean;
 	};
 };
-export const pinnedPosts: Post[] = [];
+export const pinnedPosts: Post[] = [
+	{
+		title: "4th of July Fireworks at Founder's Park",
+		image: (await import('$lib/assets/updates/fireworks/founders-park-fireworks-2024.jpg')).default,
+		description:
+			"Celebrate the 4th of July at Founder's Park with a fireworks show! The event is from 6-10PM. For more information, click the link below.",
+		details: {
+			src: 'https://islamoradachamber.com/happenings/#!event/2024/7/4/family-fun-food-fireworks',
+			linkText: 'Click here for more details',
+			linkOpenInNewTab: true
+		}
+	}
+];
 export const updatePosts: Post[] = [
 	{
 		title: 'Beautification Project Underway',

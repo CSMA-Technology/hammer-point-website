@@ -65,18 +65,21 @@
 					<ul class="my-4 list-inside space-y-3 text-xl" style="list-style-type: '📰 ';">
 						<li style="list-style-type: '🎆 ';">
 							Happy 4th of July from your board and neighbors! We hope you have a safe and enjoyable
-							holiday weekend.
+							holiday weekend. For information on local events and celebrations, check out the <a
+								class="anchor"
+								href="updates">updates</a
+							> page.
 						</li>
 						<li>
 							Your neighbors have been taking wonderful photos of the community. Check them out in
 							our <a class="anchor" href="gallery">gallery</a>!
 						</li>
-						<li>
+						<!-- <li>
 							To stay up to date with community news and events, head over to the <a
 								class="anchor"
 								href="updates">updates</a
 							> page.
-						</li>
+						</li> -->
 						<li>
 							Learn more about the Hammer Point HOA and your board members on the <a
 								class="anchor"
@@ -107,7 +110,7 @@
 <style>
 	/* Overide skeleton glass variant */
 	.variant-glass-secondary {
-		background-color: rgb(var(--color-secondary-500) / 0.5);
+		background-color: rgb(var(--color-secondary-500) / 0.65);
 	}
 
 	#content::before {
