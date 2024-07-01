@@ -29,6 +29,20 @@
 	}
 </script>
 
+<svelte:head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-94P7CQP6R1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-94P7CQP6R1');
+	</script>
+</svelte:head>
+
 <Modal />
 
 <AppShell>
