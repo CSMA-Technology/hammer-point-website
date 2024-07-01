@@ -26,6 +26,17 @@ export const pinnedPosts: Post[] = [
 			linkText: 'Click here for more details',
 			linkOpenInNewTab: true
 		}
+	},
+	{
+		title: 'Key Largo 4th of July Parade',
+		image: (await import('$lib/assets/updates/fireworks/key-largo-parade-2024.jpg')).default,
+		description:
+			"This free event begins at 10AM with a parade at MM98, and continues with a fireworks show at Rowell's Waterfront Park at 9:15PM.",
+		details: {
+			src: 'https://www.facebook.com/photo/?fbid=498416729389688&set=a.179564141274950',
+			linkText: 'Click here for more details',
+			linkOpenInNewTab: true
+		}
 	}
 ];
 export const updatePosts: Post[] = [

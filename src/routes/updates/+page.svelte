@@ -1,13 +1,14 @@
 <script lang="ts">
 	import NewsletterList from './NewsletterList.svelte';
 	import VideoModal from '$lib/components/VideoModal.svelte';
-	import UpdatePost from './UpdatePost.svelte';
+	import UpdatePost from '../../lib/components/UpdatePost.svelte';
 	import { fade } from 'svelte/transition';
 	import { sineIn } from 'svelte/easing';
 	import { onMount } from 'svelte';
 	import { submitFormToNetlify } from '$lib/utils';
 	import { updatePosts, pinnedPosts } from '$lib/data/updates';
 	import { getModalStore, type ModalComponent } from '@skeletonlabs/skeleton';
+	import ModalImage from '$lib/components/ModalImage.svelte';
 
 	const modalComponent: ModalComponent = { ref: VideoModal };
 
@@ -80,7 +81,7 @@
 							<svelte:fragment slot="title">{post.title}</svelte:fragment>
 							<svelte:fragment slot="image">
 								{#if post.image}
-									<img src={post.image} alt="" class="rounded-2xl" />
+									<ModalImage src={post.image} alt="" class="rounded-2xl" />
 								{:else}
 									<img src="$lib/assets/hammer-point-logo.svg" alt="" />
 								{/if}
@@ -130,7 +131,7 @@
 						<svelte:fragment slot="title">{post.title}</svelte:fragment>
 						<svelte:fragment slot="image">
 							{#if post.image}
-								<img src={post.image} alt="" class="rounded-2xl" />
+								<ModalImage src={post.image} alt="" class="rounded-2xl" />
 							{:else}
 								<img src="$lib/assets/hammer-point-logo.svg" alt="" />
 							{/if}
