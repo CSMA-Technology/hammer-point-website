@@ -63,12 +63,11 @@
 					<h2 class="h1 text-center">News and Notes</h2>
 					<Rope />
 					<ul class="my-4 list-inside space-y-3 text-xl" style="list-style-type: '📰 ';">
-						<li style="list-style-type: '🎆 ';">
-							Happy 4th of July from your board and neighbors! We hope you have a safe and enjoyable
-							holiday weekend. For information on local events and celebrations, check out the <a
-								class="anchor"
-								href="updates">updates</a
-							> page.
+						<li>
+							Don't miss the <em>Meet the Candidates Mixer</em> and
+							<em>Upper Keys Candidate Forum</em>
+							on August 13th and October 10th. Check the
+							<a class="anchor" href="updates">updates</a> page for more information.
 						</li>
 						<li>
 							Your neighbors have been taking wonderful photos of the community. Check them out in

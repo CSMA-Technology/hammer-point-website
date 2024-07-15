@@ -17,26 +17,11 @@ type Post = {
 };
 export const pinnedPosts: Post[] = [
 	{
-		title: "4th of July Fireworks at Founder's Park",
-		image: (await import('$lib/assets/updates/fireworks/founders-park-fireworks-2024.jpg')).default,
-		description:
-			"Celebrate the 4th of July at Founder's Park with a fireworks show! The event is from 6-10PM. For more information, click the link below.",
-		details: {
-			src: 'https://islamoradachamber.com/happenings/#!event/2024/7/4/family-fun-food-fireworks',
-			linkText: 'Click here for more details',
-			linkOpenInNewTab: true
-		}
-	},
-	{
-		title: 'Key Largo 4th of July Parade',
-		image: (await import('$lib/assets/updates/fireworks/key-largo-parade-2024.jpg')).default,
-		description:
-			"This free event begins at 10AM with a parade at MM98, and continues with a fireworks show at Rowell's Waterfront Park at 9:15PM.",
-		details: {
-			src: 'https://www.facebook.com/photo/?fbid=498416729389688&set=a.179564141274950',
-			linkText: 'Click here for more details',
-			linkOpenInNewTab: true
-		}
+		title: 'Learn About Local Candidates',
+		description: `There are two upcoming events where you can meet and learn more about the candidates running for local office here in the Upper Keys.
+		<br/><br/>The <strong>Meet the Candidates Mixer</strong> will take place August 13th at 6PM at the Crooked Palm Cabana.
+		<br/><br/>The <strong>Upper Keys Candidate Forum</strong> will take place October 10th at 5:30PM at the Murray Nelson Government Center.`,
+		image: (await import('$lib/assets/updates/informed-voter.jpg')).default
 	}
 ];
 export const updatePosts: Post[] = [
