@@ -17,12 +17,6 @@ type Post = {
 };
 export const pinnedPosts: Post[] = [
 	{
-		title: 'National Night Out',
-		description:
-			'Mark your calendars for this wonderful FREE community event! 2024 National Night Out. Join local law enforcement officials for this great event! Enjoy food, games and interaction with our community partners.',
-		image: (await import('$lib/assets/updates/national-night-out.jpg')).default
-	},
-	{
 		title: 'Learn About Local Candidates',
 		description: `There are two upcoming events where you can meet and learn more about the candidates running for local office here in the Upper Keys.
 		<br/><br/>The <strong>Meet the Candidates Mixer</strong> will take place August 13th at 6PM at the Crooked Palm Cabana.
