@@ -42,7 +42,7 @@ export const updatePosts: Post[] = [
 	{
 		title: 'Tire Recycling Event',
 		description:
-			'FREE Monroe County Tire Recycling Event! Bring your old tires to any participating Transfer Station and they will be recycled into granules for asphalt and road surfacing. Availeble between 9AM and 2 PM on the following dates: 9/7, 10/5, 11/2',
+			'FREE Monroe County Tire Recycling Event! Bring your old tires to any participating Transfer Station and they will be recycled into granules for asphalt and road surfacing. Available between 9AM and 2 PM on the following dates: 9/7, 10/5, 11/2',
 		image: (await import('$lib/assets/updates/tire-recycling-event.jpg')).default
 	},
 	{
