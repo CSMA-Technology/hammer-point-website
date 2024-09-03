@@ -64,13 +64,9 @@
 					<Rope />
 					<ul class="my-4 list-inside space-y-3 text-xl" style="list-style-type: '📰 ';">
 						<li>
-							Your board would like to wish all Hammer Point residents a happy and safe Labor Day
-							Weekend!
-						</li>
-						<li>
 							Don't miss the <em>Meet the Candidates Mixer</em> and
 							<em>Upper Keys Candidate Forum</em>
-							on August 13th and October 10th. Check the
+							on October 10th. Check the
 							<a class="anchor" href="updates">updates</a> page for more information.
 						</li>
 						<li>
