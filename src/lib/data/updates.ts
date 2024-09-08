@@ -19,7 +19,6 @@ export const pinnedPosts: Post[] = [
 	{
 		title: 'Learn About Local Candidates',
 		description: `There are two upcoming events where you can meet and learn more about the candidates running for local office here in the Upper Keys.
-		<br/><br/>The <strong>Meet the Candidates Mixer</strong> will take place August 13th at 6PM at the Crooked Palm Cabana.
 		<br/><br/>The <strong>Upper Keys Candidate Forum</strong> will take place October 10th at 5:30PM at the Murray Nelson Government Center.`,
 		image: (await import('$lib/assets/updates/informed-voter.jpg')).default
 	},
@@ -30,7 +29,7 @@ export const pinnedPosts: Post[] = [
 		<br><br> Proof of residency is required in the form of a driver’s license, utility bill, tax bill, etc. 
 		Residents are limited to one pick-up per household per event. You must be able to load the bags on your own or bring someone to assist you.
 		<br><br>
-		**If you are down in the Keys on  Saturdays (September 7th and/or October 5th)  and can go get your FREE compost, the HOA Beautification Committee would greatly appreciate it. This will help us with our entrance project. Just leave the bags at the entrance of the Hammer Point community (you will see a pile of other bags there). Thanks!!
+		**If you are down in the Keys on  Saturdays (September 7th and/or October 5th) and can go get your FREE compost, the HOA Beautification Committee would greatly appreciate it. This will help us with our entrance project. Just leave the bags at the entrance of the Hammer Point community (you will see a pile of other bags there). Thanks!!
 		<br><br>
 		<strong>
 		Monroe County Transfer Station <br>
@@ -39,6 +38,30 @@ export const pinnedPosts: Post[] = [
 	}
 ];
 export const updatePosts: Post[] = [
+	{
+		title: 'Monroe County Vaccine Event',
+		description: `
+Services offered include:
+<br/>
+Health Screenings
+<br/>
+Cancer Screenings
+<br/>
+Food Boxes
+<br/>
+Transportation
+<br/>
+Food Bank Distribution
+<br/>
+Voter Registration Assistance
+<br/>
+Lunch and Refreshments
+<br/><br/>Date: Monday September 23, 2024, from 10 AM - 1 PM
+<br/><br/>Location: 101491 Overseas Highway Key Largo, Florida 33037. Suite #4 / Tradewinds Plaza 
+<br/><br/>For more information: Call (786) 300-1556
+<br/><br/>
+Call by September 20th to reserve transportation`
+	},
 	{
 		title: 'Tire Recycling Event',
 		description:
