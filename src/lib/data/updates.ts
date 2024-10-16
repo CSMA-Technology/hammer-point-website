@@ -1,5 +1,6 @@
 import canalVideo from '$lib/assets/updates/canal/Canal_Work.mp4';
 import beautificationSign from '$lib/assets/updates/beautification/new-sign.jpg';
+import witchesRide from '$lib/assets/updates/witches-ride-24.png';
 type Post = {
 	title: string;
 	description: string;
@@ -16,6 +17,30 @@ type Post = {
 	};
 };
 export const pinnedPosts: Post[] = [
+	{
+		title: '11th Annual Witches Ride Fundraiser',
+		description: `Come by on <strong>Saturday, October 19th</strong> starting at 12pm at The Catch Restaurant & Bar – 104080 Overseas Highway
+		<br/><br/>
+		Registration is a $25 donation. (You can register at the Catch or at the Caribbean Club on the day of the event.)
+		<br/><br/>
+		Make sure to get creative and decorate your bikes and brooms and throw on your best witches dress! There will be a costume and bike contest!
+		<br/><br/>
+		After the party at the Catch, we will take flight and travel by broom, bike, or car to the Caribbean Club for a big bash in the backyard with music at around 2pm!
+		<br/><br/>
+		The Caribbean Club outside Tiki Bar will be open and serving up spooky specialty cocktails.
+		<br/><br/>
+		Expect lots of other fun surprises along the way: Jell-O shots, raffles, silent auction, and the infamous Witches Dance and much more!
+		<br/><br/>
+		All money raised at the fundraiser is donated to the Joey Patterson Memorial Scholarship Fund and local families in need.`,
+		image: witchesRide,
+		details: {
+			src: 'https://www.caribbeanclubkl.com/events/2024/10/19/the-11th-annual-witches-ride-fundraiser',
+			linkText: 'Click here for more details',
+			linkOpenInNewTab: true
+		}
+	}
+];
+export const updatePosts: Post[] = [
 	{
 		title: 'Learn About Local Candidates',
 		description: `There are two upcoming events where you can meet and learn more about the candidates running for local office here in the Upper Keys.
@@ -35,9 +60,7 @@ export const pinnedPosts: Post[] = [
 		Monroe County Transfer Station <br>
 		11180 County Rd 905
 		</strong>`
-	}
-];
-export const updatePosts: Post[] = [
+	},
 	{
 		title: 'Monroe County Vaccine Event',
 		description: `

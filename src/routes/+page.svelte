@@ -64,9 +64,8 @@
 					<Rope />
 					<ul class="my-4 list-inside space-y-3 text-xl" style="list-style-type: '📰 ';">
 						<li>
-							Don't miss the <em>Meet the Candidates Mixer</em> and
-							<em>Upper Keys Candidate Forum</em>
-							on October 10th. Check the
+							The 11th annual Witches Ride Fundraiser is on Saturday, October 19th! Don't miss this
+							great event! Check the
 							<a class="anchor" href="updates">updates</a> page for more information.
 						</li>
 						<li>
