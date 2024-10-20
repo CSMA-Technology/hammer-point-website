@@ -60,6 +60,30 @@ const imageData: GalleryImage[] = [
 			).map((module) => module())
 		),
 		'Richard & Helen, Ivanhoe Ct.'
+	),
+	// Lidia Yoham images
+	...transformImageFiles(
+		await Promise.all(
+			Object.values(
+				import.meta.glob<ImageFile>('$lib/assets/gallery/lidia_yoham/*', {
+					query: { enhanced: true },
+					import: 'default'
+				})
+			).map((module) => module())
+		),
+		'Lidia the Realtor, Ellington Ct.'
+	),
+	// Melissa and Alex images
+	...transformImageFiles(
+		await Promise.all(
+			Object.values(
+				import.meta.glob<ImageFile>('$lib/assets/gallery/melissa_alex/*', {
+					query: { enhanced: true },
+					import: 'default'
+				})
+			).map((module) => module())
+		),
+		'Melissa & Alex, Fairwich Ct.'
 	)
 ];
 
