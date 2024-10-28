@@ -16,7 +16,8 @@ type Post = {
 		linkOpenInNewTab?: boolean;
 	};
 };
-export const pinnedPosts: Post[] = [
+export const pinnedPosts: Post[] = [];
+export const updatePosts: Post[] = [
 	{
 		title: '11th Annual Witches Ride Fundraiser',
 		description: `Come by on <strong>Saturday, October 19th</strong> starting at 12pm at The Catch Restaurant & Bar – 104080 Overseas Highway
@@ -38,9 +39,7 @@ export const pinnedPosts: Post[] = [
 			linkText: 'Click here for more details',
 			linkOpenInNewTab: true
 		}
-	}
-];
-export const updatePosts: Post[] = [
+	},
 	{
 		title: 'Learn About Local Candidates',
 		description: `There are two upcoming events where you can meet and learn more about the candidates running for local office here in the Upper Keys.

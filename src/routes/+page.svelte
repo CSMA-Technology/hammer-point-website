@@ -64,33 +64,21 @@
 					<Rope />
 					<ul class="my-4 list-inside space-y-3 text-xl" style="list-style-type: '📰 ';">
 						<li>
-							The 11th annual Witches Ride Fundraiser is on Saturday, October 19th! Don't miss this
-							great event! Check the
-							<a class="anchor" href="updates">updates</a> page for more information.
-						</li>
-						<li>
-							The county is giving away free compost bags on 9/7 and 10/5. You can contribute to the
-							beautification project by donating a bag! Read more about it on the <a
-								class="anchor"
-								href="updates">updates</a
-							> page.
-						</li>
-						<li>
 							Your neighbors have been taking wonderful photos of the community. Check them out in
 							our <a class="anchor" href="gallery">gallery</a>!
 						</li>
-						<!-- <li>
+						<li>
 							To stay up to date with community news and events, head over to the <a
 								class="anchor"
 								href="updates">updates</a
 							> page.
-						</li> -->
-						<!-- <li>
+						</li>
+						<li>
 							Learn more about the Hammer Point HOA and your board members on the <a
 								class="anchor"
 								href="about">about</a
 							> page.
-						</li> -->
+						</li>
 					</ul>
 				</div>
 			</div>
