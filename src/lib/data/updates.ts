@@ -16,7 +16,21 @@ type Post = {
 		linkOpenInNewTab?: boolean;
 	};
 };
-export const pinnedPosts: Post[] = [];
+export const pinnedPosts: Post[] = [
+	{
+		title: 'Monroe County Tax Bill Printing Error',
+		description: `Attention Hammer Point Residents:<br><br>
+
+Monroe County Tax Collector Sam C. Steele has informed property owners of a printing error affecting mailed tax bills. Due to a vendor error, some Monroe County residents received tax bills printed on Charlotte County’s tax bill paper and displaying Charlotte County’s property values.<br><br>
+
+Tax Collector Steele assures residents that this was not a data breach but a printing mistake by TC Delivers, the vendor responsible. Residents can rest assured that their data remains secure, and payments through the Monroe County website are safe. For any questions, residents are encouraged to call the Monroe County Tax Collector’s Property Tax Department at (305) 295-5044 or visit <a href="http://www.monroetaxcollector.com">www.monroetaxcollector.com</a>.<br><br>
+`,
+		details: {
+			src: '/updates/detail/tax-collector-error',
+			linkText: 'To read the full notice from the Tax Collector, click here'
+		}
+	}
+];
 export const updatePosts: Post[] = [
 	{
 		title: '11th Annual Witches Ride Fundraiser',
