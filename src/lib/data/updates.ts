@@ -18,6 +18,11 @@ type Post = {
 };
 export const pinnedPosts: Post[] = [
 	{
+		title: 'Happy Thanksgiving!',
+		description: `The Hammer Point Board of Directors would like to wish everyone a Happy Thanksgiving! We hope you have a wonderful holiday with family and friends.`,
+		image: (await import('$lib/assets/updates/thanksgiving.jpeg')).default
+	},
+	{
 		title: 'Monroe County Tax Bill Printing Error',
 		description: `Attention Hammer Point Residents:<br><br>
 
