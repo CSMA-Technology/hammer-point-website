@@ -84,7 +84,19 @@ const imageData: GalleryImage[] = [
 			).map((module) => module())
 		),
 		'Melissa & Alex, Fairwich Ct.'
+	),
+	//Maria and Roberto images
+	...transformImageFiles(
+		await Promise.all(
+			Object.values(
+				import.meta.glob<ImageFile>('$lib/assets/gallery/maria_roberto/*', {
+					query: { enhanced: true },
+					import: 'default'
+				})
+			).map((module) => module())
+		),
+		'Maria & Roberto, Fairwich Ct.'
 	)
 ];
 
-export default imageData;
+export default imageData.reverse();

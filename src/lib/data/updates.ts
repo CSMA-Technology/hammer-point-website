@@ -1,6 +1,5 @@
 import canalVideo from '$lib/assets/updates/canal/Canal_Work.mp4';
 import beautificationSign from '$lib/assets/updates/beautification/new-sign.jpg';
-import witchesRide from '$lib/assets/updates/witches-ride-24.png';
 type Post = {
 	title: string;
 	description: string;
@@ -18,11 +17,6 @@ type Post = {
 };
 export const pinnedPosts: Post[] = [
 	{
-		title: 'Happy Thanksgiving!',
-		description: `The Hammer Point Board of Directors would like to wish everyone a Happy Thanksgiving! We hope you have a wonderful holiday with family and friends.`,
-		image: (await import('$lib/assets/updates/thanksgiving.jpeg')).default
-	},
-	{
 		title: 'Monroe County Tax Bill Printing Error',
 		description: `Attention Hammer Point Residents:<br><br>
 
@@ -38,34 +32,6 @@ Tax Collector Steele assures residents that this was not a data breach but a pri
 ];
 export const updatePosts: Post[] = [
 	{
-		title: '11th Annual Witches Ride Fundraiser',
-		description: `Come by on <strong>Saturday, October 19th</strong> starting at 12pm at The Catch Restaurant & Bar – 104080 Overseas Highway
-		<br/><br/>
-		Registration is a $25 donation. (You can register at the Catch or at the Caribbean Club on the day of the event.)
-		<br/><br/>
-		Make sure to get creative and decorate your bikes and brooms and throw on your best witches dress! There will be a costume and bike contest!
-		<br/><br/>
-		After the party at the Catch, we will take flight and travel by broom, bike, or car to the Caribbean Club for a big bash in the backyard with music at around 2pm!
-		<br/><br/>
-		The Caribbean Club outside Tiki Bar will be open and serving up spooky specialty cocktails.
-		<br/><br/>
-		Expect lots of other fun surprises along the way: Jell-O shots, raffles, silent auction, and the infamous Witches Dance and much more!
-		<br/><br/>
-		All money raised at the fundraiser is donated to the Joey Patterson Memorial Scholarship Fund and local families in need.`,
-		image: witchesRide,
-		details: {
-			src: 'https://www.caribbeanclubkl.com/events/2024/10/19/the-11th-annual-witches-ride-fundraiser',
-			linkText: 'Click here for more details',
-			linkOpenInNewTab: true
-		}
-	},
-	{
-		title: 'Learn About Local Candidates',
-		description: `There are two upcoming events where you can meet and learn more about the candidates running for local office here in the Upper Keys.
-		<br/><br/>The <strong>Upper Keys Candidate Forum</strong> will take place October 10th at 5:30PM at the Murray Nelson Government Center.`,
-		image: (await import('$lib/assets/updates/informed-voter.jpg')).default
-	},
-	{
 		title: 'Free Compost Giveaway at County Transfer Stations',
 		description: `Monroe County and Monroe County’s yard waste contractor will offer free compost (nutrient-rich black dirt) to unincorporated Monroe County residents and cities of Marathon, Key Colony Beach, Islamorada, and Layton residents at the County’s three transfer stations on the first Saturday of each month from 9 a.m. to 2 p.m. or until it is gone. 
 		Residents can pickup up to six bags of compost -- the compost is already bagged and ready for pickup.
@@ -78,36 +44,6 @@ export const updatePosts: Post[] = [
 		Monroe County Transfer Station <br>
 		11180 County Rd 905
 		</strong>`
-	},
-	{
-		title: 'Monroe County Vaccine Event',
-		description: `
-Services offered include:
-<br/>
-Health Screenings
-<br/>
-Cancer Screenings
-<br/>
-Food Boxes
-<br/>
-Transportation
-<br/>
-Food Bank Distribution
-<br/>
-Voter Registration Assistance
-<br/>
-Lunch and Refreshments
-<br/><br/>Date: Monday September 23, 2024, from 10 AM - 1 PM
-<br/><br/>Location: 101491 Overseas Highway Key Largo, Florida 33037. Suite #4 / Tradewinds Plaza 
-<br/><br/>For more information: Call (786) 300-1556
-<br/><br/>
-Call by September 20th to reserve transportation`
-	},
-	{
-		title: 'Tire Recycling Event',
-		description:
-			'FREE Monroe County Tire Recycling Event! Bring your old tires to any participating Transfer Station and they will be recycled into granules for asphalt and road surfacing. Available between 9AM and 2 PM on the following dates: 9/7, 10/5, 11/2',
-		image: (await import('$lib/assets/updates/tire-recycling-event.jpg')).default
 	},
 	{
 		title: 'Beautification Project Underway',
