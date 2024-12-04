@@ -43,7 +43,7 @@
 						class="sm:min-h-[65px] sm:min-w-[65px]"
 						width="65"
 						height="65"
-						src="$lib/assets/hammer-point-logo-condensed.png"
+						src="$lib/assets/hammer-point-holiday-logo.png"
 						alt=""
 					/>
 				</div>
