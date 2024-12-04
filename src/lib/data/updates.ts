@@ -1,5 +1,8 @@
 import canalVideo from '$lib/assets/updates/canal/Canal_Work.mp4';
 import beautificationSign from '$lib/assets/updates/beautification/new-sign.jpg';
+import boatParade from '$lib/assets/updates/boat-parade-2024.jpg';
+import gardenClubHolidayMarket from '$lib/assets/updates/garden-club-holiday-market-2024.png';
+import santaCarolers from '$lib/assets/updates/santa-carolers-2024.jpg';
 type Post = {
 	title: string;
 	description: string;
@@ -31,6 +34,29 @@ Tax Collector Steele assures residents that this was not a data breach but a pri
 	}
 ];
 export const updatePosts: Post[] = [
+	{
+		title: 'Christmas in the Keys Boat Parade',
+		description:
+			'Enter your holiday decorated boat for a chance at $5000 CASH & prizes! The parade will begin at 7:30PM on December 14th.',
+		image: boatParade,
+		details: {
+			linkText: 'Click here for more details',
+			src: 'https://www.keylargoboatparade.com/',
+			linkOpenInNewTab: true
+		}
+	},
+	{
+		title: 'Florida Keys Garden Club Holiday Market',
+		description:
+			'Come out and enjoy our wonderful weather and delicious food and unique goods! Join the Florida Keys Garden Club for their  Holiday Market on December 7th from 9am-4pm. There will be vendors, food trucks, art, and more!',
+		image: gardenClubHolidayMarket
+	},
+	{
+		title: 'Santa Claus & His Carolers',
+		description:
+			'Join in the fun and sing along with Santa & his Carolers! <br><br>Santa & his Carolers will depart Station 20 at 5:10PM. See the Caroling Route above for when they will be passing by your area.',
+		image: santaCarolers
+	},
 	{
 		title: 'Free Compost Giveaway at County Transfer Stations',
 		description: `Monroe County and Monroe County’s yard waste contractor will offer free compost (nutrient-rich black dirt) to unincorporated Monroe County residents and cities of Marathon, Key Colony Beach, Islamorada, and Layton residents at the County’s three transfer stations on the first Saturday of each month from 9 a.m. to 2 p.m. or until it is gone. 

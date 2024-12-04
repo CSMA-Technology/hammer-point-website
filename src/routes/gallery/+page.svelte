@@ -38,7 +38,7 @@
 					>
 				</p>
 				<div class="relative mt-8 flex w-full flex-row flex-wrap justify-center gap-8">
-					{#each imageData as image}
+					{#each imageData as image, index}
 						<div class="relative">
 							<button
 								on:click={() => {
@@ -51,14 +51,17 @@
 							>
 								{#if image.enhancedImage}
 									<enhanced:img
+										loading={index < 10 ? 'eager' : 'lazy'}
 										class="h-96 w-96 rounded-xl border-2 border-primary-700 object-cover"
 										src={image.enhancedImage}
+										alt={`Gallery image by ${image.photographer}`}
 									/>
 								{:else}
 									<img
+										loading={index < 10 ? 'eager' : 'lazy'}
 										class="h-96 w-96 rounded-xl border-2 border-primary-700 object-cover"
 										src={image.src}
-										alt=""
+										alt={`Gallery image by ${image.photographer}`}
 									/>
 								{/if}
 							</button>
