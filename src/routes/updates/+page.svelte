@@ -1,5 +1,4 @@
 <script lang="ts">
-	import NewsletterList from './NewsletterList.svelte';
 	import VideoModal from '$lib/components/VideoModal.svelte';
 	import UpdatePost from '../../lib/components/UpdatePost.svelte';
 	import { fade } from 'svelte/transition';
@@ -41,31 +40,53 @@
 
 {#if mounted}
 	<div
-		class="mx-2 mb-4 mt-24 flex flex-col-reverse justify-center gap-4
-  				lg:mx-0 lg:mt-28 lg:flex-row"
+		class="mx-2 mb-4 mt-24 flex flex-col justify-center gap-4
+  				lg:mx-0 lg:mt-28"
 		in:fade={{ duration: 800, easing: sineIn, delay: 100 }}
 	>
 		<div
-			class="card variant-glass-secondary h-fit p-6
-						shadow-md lg:w-[20vw]"
-		>
-			<h2 class="h2 text-center">Pelican Press</h2>
-			<p>
-				The Pelican Press is our community's own volunteer newsletter. Check out recent editions by
-				clicking the links below!
-			</p>
-			<NewsletterList />
-		</div>
-		<div
-			class="card variant-glass-secondary max-w-5xl p-1 shadow-md
-						lg:w-[40vw] lg:p-6"
+			class="card variant-glass-secondary mx-auto max-w-4xl p-1 shadow-md
+						 lg:p-6"
 		>
 			<h1
-				class="h1 mb-6 mt-2 text-center
+				class="h1 mb-2 mt-2 text-center md:mb-4
 							lg:mt-0"
 			>
 				Community Updates
 			</h1>
+			<div
+				class="card variant-glass-secondary mx-auto mb-8 w-fit px-2 py-4 text-center shadow-md ring-1 lg:px-6"
+			>
+				<h2 class="h3">Stay Informed!</h2>
+				<p class="text-sm">
+					Subscribe our email list to get the latest community news straight to your inbox.
+				</p>
+				{#if !subscribeFormError}
+					{#if !didSubmitSubscribeForm}
+						<form on:submit|preventDefault={handleSubscribeFormSubmit} class="mx-auto max-w-md">
+							<input type="hidden" name="form-name" value="newsletter-subscribe" />
+							<div class="mt-3 flex flex-row flex-nowrap justify-center gap-1">
+								<input
+									name="email"
+									aria-label="Email Address"
+									type="email"
+									class="input border-paper-dark bg-paper-light"
+									placeholder="Email Address"
+								/>
+								<button disabled={isSubscribeFormSubmitting} class="variant-filled-primary btn"
+									>Subscribe</button
+								>
+							</div>
+						</form>
+					{:else}
+						<p class="card p-4 text-center text-lg text-success-500">Thank you for subscribing!</p>
+					{/if}
+				{:else}
+					<p class="card p-4 text-center text-lg text-error-500">
+						There was an error subscribing you to the newsletter. Please try again later.
+					</p>
+				{/if}
+			</div>
 			<!-- Pinned Posts -->
 			{#if pinnedPosts.length}
 				<div
@@ -164,43 +185,6 @@
 						</svelte:fragment>
 					</UpdatePost>
 				{/each}
-			</div>
-		</div>
-		<div
-			class="flex flex-col gap-4
-						lg:mx-0 lg:w-[20vw] lg:max-w-lg"
-		>
-			<div class="card variant-glass-secondary mx-auto p-6 shadow-md ring-1">
-				<h2 class="h2 text-center">Stay Informed!</h2>
-				<p>
-					Subscribe to the Pelican Press and get the latest edition straight to your inbox right
-					when it is published.
-				</p>
-				{#if !subscribeFormError}
-					{#if !didSubmitSubscribeForm}
-						<form on:submit|preventDefault={handleSubscribeFormSubmit}>
-							<input type="hidden" name="form-name" value="newsletter-subscribe" />
-							<div class="mt-3 flex flex-row flex-wrap justify-center gap-1 2xl:flex-nowrap">
-								<input
-									name="email"
-									aria-label="Email Address"
-									type="email"
-									class="input border-paper-dark bg-paper-light"
-									placeholder="Email Address"
-								/>
-								<button disabled={isSubscribeFormSubmitting} class="variant-filled-primary btn"
-									>Subscribe</button
-								>
-							</div>
-						</form>
-					{:else}
-						<p class="card p-4 text-center text-lg text-success-500">Thank you for subscribing!</p>
-					{/if}
-				{:else}
-					<p class="card p-4 text-center text-lg text-error-500">
-						There was an error subscribing you to the newsletter. Please try again later.
-					</p>
-				{/if}
 			</div>
 		</div>
 	</div>
