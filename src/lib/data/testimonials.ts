@@ -1,6 +1,11 @@
 export default [
 	{
 		quote:
+			'We have owned in Hammer Point since 1996. Our children grew up fishing and diving in the area. We made this our permanent residence 2023.',
+		author: 'Rick, Westminster Drive'
+	},
+	{
+		quote:
 			'Hammer Point has very active sea life canals and central access to land and sea. Many amenities and great sunsets!',
 		author: 'Debbie, Westminster Drive'
 	},

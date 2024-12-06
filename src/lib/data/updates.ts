@@ -20,6 +20,12 @@ type Post = {
 };
 export const pinnedPosts: Post[] = [
 	{
+		title: 'Florida Keys Garden Club Holiday Market',
+		description:
+			'Come out and enjoy our wonderful weather and delicious food and unique goods! Join the Florida Keys Garden Club for their  Holiday Market on December 7th from 9am-4pm. There will be vendors, food trucks, art, and more!',
+		image: gardenClubHolidayMarket
+	},
+	{
 		title: 'Christmas in the Keys Boat Parade',
 		description:
 			'Enter your holiday decorated boat for a chance at $5000 CASH & prizes! The parade will begin at 7:30PM on December 14th.',
@@ -29,12 +35,6 @@ export const pinnedPosts: Post[] = [
 			src: 'https://www.keylargoboatparade.com/',
 			linkOpenInNewTab: true
 		}
-	},
-	{
-		title: 'Florida Keys Garden Club Holiday Market',
-		description:
-			'Come out and enjoy our wonderful weather and delicious food and unique goods! Join the Florida Keys Garden Club for their  Holiday Market on December 7th from 9am-4pm. There will be vendors, food trucks, art, and more!',
-		image: gardenClubHolidayMarket
 	},
 	{
 		title: 'Santa Claus & His Carolers',
@@ -50,7 +50,7 @@ export const updatePosts: Post[] = [
 
 Monroe County Tax Collector Sam C. Steele has informed property owners of a printing error affecting mailed tax bills. Due to a vendor error, some Monroe County residents received tax bills printed on Charlotte County’s tax bill paper and displaying Charlotte County’s property values.<br><br>
 
-Tax Collector Steele assures residents that this was not a data breach but a printing mistake by TC Delivers, the vendor responsible. Residents can rest assured that their data remains secure, and payments through the Monroe County website are safe. For any questions, residents are encouraged to call the Monroe County Tax Collector’s Property Tax Department at (305) 295-5044 or visit <a href="http://www.monroetaxcollector.com">www.monroetaxcollector.com</a>.<br><br>
+Tax Collector Steele assures residents that this was not a data breach but a printing mistake by TC Delivers, the vendor responsible. Residents can rest assured that their data remains secure, and payments through the Monroe County website are safe. For any questions, residents are encouraged to call the Monroe County Tax Collector’s Property Tax Department at (305) 295-5044 or visit <a href="http://www.monroetaxcollector.com">monroetaxcollector.com</a>.<br><br>
 `,
 		details: {
 			src: '/updates/detail/tax-collector-error',
