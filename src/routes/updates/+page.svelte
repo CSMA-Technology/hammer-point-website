@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { preventDefault } from 'svelte/legacy';
+
 	import VideoModal from '$lib/components/VideoModal.svelte';
 	import UpdatePost from '../../lib/components/UpdatePost.svelte';
 	import { fade } from 'svelte/transition';
@@ -13,14 +15,14 @@
 
 	const modalStore = getModalStore();
 
-	let mounted = false;
+	let mounted = $state(false);
 	onMount(() => {
 		mounted = true;
 	});
 
-	let isSubscribeFormSubmitting = false;
-	let didSubmitSubscribeForm = false;
-	let subscribeFormError = '';
+	let isSubscribeFormSubmitting = $state(false);
+	let didSubmitSubscribeForm = $state(false);
+	let subscribeFormError = $state('');
 	const handleSubscribeFormSubmit = async (event: Event) => {
 		isSubscribeFormSubmitting = true;
 		const form = event.target as HTMLFormElement;
@@ -63,7 +65,7 @@
 				</p>
 				{#if !subscribeFormError}
 					{#if !didSubmitSubscribeForm}
-						<form on:submit|preventDefault={handleSubscribeFormSubmit} class="mx-auto max-w-md">
+						<form onsubmit={preventDefault(handleSubscribeFormSubmit)} class="mx-auto max-w-md">
 							<input type="hidden" name="form-name" value="newsletter-subscribe" />
 							<div class="mt-3 flex flex-row flex-nowrap justify-center gap-1">
 								<input
@@ -99,41 +101,51 @@
 					</h2>
 					{#each pinnedPosts as post}
 						<UpdatePost>
-							<svelte:fragment slot="title">{post.title}</svelte:fragment>
-							<svelte:fragment slot="image">
-								{#if post.image}
-									<ModalImage src={post.image} alt="" class="rounded-2xl" />
-								{:else}
-									<img src="$lib/assets/hammer-point-logo.svg" alt="" />
-								{/if}
-							</svelte:fragment>
+							{#snippet title()}
+														{post.title}
+													{/snippet}
+							{#snippet image()}
+													
+									{#if post.image}
+										<ModalImage src={post.image} alt="" class="rounded-2xl" />
+									{:else}
+										<img src="$lib/assets/hammer-point-logo.svg" alt="" />
+									{/if}
+								
+													{/snippet}
 							<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-							<svelte:fragment slot="description">{@html post.description}</svelte:fragment>
-							<svelte:fragment slot="video">
-								{#if post.video}
-									{@const videoSrc = post.video.src}
-									<button
-										class="anchor mt-1"
-										on:click={() => {
+							{#snippet description()}
+														{@html post.description}
+													{/snippet}
+							{#snippet video()}
+													
+									{#if post.video}
+										{@const videoSrc = post.video.src}
+										<button
+											class="anchor mt-1"
+											onclick={() => {
 											modalStore.trigger({
 												type: 'component',
 												component: modalComponent,
 												image: videoSrc
 											});
 										}}>{post.video.linkText}</button
-									>
-								{/if}
-							</svelte:fragment>
-							<svelte:fragment slot="details">
-								{#if post.details}
-									<a
-										href={post.details.src}
-										class="anchor"
-										target={post.details.linkOpenInNewTab ? '_blank' : ''}
-										>{post.details.linkText}</a
-									>
-								{/if}
-							</svelte:fragment>
+										>
+									{/if}
+								
+													{/snippet}
+							{#snippet details()}
+													
+									{#if post.details}
+										<a
+											href={post.details.src}
+											class="anchor"
+											target={post.details.linkOpenInNewTab ? '_blank' : ''}
+											>{post.details.linkText}</a
+										>
+									{/if}
+								
+													{/snippet}
 						</UpdatePost>
 					{/each}
 				</div>
@@ -149,40 +161,50 @@
 				</h2>
 				{#each updatePosts as post}
 					<UpdatePost>
-						<svelte:fragment slot="title">{post.title}</svelte:fragment>
-						<svelte:fragment slot="image">
-							{#if post.image}
-								<ModalImage src={post.image} alt="" class="rounded-2xl" />
-							{:else}
-								<img src="$lib/assets/hammer-point-logo.svg" alt="" />
-							{/if}
-						</svelte:fragment>
+						{#snippet title()}
+												{post.title}
+											{/snippet}
+						{#snippet image()}
+											
+								{#if post.image}
+									<ModalImage src={post.image} alt="" class="rounded-2xl" />
+								{:else}
+									<img src="$lib/assets/hammer-point-logo.svg" alt="" />
+								{/if}
+							
+											{/snippet}
 						<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-						<svelte:fragment slot="description">{@html post.description}</svelte:fragment>
-						<svelte:fragment slot="video">
-							{#if post.video}
-								{@const videoSrc = post.video.src}
-								<button
-									class="anchor mt-1 text-left"
-									on:click={() => {
+						{#snippet description()}
+												{@html post.description}
+											{/snippet}
+						{#snippet video()}
+											
+								{#if post.video}
+									{@const videoSrc = post.video.src}
+									<button
+										class="anchor mt-1 text-left"
+										onclick={() => {
 										modalStore.trigger({
 											type: 'component',
 											component: modalComponent,
 											image: videoSrc
 										});
 									}}>{post.video.linkText}</button
-								>
-							{/if}
-						</svelte:fragment>
-						<svelte:fragment slot="details">
-							{#if post.details}
-								<a
-									href={post.details.src}
-									class="anchor"
-									target={post.details.linkOpenInNewTab ? '_blank' : ''}>{post.details.linkText}</a
-								>
-							{/if}
-						</svelte:fragment>
+									>
+								{/if}
+							
+											{/snippet}
+						{#snippet details()}
+											
+								{#if post.details}
+									<a
+										href={post.details.src}
+										class="anchor"
+										target={post.details.linkOpenInNewTab ? '_blank' : ''}>{post.details.linkText}</a
+									>
+								{/if}
+							
+											{/snippet}
 					</UpdatePost>
 				{/each}
 			</div>

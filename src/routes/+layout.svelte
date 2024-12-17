@@ -8,6 +8,11 @@
 	import { storePopup, initializeStores } from '@skeletonlabs/skeleton';
 	import { beforeNavigate, onNavigate } from '$app/navigation';
 	import { browser } from '$app/environment';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 
 	initializeStores();
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
@@ -46,14 +51,18 @@
 <Modal />
 
 <AppShell>
-	<svelte:fragment slot="header">
-		<AppBar />
-	</svelte:fragment>
+	{#snippet header()}
+	
+			<AppBar />
+		
+	{/snippet}
 	<!-- Page Route Content -->
-	<slot />
-	<svelte:fragment slot="pageFooter">
-		<div class="bg-tertiary-500 p-4 text-center text-white">
-			<p class="text-sm">&copy; 2024 Hammer Point Owners Association</p>
-		</div>
-	</svelte:fragment>
+	{@render children?.()}
+	{#snippet pageFooter()}
+	
+			<div class="bg-tertiary-500 p-4 text-center text-white">
+				<p class="text-sm">&copy; 2024 Hammer Point Owners Association</p>
+			</div>
+		
+	{/snippet}
 </AppShell>

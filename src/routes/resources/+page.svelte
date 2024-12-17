@@ -6,7 +6,7 @@
 	import ResourceProperty from './ResourceProperty.svelte';
 	import Rope from '$lib/components/Rope.svelte';
 
-	let mounted = false;
+	let mounted = $state(false);
 	onMount(() => {
 		document.documentElement.classList.replace('light', 'dark');
 		document.getElementById('content')?.classList.add('customBlur');
@@ -46,56 +46,92 @@
 		>
 			<div class="flex flex-col gap-4">
 				<ResourceCard>
-					<svelte:fragment slot="heading"
-						>2024 State of the County and Information Guide</svelte:fragment
-					>
+					{#snippet heading()}
+										2024 State of the County and Information Guide
+									{/snippet}
 					<p class="pt-2 text-center">
 						<a class="anchor" href="/monroe-guide-2024.pdf" target="_blank">Click here</a> to download
 					</p>
 				</ResourceCard>
 				<ResourceCard>
-					<svelte:fragment slot="heading">Law Enforcement</svelte:fragment>
-					<svelte:fragment slot="subtitle">Sheriff's Office</svelte:fragment>
+					{#snippet heading()}
+										Law Enforcement
+									{/snippet}
+					{#snippet subtitle()}
+										Sheriff's Office
+									{/snippet}
 					<dl>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Emergency</svelte:fragment>
-							<svelte:fragment slot="value">911</svelte:fragment>
+							{#snippet label()}
+														Emergency
+													{/snippet}
+							{#snippet value()}
+														911
+													{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Non-Emergency</svelte:fragment>
-							<svelte:fragment slot="value">(305) 853-3211</svelte:fragment>
+							{#snippet label()}
+														Non-Emergency
+													{/snippet}
+							{#snippet value()}
+														(305) 853-3211
+													{/snippet}
 						</ResourceProperty>
 					</dl>
 				</ResourceCard>
 				<ResourceCard>
-					<svelte:fragment slot="heading">Garbage and Recycling</svelte:fragment>
-					<svelte:fragment slot="subtitle">Keys Sanitary Service</svelte:fragment>
+					{#snippet heading()}
+										Garbage and Recycling
+									{/snippet}
+					{#snippet subtitle()}
+										Keys Sanitary Service
+									{/snippet}
 					<dl>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Website</svelte:fragment>
-							<svelte:fragment slot="value">
-								<a href="https://www.keyssanitaryservice.com" target="_blank"
-									>www.keyssanitaryservice.com</a
-								>
-							</svelte:fragment>
+							{#snippet label()}
+														Website
+													{/snippet}
+							{#snippet value()}
+													
+									<a href="https://www.keyssanitaryservice.com" target="_blank"
+										>www.keyssanitaryservice.com</a
+									>
+								
+													{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Mailing Address</svelte:fragment>
-							<svelte:fragment slot="value">
-								300 Central Avenue<br />Key Largo, FL 33037
-							</svelte:fragment>
+							{#snippet label()}
+														Mailing Address
+													{/snippet}
+							{#snippet value()}
+													
+									300 Central Avenue<br />Key Largo, FL 33037
+								
+													{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Phone Number</svelte:fragment>
-							<svelte:fragment slot="value">(305) 451-2025</svelte:fragment>
+							{#snippet label()}
+														Phone Number
+													{/snippet}
+							{#snippet value()}
+														(305) 451-2025
+													{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Garbage Pickup</svelte:fragment>
-							<svelte:fragment slot="value">Tuesdays and Fridays</svelte:fragment>
+							{#snippet label()}
+														Garbage Pickup
+													{/snippet}
+							{#snippet value()}
+														Tuesdays and Fridays
+													{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Recycling & Yard Waste Pickup</svelte:fragment>
-							<svelte:fragment slot="value">Thursdays</svelte:fragment>
+							{#snippet label()}
+														Recycling & Yard Waste Pickup
+													{/snippet}
+							{#snippet value()}
+														Thursdays
+													{/snippet}
 						</ResourceProperty>
 						<hr class="my-2 !border-tertiary-500/30" />
 						<p class="hyphens-auto text-justify text-sm">
@@ -108,16 +144,22 @@
 					</dl>
 				</ResourceCard>
 				<ResourceCard>
-					<svelte:fragment slot="heading">Fish & Wildlife</svelte:fragment>
-					<svelte:fragment slot="subtitle"
-						>Florida Fish and Wildlife Conservation Commission</svelte:fragment
-					>
+					{#snippet heading()}
+										Fish & Wildlife
+									{/snippet}
+					{#snippet subtitle()}
+										Florida Fish and Wildlife Conservation Commission
+									{/snippet}
 					<dl>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Website</svelte:fragment>
-							<svelte:fragment slot="value">
-								<a href="https://myfwc.com" target="_blank">myfwc.com</a>
-							</svelte:fragment>
+							{#snippet label()}
+														Website
+													{/snippet}
+							{#snippet value()}
+													
+									<a href="https://myfwc.com" target="_blank">myfwc.com</a>
+								
+													{/snippet}
 						</ResourceProperty>
 						<hr class="my-2 !border-tertiary-500/30" />
 						<p class="hyphens-auto text-balance text-justify text-sm">
@@ -137,49 +179,75 @@
 					</dl>
 				</ResourceCard>
 				<ResourceCard>
-					<svelte:fragment slot="heading">Free Local Media Publications</svelte:fragment>
+					{#snippet heading()}
+										Free Local Media Publications
+									{/snippet}
 					<dl>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Keys Weekly</svelte:fragment>
-							<svelte:fragment slot="value">
-								<a href="https://www.keysweekly.com" target="_blank">www.keysweekly.com</a>
-							</svelte:fragment>
+							{#snippet label()}
+														Keys Weekly
+													{/snippet}
+							{#snippet value()}
+													
+									<a href="https://www.keysweekly.com" target="_blank">www.keysweekly.com</a>
+								
+													{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Florida Keys Free Press</svelte:fragment>
-							<svelte:fragment slot="value">
-								<a href="https://www.keysnews.com/flkeysfreepress" target="_blank"
-									>www.keysnews.com/flkeysfreepress</a
-								>
-							</svelte:fragment>
+							{#snippet label()}
+														Florida Keys Free Press
+													{/snippet}
+							{#snippet value()}
+													
+									<a href="https://www.keysnews.com/flkeysfreepress" target="_blank"
+										>www.keysnews.com/flkeysfreepress</a
+									>
+								
+													{/snippet}
 						</ResourceProperty>
 					</dl>
 				</ResourceCard>
 			</div>
 			<div class="flex flex-col gap-4">
 				<ResourceCard>
-					<svelte:fragment slot="heading">Electric Utility</svelte:fragment>
-					<svelte:fragment slot="subtitle">
-						Florida Keys Electric Cooperative Association, Inc.
-					</svelte:fragment>
+					{#snippet heading()}
+										Electric Utility
+									{/snippet}
+					{#snippet subtitle()}
+									
+							Florida Keys Electric Cooperative Association, Inc.
+						
+									{/snippet}
 					<dl>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Website</svelte:fragment>
-							<svelte:fragment slot="value">
-								<a href="https://www.fkec.com" target="_blank">www.fkec.com</a>
-							</svelte:fragment>
+							{#snippet label()}
+														Website
+													{/snippet}
+							{#snippet value()}
+													
+									<a href="https://www.fkec.com" target="_blank">www.fkec.com</a>
+								
+													{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Address</svelte:fragment>
-							<svelte:fragment slot="value">
-								91630 Overseas Hwy<br /> Tavernier FL 33070
-							</svelte:fragment>
+							{#snippet label()}
+														Address
+													{/snippet}
+							{#snippet value()}
+													
+									91630 Overseas Hwy<br /> Tavernier FL 33070
+								
+													{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Mailing Address</svelte:fragment>
-							<svelte:fragment slot="value">
-								P.O. Box 377<br />Tavernier, FL 33070
-							</svelte:fragment>
+							{#snippet label()}
+														Mailing Address
+													{/snippet}
+							{#snippet value()}
+													
+									P.O. Box 377<br />Tavernier, FL 33070
+								
+													{/snippet}
 						</ResourceProperty>
 					</dl>
 					<hr class="my-2 !border-tertiary-500/30" />
@@ -192,72 +260,118 @@
 					</p>
 				</ResourceCard>
 				<ResourceCard>
-					<svelte:fragment slot="heading">Water Utility</svelte:fragment>
-					<svelte:fragment slot="subtitle">Florida Keys Aquaduct Authority</svelte:fragment>
+					{#snippet heading()}
+										Water Utility
+									{/snippet}
+					{#snippet subtitle()}
+										Florida Keys Aquaduct Authority
+									{/snippet}
 					<dl>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Website</svelte:fragment>
-							<svelte:fragment slot="value">
-								<a href="https://www.fkaa.com" target="_blank">www.fkaa.com</a>
-							</svelte:fragment>
+							{#snippet label()}
+														Website
+													{/snippet}
+							{#snippet value()}
+													
+									<a href="https://www.fkaa.com" target="_blank">www.fkaa.com</a>
+								
+													{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Address</svelte:fragment>
-							<svelte:fragment slot="value">
-								91620 Overseas Highway<br />Tavernier, FL 33070
-							</svelte:fragment>
+							{#snippet label()}
+														Address
+													{/snippet}
+							{#snippet value()}
+													
+									91620 Overseas Highway<br />Tavernier, FL 33070
+								
+													{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Phone Number</svelte:fragment>
-							<svelte:fragment slot="value">(305) 853-1999</svelte:fragment>
+							{#snippet label()}
+														Phone Number
+													{/snippet}
+							{#snippet value()}
+														(305) 853-1999
+													{/snippet}
 						</ResourceProperty>
 					</dl>
 				</ResourceCard>
 				<ResourceCard>
-					<svelte:fragment slot="heading">Sewer Utility</svelte:fragment>
-					<svelte:fragment slot="subtitle">Key Largo Wastewater Treatment District</svelte:fragment>
+					{#snippet heading()}
+										Sewer Utility
+									{/snippet}
+					{#snippet subtitle()}
+										Key Largo Wastewater Treatment District
+									{/snippet}
 					<dl>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Website</svelte:fragment>
-							<svelte:fragment slot="value">
-								<a href="https://www.klwtd.com" target="_blank">www.klwtd.com</a>
-							</svelte:fragment>
+							{#snippet label()}
+														Website
+													{/snippet}
+							{#snippet value()}
+													
+									<a href="https://www.klwtd.com" target="_blank">www.klwtd.com</a>
+								
+													{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Address</svelte:fragment>
-							<svelte:fragment slot="value">
-								103355 Overseas Hwy<br />Key Largo, FL 33037
-							</svelte:fragment>
+							{#snippet label()}
+														Address
+													{/snippet}
+							{#snippet value()}
+													
+									103355 Overseas Hwy<br />Key Largo, FL 33037
+								
+													{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Mailing Address</svelte:fragment>
-							<svelte:fragment slot="value">
-								Post Office Box 491<br />Key Largo, FL 33037
-							</svelte:fragment>
+							{#snippet label()}
+														Mailing Address
+													{/snippet}
+							{#snippet value()}
+													
+									Post Office Box 491<br />Key Largo, FL 33037
+								
+													{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Phone Number</svelte:fragment>
-							<svelte:fragment slot="value">(305) 451-4019</svelte:fragment>
+							{#snippet label()}
+														Phone Number
+													{/snippet}
+							{#snippet value()}
+														(305) 451-4019
+													{/snippet}
 						</ResourceProperty>
 					</dl>
 				</ResourceCard>
 				<ResourceCard>
-					<svelte:fragment slot="heading">United Way</svelte:fragment>
-					<svelte:fragment slot="subtitle"
-						>United Way of Collier County and The Florida Keys</svelte:fragment
-					>
+					{#snippet heading()}
+										United Way
+									{/snippet}
+					{#snippet subtitle()}
+										United Way of Collier County and The Florida Keys
+									{/snippet}
 					<dl>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Resource Guide</svelte:fragment>
-							<svelte:fragment slot="value">
-								<a href="https://uwcollierkeys.org/keys-help-2" target="_blank"
-									>uwcollierkeys.org/keys-help-2</a
-								>
-							</svelte:fragment>
+							{#snippet label()}
+														Resource Guide
+													{/snippet}
+							{#snippet value()}
+													
+									<a href="https://uwcollierkeys.org/keys-help-2" target="_blank"
+										>uwcollierkeys.org/keys-help-2</a
+									>
+								
+													{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
-							<svelte:fragment slot="label">Phone Number</svelte:fragment>
-							<svelte:fragment slot="value">(305) 451-4019</svelte:fragment>
+							{#snippet label()}
+														Phone Number
+													{/snippet}
+							{#snippet value()}
+														(305) 451-4019
+													{/snippet}
 						</ResourceProperty>
 					</dl>
 				</ResourceCard>

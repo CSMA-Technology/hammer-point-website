@@ -1,11 +1,15 @@
 <script lang="ts">
 	import Testimonial from '$lib/components/Testimonial.svelte';
 	import { fade } from 'svelte/transition';
-	export let count: number;
 
-	export let testimonials: { quote: string; author: string }[] = [];
+	interface Props {
+		count: number;
+		testimonials?: { quote: string; author: string }[];
+	}
 
-	const currentTestimonials = testimonials.slice(0, count);
+	let { count, testimonials = [] }: Props = $props();
+
+	const currentTestimonials = $state(testimonials.slice(0, count));
 	let lastIndexChanged = 0;
 	const replaceRandomTestimonial = () => {
 		let randomIndex = Math.floor(Math.random() * currentTestimonials.length);

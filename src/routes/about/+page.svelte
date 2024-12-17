@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { preventDefault } from 'svelte/legacy';
+
 	import PersonCard from '$lib/components/PersonCard.svelte';
 	import helenShinners from '$lib/assets/people/Helen_Shinners.jpg';
 	import burkeCannon from '$lib/assets/people/Burke_Cannon.jpg';
@@ -15,15 +17,15 @@
 	import { submitFormToNetlify } from '$lib/utils';
 	import Rope from '$lib/components/Rope.svelte';
 
-	let mounted = false;
+	let mounted = $state(false);
 	onMount(() => {
 		document.getElementById('content')?.classList.add('customBlur');
 		mounted = true;
 	});
 
-	let isContactFormSubmitting = false;
-	let didSubmitContactForm = false;
-	let contactFormError = '';
+	let isContactFormSubmitting = $state(false);
+	let didSubmitContactForm = $state(false);
+	let contactFormError = $state('');
 	const handleContactFormSubmit = async (event: Event) => {
 		isContactFormSubmitting = true;
 		const form = event.target as HTMLFormElement;
@@ -107,7 +109,7 @@
 							<h3 class="h2 my-2 text-center">Send Us a Message</h3>
 							{#if !contactFormError}
 								{#if !didSubmitContactForm}
-									<form on:submit|preventDefault={handleContactFormSubmit}>
+									<form onsubmit={preventDefault(handleContactFormSubmit)}>
 										<input type="hidden" name="form-name" value="contact-form" />
 										<p class="text-lg">
 											We'd love to hear from you! Leave us your email and message below and someone

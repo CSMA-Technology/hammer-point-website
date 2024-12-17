@@ -1,4 +1,4 @@
-<script lang="ts" context="module">
+<script lang="ts" module>
 	/**
 	 * Transforms an array of image sources into an array of objects with `src` and `alt` properties.
 	 * Used when a series of photos will have the same alt text.
@@ -15,13 +15,17 @@
 	const modalComponent: ModalComponent = { ref: ImageModal };
 
 	const modalStore = getModalStore();
-	export let photos: { src: string; alt?: string }[];
+	interface Props {
+		photos: { src: string; alt?: string }[];
+	}
+
+	let { photos }: Props = $props();
 </script>
 
 <div class="flex flex-row flex-wrap justify-around gap-2 max-sm:justify-center">
 	{#each photos as { src, alt }}
 		<button
-			on:click={() => {
+			onclick={() => {
 				modalStore.trigger({
 					type: 'component',
 					component: modalComponent,

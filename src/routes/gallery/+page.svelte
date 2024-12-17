@@ -9,7 +9,7 @@
 
 	const modalStore = getModalStore();
 
-	let mounted = false;
+	let mounted = $state(false);
 	onMount(() => {
 		mounted = true;
 	});
@@ -41,7 +41,7 @@
 					{#each imageData as image, index}
 						<div class="relative">
 							<button
-								on:click={() => {
+								onclick={() => {
 									modalStore.trigger({
 										type: 'component',
 										component: modalComponent,

@@ -7,7 +7,7 @@
 	import Rope from '$lib/components/Rope.svelte';
 	import testimonials from '$lib/data/testimonials';
 
-	let mounted = false;
+	let mounted = $state(false);
 	onMount(() => {
 		document.getElementById('content')?.classList.add('customBlur');
 		mounted = true;

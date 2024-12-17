@@ -4,7 +4,7 @@
 	import { sineIn } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 
-	let mounted = false;
+	let mounted = $state(false);
 	onMount(() => {
 		mounted = true;
 	});
