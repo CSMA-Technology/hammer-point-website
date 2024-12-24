@@ -1,8 +1,7 @@
 import canalVideo from '$lib/assets/updates/canal/Canal_Work.mp4';
 import beautificationSign from '$lib/assets/updates/beautification/new-sign.jpg';
 import boatParade from '$lib/assets/updates/boat-parade-2024.jpg';
-import gardenClubHolidayMarket from '$lib/assets/updates/garden-club-holiday-market-2024.png';
-import santaCarolers from '$lib/assets/updates/santa-carolers-2024.jpg';
+import happyHolidays2024 from '$lib/assets/updates/happy-holidays-2024.png';
 type Post = {
 	title: string;
 	description: string;
@@ -20,27 +19,10 @@ type Post = {
 };
 export const pinnedPosts: Post[] = [
 	{
-		title: 'Florida Keys Garden Club Holiday Market',
+		title: 'Happy Holidays!',
 		description:
-			'Come out and enjoy our wonderful weather and delicious food and unique goods! Join the Florida Keys Garden Club for their  Holiday Market on December 7th from 9am-4pm. There will be vendors, food trucks, art, and more!',
-		image: gardenClubHolidayMarket
-	},
-	{
-		title: 'Christmas in the Keys Boat Parade',
-		description:
-			'Enter your holiday decorated boat for a chance at $5000 CASH & prizes! The parade will begin at 7:30PM on December 14th.',
-		image: boatParade,
-		details: {
-			linkText: 'Click here for more details',
-			src: 'https://www.keylargoboatparade.com/',
-			linkOpenInNewTab: true
-		}
-	},
-	{
-		title: 'Santa Claus & His Carolers',
-		description:
-			'Join in the fun and sing along with Santa & his Carolers! <br><br>Santa & his Carolers will depart Station 20 at 5:10PM. See the Caroling Route above for when they will be passing by your area.',
-		image: santaCarolers
+			'Your Hammer Point Owners Association wishes you a most joyous holiday season. We thank you for your continued support throughout this year and look forward to 2025!',
+		image: happyHolidays2024
 	}
 ];
 export const updatePosts: Post[] = [
