@@ -4,7 +4,9 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { sineIn } from 'svelte/easing';
-	import imageData from '$lib/data/gallery';
+	import imageData, { categoryMap } from '$lib/data/gallery';
+	import { TabGroup, Tab, TabAnchor } from '@skeletonlabs/skeleton';
+	import { page } from '$app/state';
 	const modalComponent: ModalComponent = { ref: ImageModal };
 
 	const modalStore = getModalStore();
@@ -13,6 +15,8 @@
 	onMount(() => {
 		mounted = true;
 	});
+
+	let selectedCategory = $derived(page.url.searchParams.get('category'));
 </script>
 
 <svelte:head>
@@ -37,6 +41,13 @@
 						href="mailto:hammerpointhoa@gmail.com">hammerpointhoa@gmail.com</a
 					>
 				</p>
+				<TabGroup>
+					{#each Object.keys(categoryMap) as category}
+						<TabAnchor href={`?category=${category}`} selected={selectedCategory === category}
+							>{category}</TabAnchor
+						>
+					{/each}
+				</TabGroup>
 				<div class="relative mt-8 flex w-full flex-row flex-wrap justify-center gap-8">
 					{#each imageData as image, index}
 						<div class="relative">

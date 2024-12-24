@@ -3,6 +3,7 @@ export interface GalleryImage {
 	enhancedImage?: ImageFile;
 	alt?: string;
 	photographer?: string;
+	category?: string;
 }
 interface ImageFile {
 	sources: {
@@ -17,7 +18,7 @@ interface ImageFile {
 	};
 }
 
-const transformImageFiles = (images: ImageFile[], photographer?: string) =>
+const transformImageFiles = (images: ImageFile[], photographer?: string): GalleryImage[] =>
 	images.map((image) => ({
 		src: image.img.src,
 		enhancedImage: image,
@@ -99,4 +100,52 @@ const imageData: GalleryImage[] = [
 	)
 ];
 
-export default imageData.reverse();
+const authorMap: Record<string, string> = {
+	terri_mike: 'Terri & Mike, Guilford Ct.',
+	barbara_sharon: 'Barbara & Sharon, Westminster Dr.',
+	richard_helen: 'Richard & Helen, Ivanhoe Ct.',
+	lidia_yoham: 'Lidia the Realtor, Ellington Ct.',
+	melissa_alex: 'Melissa & Alex, Fairwich Ct.',
+	maria_roberto: 'Maria & Roberto, Fairwich Ct.'
+};
+
+export const categoryMap: Record<string, string> = {
+	sunsets: 'Sunsets',
+	landscapes: 'Landscapes',
+	wildlife: 'Wildlife',
+	'night-views': 'Night Views'
+};
+
+const fileNameRegex =
+	/gallery\/categories\/(?<categoryOrder>\d+)_(?<categoryName>[^\/]+)\/(?<author>[^\/]+)\/[^\/]+/;
+
+const fileData = import.meta.glob<ImageFile>('$lib/assets/gallery/categories/**/*', {
+	query: { enhanced: true },
+	import: 'default'
+});
+
+const allImageData: GalleryImage[] = await Promise.all(
+	Object.entries(fileData)
+		.map(([path, module]) => {
+			return {
+				...(fileNameRegex.exec(path)?.groups as {
+					categoryOrder: string;
+					categoryName: string;
+					author: string;
+				}),
+				module
+			};
+		})
+		.toSorted((a, b) => parseInt(a.categoryOrder) - parseInt(b.categoryOrder))
+		.map(async ({ module, author, categoryName }) => {
+			const enhancedImage = await module();
+			return {
+				src: enhancedImage.img.src,
+				enhancedImage,
+				photographer: authorMap[author] ?? author,
+				category: categoryMap[categoryName] ?? categoryName
+			};
+		})
+);
+
+export default allImageData;

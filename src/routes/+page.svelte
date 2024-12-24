@@ -42,8 +42,8 @@
 					<div
 						class="mt-4 flex w-full flex-row flex-wrap justify-center gap-y-2 opacity-70 max-md:justify-around md:gap-16"
 					>
-						<a href="/about" class="variant-filled-primary btn font-bold">Learn More</a>
-						<a href="/pay-dues" class="variant-filled-tertiary btn font-bold">Contribute</a>
+						<a href="/about" class="variant-filled-primary btn font-bold shadow">Learn More</a>
+						<a href="/pay-dues" class="variant-filled-tertiary btn font-bold shadow">Contribute</a>
 					</div>
 					<h2 class="h2 mt-6 text-center">Community Resources</h2>
 					<!-- <img src="$lib/assets/rope.png" alt="" class="px-10 my-1" /> -->
