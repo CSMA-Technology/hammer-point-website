@@ -43,12 +43,12 @@
 {#if mounted}
 	<div
 		class="mx-2 mb-4 mt-24 flex flex-col justify-center gap-4
-  				lg:mx-0 lg:mt-28"
+  				md:px-6 lg:mx-0 lg:mt-28"
 		in:fade={{ duration: 800, easing: sineIn, delay: 100 }}
 	>
 		<div
-			class="card variant-glass-secondary mx-auto max-w-4xl p-1 shadow-md
-						 lg:p-6"
+			class="card variant-glass-secondary mx-auto max-w-7xl p-1 shadow-md
+					lg:p-6"
 		>
 			<h1
 				class="h1 mb-2 mt-2 text-center md:mb-4
@@ -102,50 +102,44 @@
 					{#each pinnedPosts as post}
 						<UpdatePost>
 							{#snippet title()}
-														{post.title}
-													{/snippet}
+								{post.title}
+							{/snippet}
 							{#snippet image()}
-													
-									{#if post.image}
-										<ModalImage src={post.image} alt="" class="rounded-2xl" />
-									{:else}
-										<img src="$lib/assets/hammer-point-logo.svg" alt="" />
-									{/if}
-								
-													{/snippet}
+								{#if post.image}
+									<ModalImage src={post.image} alt="" class="rounded-2xl" />
+								{:else}
+									<img src="$lib/assets/hammer-point-logo.svg" alt="" />
+								{/if}
+							{/snippet}
 							<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 							{#snippet description()}
-														{@html post.description}
-													{/snippet}
+								{@html post.description}
+							{/snippet}
 							{#snippet video()}
-													
-									{#if post.video}
-										{@const videoSrc = post.video.src}
-										<button
-											class="anchor mt-1"
-											onclick={() => {
+								{#if post.video}
+									{@const videoSrc = post.video.src}
+									<button
+										class="anchor mt-1"
+										onclick={() => {
 											modalStore.trigger({
 												type: 'component',
 												component: modalComponent,
 												image: videoSrc
 											});
 										}}>{post.video.linkText}</button
-										>
-									{/if}
-								
-													{/snippet}
+									>
+								{/if}
+							{/snippet}
 							{#snippet details()}
-													
-									{#if post.details}
-										<a
-											href={post.details.src}
-											class="anchor"
-											target={post.details.linkOpenInNewTab ? '_blank' : ''}
-											>{post.details.linkText}</a
-										>
-									{/if}
-								
-													{/snippet}
+								{#if post.details}
+									<a
+										href={post.details.src}
+										class="anchor"
+										target={post.details.linkOpenInNewTab ? '_blank' : ''}
+										>{post.details.linkText}</a
+									>
+								{/if}
+							{/snippet}
 						</UpdatePost>
 					{/each}
 				</div>
@@ -162,49 +156,43 @@
 				{#each updatePosts as post}
 					<UpdatePost>
 						{#snippet title()}
-												{post.title}
-											{/snippet}
+							{post.title}
+						{/snippet}
 						{#snippet image()}
-											
-								{#if post.image}
-									<ModalImage src={post.image} alt="" class="rounded-2xl" />
-								{:else}
-									<img src="$lib/assets/hammer-point-logo.svg" alt="" />
-								{/if}
-							
-											{/snippet}
+							{#if post.image}
+								<ModalImage src={post.image} alt="" class="rounded-2xl" />
+							{:else}
+								<img src="$lib/assets/hammer-point-logo.svg" alt="" />
+							{/if}
+						{/snippet}
 						<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 						{#snippet description()}
-												{@html post.description}
-											{/snippet}
+							{@html post.description}
+						{/snippet}
 						{#snippet video()}
-											
-								{#if post.video}
-									{@const videoSrc = post.video.src}
-									<button
-										class="anchor mt-1 text-left"
-										onclick={() => {
+							{#if post.video}
+								{@const videoSrc = post.video.src}
+								<button
+									class="anchor mt-1 text-left"
+									onclick={() => {
 										modalStore.trigger({
 											type: 'component',
 											component: modalComponent,
 											image: videoSrc
 										});
 									}}>{post.video.linkText}</button
-									>
-								{/if}
-							
-											{/snippet}
+								>
+							{/if}
+						{/snippet}
 						{#snippet details()}
-											
-								{#if post.details}
-									<a
-										href={post.details.src}
-										class="anchor"
-										target={post.details.linkOpenInNewTab ? '_blank' : ''}>{post.details.linkText}</a
-									>
-								{/if}
-							
-											{/snippet}
+							{#if post.details}
+								<a
+									href={post.details.src}
+									class="anchor"
+									target={post.details.linkOpenInNewTab ? '_blank' : ''}>{post.details.linkText}</a
+								>
+							{/if}
+						{/snippet}
 					</UpdatePost>
 				{/each}
 			</div>
