@@ -39,81 +39,77 @@
 		gap="lg:gap-8"
 	>
 		{#snippet lead()}
-			
-				<a href="/" class="flex flex-row items-center">
-					<div class="hidden xxs:block">
-						<img
-							class="sm:min-h-[65px] sm:min-w-[65px]"
-							width="65"
-							height="65"
-							src="$lib/assets/hammer-point-holiday-logo.png"
-							alt=""
-						/>
-					</div>
-					<div class="ml-4 flex min-h-[65px] min-w-[165px] flex-col justify-center xxs:ml-1">
-						<img
-							class="dark:hidden"
-							src="$lib/assets/hammer-point-logo-text.png"
-							alt="Hammer Point Owner's Association"
-							width="165"
-						/>
-						<img
-							class="hidden dark:block"
-							src="$lib/assets/hammer-point-logo-text-dark.png"
-							alt="Hammer Point Owner's Association"
-							width="165"
-						/>
-					</div>
-				</a>
-			
-			{/snippet}
-		{#snippet trail()}
-			
-				<div>
-					<nav class="list-nav flex gap-0 max-lg:hidden lg:min-w-[472px]">
-						{#each links as link}
-							<a
-								class={`anchor mx-1 !px-3 font-semibold !text-inherit no-underline ${link.href === $page.url.pathname ? '!bg-surface-500/30' : ''}`}
-								href={link.href}
-								rel="noreferrer"
-							>
-								{link.text}
-							</a>
-						{/each}
-					</nav>
-
-					<div class="pl-6 pr-4 lg:hidden">
-						<button
-							role="menu"
-							class="flex h-5 w-5 cursor-pointer flex-col justify-between border-none bg-transparent"
-							onclick={stopPropagation(toggleMenu)}
-						>
-							{#if !isMenuOpen}
-								<span class="h-0.5 w-full bg-tertiary-500"></span>
-								<span class="h-0.5 w-full bg-tertiary-500"></span>
-								<span class="h-0.5 w-full bg-tertiary-500"></span>
-							{:else}
-								<img src={closeIcon} alt="" />
-							{/if}
-						</button>
-
-						{#if isMenuOpen}
-							<nav
-								in:fade={{ duration: 100, delay: 50 }}
-								class="absolute left-0 top-1/4 -z-30 flex
-						w-full flex-col items-center rounded-b-xl p-4"
-							>
-								{#each links as link}
-									<a class="mobile-menu-link" href={link.href} rel="noreferrer">
-										{link.text}
-									</a>
-								{/each}
-							</nav>
-						{/if}
-					</div>
+			<a href="/" class="flex flex-row items-center">
+				<div class="hidden xxs:block">
+					<img
+						class="sm:min-h-[65px] sm:min-w-[65px]"
+						width="65"
+						height="65"
+						src="$lib/assets/hammer-point-logo-condensed.png"
+						alt=""
+					/>
 				</div>
-			
-			{/snippet}
+				<div class="ml-4 flex min-h-[65px] min-w-[165px] flex-col justify-center xxs:ml-1">
+					<img
+						class="dark:hidden"
+						src="$lib/assets/hammer-point-logo-text.png"
+						alt="Hammer Point Owner's Association"
+						width="165"
+					/>
+					<img
+						class="hidden dark:block"
+						src="$lib/assets/hammer-point-logo-text-dark.png"
+						alt="Hammer Point Owner's Association"
+						width="165"
+					/>
+				</div>
+			</a>
+		{/snippet}
+		{#snippet trail()}
+			<div>
+				<nav class="list-nav flex gap-0 max-lg:hidden lg:min-w-[472px]">
+					{#each links as link}
+						<a
+							class={`anchor mx-1 !px-3 font-semibold !text-inherit no-underline ${link.href === $page.url.pathname ? '!bg-surface-500/30' : ''}`}
+							href={link.href}
+							rel="noreferrer"
+						>
+							{link.text}
+						</a>
+					{/each}
+				</nav>
+
+				<div class="pl-6 pr-4 lg:hidden">
+					<button
+						role="menu"
+						class="flex h-5 w-5 cursor-pointer flex-col justify-between border-none bg-transparent"
+						onclick={stopPropagation(toggleMenu)}
+					>
+						{#if !isMenuOpen}
+							<span class="h-0.5 w-full bg-tertiary-500"></span>
+							<span class="h-0.5 w-full bg-tertiary-500"></span>
+							<span class="h-0.5 w-full bg-tertiary-500"></span>
+						{:else}
+							<img src={closeIcon} alt="" />
+						{/if}
+					</button>
+
+					{#if isMenuOpen}
+						<nav
+							in:fade={{ duration: 100, delay: 50 }}
+							class="absolute left-0 top-1/4 -z-30 flex
+						w-full flex-col items-center rounded-b-xl p-4"
+						>
+							{#each links as link}
+								<a class="mobile-menu-link" href={link.href} rel="noreferrer">
+									{link.text}
+								</a>
+							{/each}
+						</nav>
+					{/if}
+				</div>
+			</div>
+		{/snippet}
 	</AppBar>
 </div>
 

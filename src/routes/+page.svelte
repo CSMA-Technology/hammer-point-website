@@ -63,9 +63,6 @@
 					<h2 class="h1 text-center">News and Notes</h2>
 					<Rope />
 					<ul class="my-4 list-inside space-y-3 text-xl" style="list-style-type: '📰 ';">
-						<li style="list-style-type: '☃️ '">
-							We are wishing all of our Hammer Point neighbors a Happy Holidays!
-						</li>
 						<li>
 							Your neighbors have been taking wonderful photos of the community. Check them out in
 							our <a class="anchor" href="gallery">gallery</a>!

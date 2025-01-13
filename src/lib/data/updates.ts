@@ -17,15 +17,18 @@ type Post = {
 		linkOpenInNewTab?: boolean;
 	};
 };
-export const pinnedPosts: Post[] = [
-	{
-		title: 'Happy Holidays!',
-		description:
-			'Your Hammer Point Owners Association wishes you a most joyous holiday season. We thank you for your continued support throughout this year and look forward to 2025!',
-		image: happyHolidays2024
-	}
-];
+export const pinnedPosts: Post[] = [];
 export const updatePosts: Post[] = [
+	{
+		title: 'Beautification Project Update',
+		description: `The second phase of the Main Entrance Beautification project is underway! You can look forward to beautiful new native plants in the near future.
+		<br/><br/>We'd like to extend a special thank you to your neighbors, the Flack family, for their generous donation of the new plants, as well as all of those who have donated to this project.
+		<br/><br/>`,
+		details: {
+			src: '/updates/detail/beautification-project-2',
+			linkText: 'For more details about the project, click here'
+		}
+	},
 	{
 		title: 'Monroe County Tax Bill Printing Error',
 		description: `Attention Hammer Point Residents:<br><br>
