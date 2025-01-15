@@ -1,7 +1,6 @@
 import canalVideo from '$lib/assets/updates/canal/Canal_Work.mp4';
 import beautificationSign from '$lib/assets/updates/beautification/new-sign.jpg';
-import boatParade from '$lib/assets/updates/boat-parade-2024.jpg';
-import happyHolidays2024 from '$lib/assets/updates/happy-holidays-2024.png';
+import artUnderTheOaks from '$lib/assets/updates/art-under-the-oaks.jpg';
 type Post = {
 	title: string;
 	description: string;
@@ -33,6 +32,11 @@ export const pinnedPosts: Post[] = [
 	}
 ];
 export const updatePosts: Post[] = [
+	{
+		title: 'Art Under the Oaks',
+		image: artUnderTheOaks,
+		description: `All are welcome to come out and enjoy this wonderful community event! It will be hosted at the San Pedro Church Gardens on Saturday, January 18th.`
+	},
 	{
 		title: 'Beautification Project Update',
 		description: `The second phase of the Main Entrance Beautification project is underway! You can look forward to beautiful new native plants in the near future.
