@@ -16,8 +16,9 @@
 		while (randomIndex === lastIndexChanged) {
 			randomIndex = Math.floor(Math.random() * currentTestimonials.length);
 		}
+		const quotes = currentTestimonials.map((testimonial) => testimonial.quote);
 		const randomTestimonial = testimonials.find(
-			(testimonial) => !currentTestimonials.includes(testimonial)
+			(testimonial) => !quotes.includes(testimonial.quote)
 		);
 		if (randomTestimonial) {
 			currentTestimonials[randomIndex] = randomTestimonial;
