@@ -1,6 +1,6 @@
 import canalVideo from '$lib/assets/updates/canal/Canal_Work.mp4';
 import beautificationSign from '$lib/assets/updates/beautification/new-sign.jpg';
-import artUnderTheOaks from '$lib/assets/updates/art-under-the-oaks.jpg';
+import gardenWalk from '$lib/assets/updates/garden-walk.jpeg';
 type Post = {
 	title: string;
 	description: string;
@@ -33,9 +33,10 @@ export const pinnedPosts: Post[] = [
 ];
 export const updatePosts: Post[] = [
 	{
-		title: 'Art Under the Oaks',
-		image: artUnderTheOaks,
-		description: `All are welcome to come out and enjoy this wonderful community event! It will be hosted at the San Pedro Church Gardens on Saturday, January 18th.`
+		title: 'Garden Walk',
+		description:
+			"The Garden Walk, presented by the Garden Club of the Upper Keys, is a wonderful way to spend your Valentine's Day Weekend! Please see the flyer for more information.",
+		image: gardenWalk
 	},
 	{
 		title: 'Beautification Project Update',
