@@ -1,6 +1,6 @@
 import canalVideo from '$lib/assets/updates/canal/Canal_Work.mp4';
 import beautificationSign from '$lib/assets/updates/beautification/new-sign.jpg';
-import gardenWalk from '$lib/assets/updates/garden-walk.jpeg';
+import nauticalMarket from '$lib/assets/updates/nautical-market.jpg';
 type Post = {
 	title: string;
 	description: string;
@@ -33,10 +33,11 @@ export const pinnedPosts: Post[] = [
 ];
 export const updatePosts: Post[] = [
 	{
-		title: 'Garden Walk',
-		description:
-			"The Garden Walk, presented by the Garden Club of the Upper Keys, is a wonderful way to spend your Valentine's Day Weekend! Please see the flyer for more information.",
-		image: gardenWalk
+		title: 'Florida Keys Nautical Market',
+		description: `Come out this weekend (February 22nd & 23rd) for a wonderful community event!
+		<br/><br/>Enjoy this outdoor event with a boat show, nautical vendors and food trucks. There will be something for everyone to enjoy! Parking is available at Coral Shores High School (MM 89.9) with FREE shuttle to the event. 
+		<br/><br/>See you there!`,
+		image: nauticalMarket
 	},
 	{
 		title: 'Beautification Project Update',
