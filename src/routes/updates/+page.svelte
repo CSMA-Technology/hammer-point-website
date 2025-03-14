@@ -7,9 +7,10 @@
 	import { sineIn } from 'svelte/easing';
 	import { onMount } from 'svelte';
 	import { submitFormToNetlify } from '$lib/utils';
-	import { updatePosts, pinnedPosts } from '$lib/data/updates';
+	import { updatePosts, pinnedPosts, archivedPosts } from '$lib/data/updates';
 	import { getModalStore, type ModalComponent } from '@skeletonlabs/skeleton';
 	import ModalImage from '$lib/components/ModalImage.svelte';
+	import { slide } from 'svelte/transition';
 
 	const modalComponent: ModalComponent = { ref: VideoModal };
 
@@ -34,6 +35,8 @@
 		}
 		isSubscribeFormSubmitting = false;
 	};
+
+	let showArchived = $state(false);
 </script>
 
 <svelte:head>
@@ -195,6 +198,73 @@
 						{/snippet}
 					</UpdatePost>
 				{/each}
+			</div>
+			<!-- Archive Section -->
+			<div
+				class="variant-ringed-surface relative mt-10 flex flex-col gap-4 rounded-md p-3 ring-paper-darker"
+			>
+				<h2
+					class="variant-ringed-surface h3 absolute z-10 w-fit -translate-x-1 -translate-y-9 rounded-lg bg-primary-300 p-1 ring-paper-darker"
+				>
+					Archive
+				</h2>
+				<button
+					class="variant-filled-primary btn mx-auto mt-2"
+					onclick={() => (showArchived = !showArchived)}
+				>
+					{#if showArchived}Hide archived posts{:else}Show {archivedPosts.length} archived posts{/if}
+				</button>
+				{#if showArchived}
+					<div
+						class="flex flex-col gap-4"
+						in:slide={{ duration: 300 }}
+						out:slide={{ duration: 300 }}
+					>
+						{#each archivedPosts as post}
+							<UpdatePost>
+								{#snippet title()}
+									{post.title}
+								{/snippet}
+								{#snippet image()}
+									{#if post.image}
+										<ModalImage src={post.image} alt="" class="rounded-2xl" />
+									{:else}
+										<img src="$lib/assets/hammer-point-logo.svg" alt="" />
+									{/if}
+								{/snippet}
+								<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+								{#snippet description()}
+									{@html post.description}
+								{/snippet}
+								{#snippet video()}
+									{#if post.video}
+										{@const videoSrc = post.video.src}
+										<button
+											class="anchor mt-1 text-left"
+											onclick={() => {
+												modalStore.trigger({
+													type: 'component',
+													component: modalComponent,
+													image: videoSrc
+												});
+											}}>{post.video.linkText}</button
+										>
+									{/if}
+								{/snippet}
+								{#snippet details()}
+									{#if post.details}
+										<a
+											href={post.details.src}
+											class="anchor"
+											target={post.details.linkOpenInNewTab ? '_blank' : ''}
+											>{post.details.linkText}</a
+										>
+									{/if}
+								{/snippet}
+							</UpdatePost>
+						{/each}
+					</div>
+				{/if}
 			</div>
 		</div>
 	</div>

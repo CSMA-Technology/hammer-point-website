@@ -47,91 +47,87 @@
 			<div class="flex flex-col gap-4">
 				<ResourceCard>
 					{#snippet heading()}
-										2024 State of the County and Information Guide
-									{/snippet}
+						2024 State of the County and Information Guide
+					{/snippet}
 					<p class="pt-2 text-center">
 						<a class="anchor" href="/monroe-guide-2024.pdf" target="_blank">Click here</a> to download
 					</p>
 				</ResourceCard>
 				<ResourceCard>
 					{#snippet heading()}
-										Law Enforcement
-									{/snippet}
+						Law Enforcement
+					{/snippet}
 					{#snippet subtitle()}
-										Sheriff's Office
-									{/snippet}
+						Sheriff's Office
+					{/snippet}
 					<dl>
 						<ResourceProperty>
 							{#snippet label()}
-														Emergency
-													{/snippet}
+								Emergency
+							{/snippet}
 							{#snippet value()}
-														911
-													{/snippet}
+								911
+							{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
 							{#snippet label()}
-														Non-Emergency
-													{/snippet}
+								Non-Emergency
+							{/snippet}
 							{#snippet value()}
-														(305) 853-3211
-													{/snippet}
+								(305) 853-3211
+							{/snippet}
 						</ResourceProperty>
 					</dl>
 				</ResourceCard>
 				<ResourceCard>
 					{#snippet heading()}
-										Garbage and Recycling
-									{/snippet}
+						Garbage and Recycling
+					{/snippet}
 					{#snippet subtitle()}
-										Keys Sanitary Service
-									{/snippet}
+						Keys Sanitary Service
+					{/snippet}
 					<dl>
 						<ResourceProperty>
 							{#snippet label()}
-														Website
-													{/snippet}
+								Website
+							{/snippet}
 							{#snippet value()}
-													
-									<a href="https://www.keyssanitaryservice.com" target="_blank"
-										>www.keyssanitaryservice.com</a
-									>
-								
-													{/snippet}
+								<a href="https://www.keyssanitaryservice.com" target="_blank"
+									>www.keyssanitaryservice.com</a
+								>
+							{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
 							{#snippet label()}
-														Mailing Address
-													{/snippet}
+								Mailing Address
+							{/snippet}
 							{#snippet value()}
-													
-									300 Central Avenue<br />Key Largo, FL 33037
-								
-													{/snippet}
+								300 Central Avenue<br />Key Largo, FL 33037
+							{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
 							{#snippet label()}
-														Phone Number
-													{/snippet}
+								Phone Number
+							{/snippet}
 							{#snippet value()}
-														(305) 451-2025
-													{/snippet}
+								(305) 451-2025
+							{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
 							{#snippet label()}
-														Garbage Pickup
-													{/snippet}
+								Garbage Pickup
+							{/snippet}
 							{#snippet value()}
-														Tuesdays and Fridays
-													{/snippet}
+								Tuesdays and Fridays
+							{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
 							{#snippet label()}
-														Recycling & Yard Waste Pickup
-													{/snippet}
+								Recycling & Yard Waste Pickup
+							{/snippet}
 							{#snippet value()}
-														Thursdays
-													{/snippet}
+								Thursdays
+							{/snippet}
 						</ResourceProperty>
 						<hr class="my-2 !border-tertiary-500/30" />
 						<p class="hyphens-auto text-justify text-sm">
@@ -145,21 +141,19 @@
 				</ResourceCard>
 				<ResourceCard>
 					{#snippet heading()}
-										Fish & Wildlife
-									{/snippet}
+						Fish & Wildlife
+					{/snippet}
 					{#snippet subtitle()}
-										Florida Fish and Wildlife Conservation Commission
-									{/snippet}
+						Florida Fish and Wildlife Conservation Commission
+					{/snippet}
 					<dl>
 						<ResourceProperty>
 							{#snippet label()}
-														Website
-													{/snippet}
+								Website
+							{/snippet}
 							{#snippet value()}
-													
-									<a href="https://myfwc.com" target="_blank">myfwc.com</a>
-								
-													{/snippet}
+								<a href="https://myfwc.com" target="_blank">myfwc.com</a>
+							{/snippet}
 						</ResourceProperty>
 						<hr class="my-2 !border-tertiary-500/30" />
 						<p class="hyphens-auto text-balance text-justify text-sm">
@@ -180,30 +174,26 @@
 				</ResourceCard>
 				<ResourceCard>
 					{#snippet heading()}
-										Free Local Media Publications
-									{/snippet}
+						Free Local Media Publications
+					{/snippet}
 					<dl>
 						<ResourceProperty>
 							{#snippet label()}
-														Keys Weekly
-													{/snippet}
+								Keys Weekly
+							{/snippet}
 							{#snippet value()}
-													
-									<a href="https://www.keysweekly.com" target="_blank">www.keysweekly.com</a>
-								
-													{/snippet}
+								<a href="https://www.keysweekly.com" target="_blank">www.keysweekly.com</a>
+							{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
 							{#snippet label()}
-														Florida Keys Free Press
-													{/snippet}
+								Florida Keys Free Press
+							{/snippet}
 							{#snippet value()}
-													
-									<a href="https://www.keysnews.com/flkeysfreepress" target="_blank"
-										>www.keysnews.com/flkeysfreepress</a
-									>
-								
-													{/snippet}
+								<a href="https://www.keysnews.com/flkeysfreepress" target="_blank"
+									>www.keysnews.com/flkeysfreepress</a
+								>
+							{/snippet}
 						</ResourceProperty>
 					</dl>
 				</ResourceCard>
@@ -211,43 +201,35 @@
 			<div class="flex flex-col gap-4">
 				<ResourceCard>
 					{#snippet heading()}
-										Electric Utility
-									{/snippet}
+						Electric Utility
+					{/snippet}
 					{#snippet subtitle()}
-									
-							Florida Keys Electric Cooperative Association, Inc.
-						
-									{/snippet}
+						Florida Keys Electric Cooperative Association, Inc.
+					{/snippet}
 					<dl>
 						<ResourceProperty>
 							{#snippet label()}
-														Website
-													{/snippet}
+								Website
+							{/snippet}
 							{#snippet value()}
-													
-									<a href="https://www.fkec.com" target="_blank">www.fkec.com</a>
-								
-													{/snippet}
+								<a href="https://www.fkec.com" target="_blank">www.fkec.com</a>
+							{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
 							{#snippet label()}
-														Address
-													{/snippet}
+								Address
+							{/snippet}
 							{#snippet value()}
-													
-									91630 Overseas Hwy<br /> Tavernier FL 33070
-								
-													{/snippet}
+								91630 Overseas Hwy<br /> Tavernier FL 33070
+							{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
 							{#snippet label()}
-														Mailing Address
-													{/snippet}
+								Mailing Address
+							{/snippet}
 							{#snippet value()}
-													
-									P.O. Box 377<br />Tavernier, FL 33070
-								
-													{/snippet}
+								P.O. Box 377<br />Tavernier, FL 33070
+							{/snippet}
 						</ResourceProperty>
 					</dl>
 					<hr class="my-2 !border-tertiary-500/30" />
@@ -261,119 +243,132 @@
 				</ResourceCard>
 				<ResourceCard>
 					{#snippet heading()}
-										Water Utility
-									{/snippet}
+						Water Utility
+					{/snippet}
 					{#snippet subtitle()}
-										Florida Keys Aquaduct Authority
-									{/snippet}
+						Florida Keys Aquaduct Authority
+					{/snippet}
 					<dl>
 						<ResourceProperty>
 							{#snippet label()}
-														Website
-													{/snippet}
+								Website
+							{/snippet}
 							{#snippet value()}
-													
-									<a href="https://www.fkaa.com" target="_blank">www.fkaa.com</a>
-								
-													{/snippet}
+								<a href="https://www.fkaa.com" target="_blank">www.fkaa.com</a>
+							{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
 							{#snippet label()}
-														Address
-													{/snippet}
+								Address
+							{/snippet}
 							{#snippet value()}
-													
-									91620 Overseas Highway<br />Tavernier, FL 33070
-								
-													{/snippet}
+								91620 Overseas Highway<br />Tavernier, FL 33070
+							{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
 							{#snippet label()}
-														Phone Number
-													{/snippet}
+								Phone Number
+							{/snippet}
 							{#snippet value()}
-														(305) 853-1999
-													{/snippet}
+								(305) 853-1999
+							{/snippet}
 						</ResourceProperty>
 					</dl>
 				</ResourceCard>
 				<ResourceCard>
 					{#snippet heading()}
-										Sewer Utility
-									{/snippet}
+						Sewer Utility
+					{/snippet}
 					{#snippet subtitle()}
-										Key Largo Wastewater Treatment District
-									{/snippet}
+						Key Largo Wastewater Treatment District
+					{/snippet}
 					<dl>
 						<ResourceProperty>
 							{#snippet label()}
-														Website
-													{/snippet}
+								Website
+							{/snippet}
 							{#snippet value()}
-													
-									<a href="https://www.klwtd.com" target="_blank">www.klwtd.com</a>
-								
-													{/snippet}
+								<a href="https://www.klwtd.com" target="_blank">www.klwtd.com</a>
+							{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
 							{#snippet label()}
-														Address
-													{/snippet}
+								Address
+							{/snippet}
 							{#snippet value()}
-													
-									103355 Overseas Hwy<br />Key Largo, FL 33037
-								
-													{/snippet}
+								103355 Overseas Hwy<br />Key Largo, FL 33037
+							{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
 							{#snippet label()}
-														Mailing Address
-													{/snippet}
+								Mailing Address
+							{/snippet}
 							{#snippet value()}
-													
-									Post Office Box 491<br />Key Largo, FL 33037
-								
-													{/snippet}
+								Post Office Box 491<br />Key Largo, FL 33037
+							{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
 							{#snippet label()}
-														Phone Number
-													{/snippet}
+								Phone Number
+							{/snippet}
 							{#snippet value()}
-														(305) 451-4019
-													{/snippet}
+								(305) 451-4019
+							{/snippet}
 						</ResourceProperty>
 					</dl>
 				</ResourceCard>
 				<ResourceCard>
 					{#snippet heading()}
-										United Way
-									{/snippet}
+						United Way
+					{/snippet}
 					{#snippet subtitle()}
-										United Way of Collier County and The Florida Keys
-									{/snippet}
+						United Way of Collier County and The Florida Keys
+					{/snippet}
 					<dl>
 						<ResourceProperty>
 							{#snippet label()}
-														Resource Guide
-													{/snippet}
+								Resource Guide
+							{/snippet}
 							{#snippet value()}
-													
-									<a href="https://uwcollierkeys.org/keys-help-2" target="_blank"
-										>uwcollierkeys.org/keys-help-2</a
-									>
-								
-													{/snippet}
+								<a href="https://uwcollierkeys.org/keys-help-2" target="_blank"
+									>uwcollierkeys.org/keys-help-2</a
+								>
+							{/snippet}
 						</ResourceProperty>
 						<ResourceProperty>
 							{#snippet label()}
-														Phone Number
-													{/snippet}
+								Phone Number
+							{/snippet}
 							{#snippet value()}
-														(305) 451-4019
-													{/snippet}
+								(305) 451-4019
+							{/snippet}
 						</ResourceProperty>
 					</dl>
+				</ResourceCard>
+				<ResourceCard>
+					{#snippet heading()}
+						Free Compost Giveaways
+					{/snippet}
+					<dl>
+						<ResourceProperty>
+							{#snippet label()}
+								Location
+							{/snippet}
+							{#snippet value()}
+								Monroe County Transfer Station<br />11180 County Rd 905
+							{/snippet}
+						</ResourceProperty>
+					</dl>
+					<hr class="my-2 !border-tertiary-500/30" />
+					<p class="hyphens-auto text-justify text-sm">
+						On the first Saturday of each month from 9AM to 2PM, Monroe County and Monroe County’s
+						yard waste contractor will offer free compost to unincorporated Monroe County residents
+						and cities of Marathon, Key Colony Beach, Islamorada, and Layton residents
+						<br /><br />
+						Proof of residency is required in the form of a driver’s license, utility bill, tax bill,
+						etc. Residents are limited to one pick-up (up to six bags) per household. You must be able
+						to load the bags on your own or bring someone to assist you.
+					</p>
 				</ResourceCard>
 			</div>
 		</div>

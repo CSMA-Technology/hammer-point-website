@@ -33,13 +33,6 @@ export const pinnedPosts: Post[] = [
 ];
 export const updatePosts: Post[] = [
 	{
-		title: 'Florida Keys Nautical Market',
-		description: `Come out this weekend (February 22nd & 23rd) for a wonderful community event!
-		<br/><br/>Enjoy this outdoor event with a boat show, nautical vendors and food trucks. There will be something for everyone to enjoy! Parking is available at Coral Shores High School (MM 89.9) with FREE shuttle to the event. 
-		<br/><br/>See you there!`,
-		image: nauticalMarket
-	},
-	{
 		title: 'Beautification Project Update',
 		description: `The second phase of the Main Entrance Beautification project is underway! You can look forward to beautiful new native plants in the near future.
 		<br/><br/>We'd like to extend a special thank you to your neighbors, the Flack family, for their generous donation of the new plants, as well as all of those who have donated to this project.
@@ -49,6 +42,19 @@ export const updatePosts: Post[] = [
 			linkText: 'For more details about the project, click here'
 		}
 	},
+	{
+		title: 'Beautification Project Underway',
+		description:
+			'The first phase of the Beautification project for the Front Entrance is finally underway! Several improvements will be made to the entrance, including new landscaping and a new sign.',
+		image: beautificationSign,
+		details: {
+			src: '/updates/detail/beautification-project',
+			linkText: 'To read the full details, click here'
+		}
+	}
+];
+
+export const archivedPosts: Post[] = [
 	{
 		title: 'Monroe County Tax Bill Printing Error',
 		description: `Attention Hammer Point Residents:<br><br>
@@ -60,30 +66,6 @@ Tax Collector Steele assures residents that this was not a data breach but a pri
 		details: {
 			src: '/updates/detail/tax-collector-error',
 			linkText: 'To read the full notice from the Tax Collector, click here'
-		}
-	},
-	{
-		title: 'Free Compost Giveaway at County Transfer Stations',
-		description: `Monroe County and Monroe County’s yard waste contractor will offer free compost (nutrient-rich black dirt) to unincorporated Monroe County residents and cities of Marathon, Key Colony Beach, Islamorada, and Layton residents at the County’s three transfer stations on the first Saturday of each month from 9 a.m. to 2 p.m. or until it is gone. 
-		Residents can pickup up to six bags of compost -- the compost is already bagged and ready for pickup.
-		<br><br> Proof of residency is required in the form of a driver’s license, utility bill, tax bill, etc. 
-		Residents are limited to one pick-up per household per event. You must be able to load the bags on your own or bring someone to assist you.
-		<br><br>
-		**If you are down in the Keys on  Saturdays (September 7th and/or October 5th) and can go get your FREE compost, the HOA Beautification Committee would greatly appreciate it. This will help us with our entrance project. Just leave the bags at the entrance of the Hammer Point community (you will see a pile of other bags there). Thanks!!
-		<br><br>
-		<strong>
-		Monroe County Transfer Station <br>
-		11180 County Rd 905
-		</strong>`
-	},
-	{
-		title: 'Beautification Project Underway',
-		description:
-			'The first phase of the Beautification project for the Front Entrance is finally underway! Several improvements will be made to the entrance, including new landscaping and a new sign.',
-		image: beautificationSign,
-		details: {
-			src: '/updates/detail/beautification-project',
-			linkText: 'To read the full details, click here'
 		}
 	},
 	{
