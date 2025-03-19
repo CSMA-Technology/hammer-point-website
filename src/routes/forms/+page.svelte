@@ -9,5 +9,6 @@
 	</form>
 	<form name="newsletter-subscribe" method="POST" data-netlify="true">
 		<input type="email" name="email" />
+		<input type="text" name="full_name" />
 	</form>
 </div>

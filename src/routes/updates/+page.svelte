@@ -64,13 +64,20 @@
 			>
 				<h2 class="h3">Stay Informed!</h2>
 				<p class="text-sm">
-					Subscribe our email list to get the latest community news straight to your inbox.
+					Subscribe to our email list to get the latest community news straight to your inbox.
 				</p>
 				{#if !subscribeFormError}
 					{#if !didSubmitSubscribeForm}
-						<form onsubmit={preventDefault(handleSubscribeFormSubmit)} class="mx-auto max-w-md">
+						<form onsubmit={preventDefault(handleSubscribeFormSubmit)} class="mx-auto">
 							<input type="hidden" name="form-name" value="newsletter-subscribe" />
-							<div class="mt-3 flex flex-row flex-nowrap justify-center gap-1">
+							<div class="mt-3 flex flex-row flex-wrap justify-center gap-1 sm:flex-nowrap">
+								<input
+									name="full_name"
+									aria-label="Full Name"
+									type="text"
+									class="input border-paper-dark bg-paper-light"
+									placeholder="Full Name"
+								/>
 								<input
 									name="email"
 									aria-label="Email Address"
@@ -78,8 +85,9 @@
 									class="input border-paper-dark bg-paper-light"
 									placeholder="Email Address"
 								/>
-								<button disabled={isSubscribeFormSubmitting} class="variant-filled-primary btn"
-									>Subscribe</button
+								<button
+									disabled={isSubscribeFormSubmitting}
+									class="variant-filled-primary btn grow-[1]">Subscribe</button
 								>
 							</div>
 						</form>
