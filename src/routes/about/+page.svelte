@@ -7,7 +7,6 @@
 	import maryBarron from '$lib/assets/people/Mary_Barron.jpg';
 	import rickHamilton from '$lib/assets/people/Rick_Hamilton.jpg';
 	import melissaBallesteros from '$lib/assets/people/Melissa_Ballesteros.jpeg';
-	import erniePortuondo from '$lib/assets/people/Ernie_Portuondo.jpg';
 	import lidiaYoham from '$lib/assets/people/Lidia_Yoham.jpg';
 	import richardShinners from '$lib/assets/people/Richard_Shinners.jpg';
 	import migdyMoya from '$lib/assets/people/Migdy_Moya.jpeg';
@@ -152,7 +151,7 @@
 					</div>
 				</div>
 				<div
-					class="card variant-glass-surface mb-4 w-full max-w-xl px-2 py-6 shadow sm:px-6
+					class="card variant-glass-surface w-full max-w-xl px-2 py-6 shadow max-md:mb-4 sm:px-6
 					md:w-fit
 					md:max-w-3xl"
 					in:fade={{ duration: 800, easing: sineIn, delay: 100 }}
@@ -181,7 +180,6 @@
 							title="Member at Large"
 							photo={melissaBallesteros}
 						/>
-						<PersonCard name="Ernie Portuondo" title="Member at Large" photo={erniePortuondo} />
 						<PersonCard name="Lidia Yoham" title="Member at Large" photo={lidiaYoham} />
 						<PersonCard
 							name="Richard Shinners"
