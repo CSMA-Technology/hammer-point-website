@@ -141,6 +141,32 @@
 				</ResourceCard>
 				<ResourceCard>
 					{#snippet heading()}
+						Mosquito Control
+					{/snippet}
+					{#snippet subtitle()}
+						Florida Keys Mosquito Control District
+					{/snippet}
+					<dl>
+						<ResourceProperty>
+							{#snippet label()}
+								Website
+							{/snippet}
+							{#snippet value()}
+								<a href="https://www.keysmosquito.org" target="_blank">www.keysmosquito.org</a>
+							{/snippet}
+						</ResourceProperty>
+						<ResourceProperty>
+							{#snippet label()}
+								Phone Number
+							{/snippet}
+							{#snippet value()}
+								(305) 453-1290
+							{/snippet}
+						</ResourceProperty>
+					</dl>
+				</ResourceCard>
+				<ResourceCard>
+					{#snippet heading()}
 						Fish & Wildlife
 					{/snippet}
 					{#snippet subtitle()}
