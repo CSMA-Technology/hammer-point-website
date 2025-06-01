@@ -223,6 +223,24 @@
 						</ResourceProperty>
 					</dl>
 				</ResourceCard>
+				<ResourceCard>
+					{#snippet heading()}
+						Great Walks of the Florida Keys
+					{/snippet}
+					{#snippet subtitle()}
+						A collection of scenic local trails
+					{/snippet}
+					<ResourceProperty>
+						{#snippet label()}
+							Website
+						{/snippet}
+						{#snippet value()}
+							<a href="https://fla-keys.com/great-walks/" target="_blank"
+								>fla-keys.com/great-walks</a
+							>
+						{/snippet}
+					</ResourceProperty>
+				</ResourceCard>
 			</div>
 			<div class="flex flex-col gap-4">
 				<ResourceCard>
