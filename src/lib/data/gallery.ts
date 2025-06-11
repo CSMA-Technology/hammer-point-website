@@ -96,6 +96,18 @@ const imageData: GalleryImage[] = [
 			).map((module) => module())
 		),
 		'Maria & Roberto, Fairwich Ct.'
+	),
+	// Anthony & Belkis Modrono
+	...transformImageFiles(
+		await Promise.all(
+			Object.values(
+				import.meta.glob<ImageFile>('$lib/assets/gallery/anthony_belkis/*', {
+					query: { enhanced: true },
+					import: 'default'
+				})
+			).map((module) => module())
+		),
+		'Anthony & Belkis, Camelot Dr.'
 	)
 ];
 
