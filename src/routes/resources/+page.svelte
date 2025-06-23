@@ -47,10 +47,10 @@
 			<div class="flex flex-col gap-4">
 				<ResourceCard>
 					{#snippet heading()}
-						2024 State of the County and Information Guide
+						2025 State of the County and Information Guide
 					{/snippet}
 					<p class="pt-2 text-center">
-						<a class="anchor" href="/monroe-guide-2024.pdf" target="_blank">Click here</a> to download
+						<a class="anchor" href="/mc-report-2025.pdf" target="_blank">Click here</a> to download
 					</p>
 				</ResourceCard>
 				<ResourceCard>
