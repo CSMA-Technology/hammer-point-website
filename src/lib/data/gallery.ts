@@ -108,6 +108,18 @@ const imageData: GalleryImage[] = [
 			).map((module) => module())
 		),
 		'Anthony & Belkis, Camelot Dr.'
+	),
+	// Lynn Young images
+	...transformImageFiles(
+		await Promise.all(
+			Object.values(
+				import.meta.glob<ImageFile>('$lib/assets/gallery/lynn_young/*', {
+					query: { enhanced: true },
+					import: 'default'
+				})
+			).map((module) => module())
+		),
+		'Lynn, Westminster Dr.'
 	)
 ];
 
