@@ -59,7 +59,7 @@
 			>
 				Community Updates
 			</h1>
-			<div
+			<!-- <div
 				class="card variant-glass-secondary mx-auto mb-8 w-fit px-2 py-4 text-center shadow-md ring-1 lg:px-6"
 			>
 				<h2 class="h3">Stay Informed!</h2>
@@ -99,7 +99,7 @@
 						There was an error subscribing you to the newsletter. Please try again later.
 					</p>
 				{/if}
-			</div>
+			</div> -->
 			<!-- Pinned Posts -->
 			{#if pinnedPosts.length}
 				<div

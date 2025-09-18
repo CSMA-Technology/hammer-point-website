@@ -16,21 +16,7 @@ type Post = {
 		linkOpenInNewTab?: boolean;
 	};
 };
-export const pinnedPosts: Post[] = [
-	{
-		title: '2025 Homeowners Annual General Meeting',
-		description: `Please mark your calendars for the upcoming annual meeting:
-		<br/>
-		<strong>
-			<br/>Date: Saturday March 15, 2025
-			<br/>Time: 9am- Noon- Breakfast will be provided
-			<br/>Place: 	The Key Largo Civic Center
-			<br/>209 Ocean Bay Dr.
-			<br/>Key Largo, FL 33037
-		</strong>
-`
-	}
-];
+export const pinnedPosts: Post[] = [];
 export const updatePosts: Post[] = [
 	{
 		title: 'Beautification Project Update',
@@ -55,6 +41,19 @@ export const updatePosts: Post[] = [
 ];
 
 export const archivedPosts: Post[] = [
+	{
+		title: '2025 Homeowners Annual General Meeting',
+		description: `Please mark your calendars for the upcoming annual meeting:
+		<br/>
+		<strong>
+			<br/>Date: Saturday March 15, 2025
+			<br/>Time: 9am- Noon- Breakfast will be provided
+			<br/>Place: 	The Key Largo Civic Center
+			<br/>209 Ocean Bay Dr.
+			<br/>Key Largo, FL 33037
+		</strong>
+`
+	},
 	{
 		title: 'Monroe County Tax Bill Printing Error',
 		description: `Attention Hammer Point Residents:<br><br>
