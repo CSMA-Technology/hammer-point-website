@@ -119,7 +119,7 @@ const imageData: GalleryImage[] = [
 				})
 			).map((module) => module())
 		),
-		'Lynn, Westminster Dr.'
+		'Lynn & Mike, Westminster Dr.'
 	)
 ];
 
