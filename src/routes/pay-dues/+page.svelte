@@ -46,6 +46,15 @@
 					us to contact you in the event of an emergency that may affect your property. It also helps
 					keep you informed of community events and items of interest through our Hammer Point Newsletter.
 				</p>
+				<h2 class="h2 mt-4 text-center">We now accept Venmo!</h2>
+				<p class="mt-2">
+					You can now pay your annual dues via Venmo
+					<a
+						class="anchor"
+						href="https://account.venmo.com/pay?recipients=hammerpointhoa"
+						target="_blank">@hammerpointhoa</a
+					>! Please include your name property address in the notes section of your payment.
+				</p>
 			</div>
 		</div>
 	</div>
