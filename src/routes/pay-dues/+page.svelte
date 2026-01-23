@@ -53,7 +53,8 @@
 						class="anchor"
 						href="https://account.venmo.com/pay?recipients=hammerpointhoa"
 						target="_blank">@hammerpointhoa</a
-					>! Please include your name property address in the notes section of your payment.
+					>
+					<br />Please include your name and property address in the notes section of your payment.
 				</p>
 			</div>
 		</div>
