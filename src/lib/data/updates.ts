@@ -1,6 +1,6 @@
 import canalVideo from '$lib/assets/updates/canal/Canal_Work.mp4';
 import beautificationSign from '$lib/assets/updates/beautification/new-sign.jpg';
-import nauticalMarket from '$lib/assets/updates/nautical-market.jpg';
+import gardenWalk from '$lib/assets/updates/2026-garden-walk.jpg';
 type Post = {
 	title: string;
 	description: string;
@@ -23,6 +23,11 @@ export const pinnedPosts: Post[] = [
 	}
 ];
 export const updatePosts: Post[] = [
+	{
+		title: 'Upcoming Event: Garden Walk',
+		description: `The Garden Club of the Upper Keys invites you to this spectacular event. Enjoy nature, artisan crafts and beautiful gardens. Click on the image for more details.`,
+		image: gardenWalk
+	},
 	{
 		title: 'Beautification Project Update',
 		description: `The second phase of the Main Entrance Beautification project is underway! You can look forward to beautiful new native plants in the near future.
