@@ -63,12 +63,12 @@
 					<h2 class="h1 text-center">News and Notes</h2>
 					<Rope />
 					<ul class="my-4 list-inside space-y-3 text-xl" style="list-style-type: '📰 ';">
-						<li>
+						<!-- <li>
 							The Annual Meeting will be held on Saturday, March 21st. For more information, see the <a
 								class="anchor"
 								href="updates">updates</a
 							> page.
-						</li>
+						</li> -->
 						<li>
 							It's time to pay your annual dues! Visit the <a class="anchor" href="pay-dues">
 								pay dues
@@ -78,7 +78,7 @@
 							Your neighbors have been taking wonderful photos of the community. Check them out in
 							our <a class="anchor" href="gallery">gallery</a>!
 						</li>
-						<!-- <li>
+						<li>
 							To stay up to date with community news and events, head over to the <a
 								class="anchor"
 								href="updates">updates</a
@@ -89,7 +89,7 @@
 								class="anchor"
 								href="about">about</a
 							> page.
-						</li> -->
+						</li>
 					</ul>
 				</div>
 			</div>

@@ -16,12 +16,7 @@ type Post = {
 		linkOpenInNewTab?: boolean;
 	};
 };
-export const pinnedPosts: Post[] = [
-	{
-		title: 'Annual Meeting Notice',
-		description: `The Hammer Point Owners Association Annual Meeting will be held on <strong>Saturday, March 21, 2026</strong>, from <strong>9:00 a.m. to noon</strong> at the <strong>Key Largo Civic Center, 209 Ocean Bay Dr., Key Largo, Florida 33037</strong>. <br><br>Breakfast will be provided between 9:00 and 10:00 a.m., and the business meeting will begin promptly at 10:00 a.m. We hope you can join us.`
-	}
-];
+export const pinnedPosts: Post[] = [];
 export const updatePosts: Post[] = [
 	{
 		title: 'Upcoming Event: Garden Walk',
