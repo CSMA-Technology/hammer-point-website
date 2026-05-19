@@ -19,11 +19,6 @@ type Post = {
 export const pinnedPosts: Post[] = [];
 export const updatePosts: Post[] = [
 	{
-		title: 'Upcoming Event: Garden Walk',
-		description: `The Garden Club of the Upper Keys invites you to this spectacular event. Enjoy nature, artisan crafts and beautiful gardens. Click on the image for more details.`,
-		image: gardenWalk
-	},
-	{
 		title: 'Beautification Project Update',
 		description: `The second phase of the Main Entrance Beautification project is underway! You can look forward to beautiful new native plants in the near future.
 		<br/><br/>We'd like to extend a special thank you to your neighbors, the Flack family, for their generous donation of the new plants, as well as all of those who have donated to this project.

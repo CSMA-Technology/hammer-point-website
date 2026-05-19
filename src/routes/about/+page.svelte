@@ -173,13 +173,7 @@
 					md:grid-cols-2"
 					>
 						<PersonCard name="Migdy Moya" title="Treasurer" photo={migdyMoya} />
-						<PersonCard name="Mary Barron-Lopez" title="Member at Large" photo={maryBarron} />
 						<PersonCard name="Rick Hamilton" title="Member at Large" photo={rickHamilton} />
-						<PersonCard
-							name="Melissa Ballesteros"
-							title="Member at Large"
-							photo={melissaBallesteros}
-						/>
 						<PersonCard name="Lidia Yoham" title="Member at Large" photo={lidiaYoham} />
 						<PersonCard
 							name="Richard Shinners"
