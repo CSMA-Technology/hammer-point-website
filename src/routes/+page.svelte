@@ -63,12 +63,21 @@
 					<h2 class="h1 text-center">News and Notes</h2>
 					<Rope />
 					<ul class="my-4 list-inside space-y-3 text-xl" style="list-style-type: '📰 ';">
-						<!-- <li>
-							The Annual Meeting will be held on Saturday, March 21st. For more information, see the <a
-								class="anchor"
-								href="updates">updates</a
-							> page.
-						</li> -->
+						<li style="list-style-type: '🎆 ';">
+							<img
+								style="display: inline;"
+								width="32"
+								alt="US Flag"
+								src="https://images.emojiterra.com/google/noto-emoji/unicode-17.0/color/svg/1f1fa-1f1f8.svg"
+							/>
+							Happy 4th of July!
+							<img
+								style="display: inline;"
+								width="32"
+								alt="US Flag"
+								src="https://images.emojiterra.com/google/noto-emoji/unicode-17.0/color/svg/1f1fa-1f1f8.svg"
+							/>
+						</li>
 						<li>
 							It's time to pay your annual dues! Visit the <a class="anchor" href="pay-dues">
 								pay dues
